@@ -1,0 +1,2101 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Feria Mañana Deportiva 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&display=swap">
+<style>
+/* Layout: navy sidebar on desktop / tab bar on phones, soft-grey canvas; POS = product grid + scoreboard cart */
+:root{
+  --bg:#F3F5F9; --surface:#FFFFFF; --surface-2:#EDF0F6; --surface-3:#E3E8F1;
+  --ink:#0B1220; --ink-2:#47536D; --ink-3:#7A869E; --line:#DCE2EC; --line-2:#C9D1DE;
+  --brand:#2563EB; --brand-hover:#1D4FD0; --brand-ink:#FFFFFF; --brand-soft:#E4ECFE; --brand-text:#1D4ED8;
+  --lime:#C8FF5F; --lime-ink:#0B1220; --lime-soft:#F1FFD6;
+  --navy:#0B1220; --navy-2:#16213A; --navy-3:#1F2C49; --on-navy:#E8EDF7; --on-navy-2:#8F9CB8;
+  --good:#127A3A; --good-soft:#E2F5E8; --warn:#9A5800; --warn-soft:#FCF0DA; --bad:#C92A2A; --bad-soft:#FCE6E6;
+  --m-efe:#12A150; --m-tra:#2563EB; --m-tar:#0B1220;
+  --shadow:0 1px 2px rgba(11,18,32,.05),0 6px 20px rgba(11,18,32,.06);
+  --shadow-lg:0 24px 60px rgba(11,18,32,.22);
+  --backdrop:rgba(11,18,32,.48);
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --display:"Barlow Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+  --r:16px; --r-sm:11px; --r-xs:8px;
+  --side-w:248px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A101C; --surface:#111A2C; --surface-2:#172238; --surface-3:#1E2B45;
+  --ink:#EAF0FA; --ink-2:#A3B0C8; --ink-3:#71809C; --line:#223050; --line-2:#2E3D60;
+  --brand:#4A82F7; --brand-hover:#6797FA; --brand-ink:#FFFFFF; --brand-soft:#16264A; --brand-text:#8DB2FF;
+  --lime-soft:#24321A;
+  --navy:#060A13; --navy-2:#111A2C; --navy-3:#1A2640; --on-navy:#E8EDF7; --on-navy-2:#8F9CB8;
+  --good:#4ADE80; --good-soft:#123222; --warn:#FBBF24; --warn-soft:#3A2A0C; --bad:#F87171; --bad-soft:#3D1717;
+  --m-efe:#4ADE80; --m-tra:#5B8DF8; --m-tar:#C8FF5F;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  --backdrop:rgba(2,5,12,.66);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0A101C; --surface:#111A2C; --surface-2:#172238; --surface-3:#1E2B45;
+  --ink:#EAF0FA; --ink-2:#A3B0C8; --ink-3:#71809C; --line:#223050; --line-2:#2E3D60;
+  --brand:#4A82F7; --brand-hover:#6797FA; --brand-ink:#FFFFFF; --brand-soft:#16264A; --brand-text:#8DB2FF;
+  --lime-soft:#24321A;
+  --navy:#060A13; --navy-2:#111A2C; --navy-3:#1A2640; --on-navy:#E8EDF7; --on-navy-2:#8F9CB8;
+  --good:#4ADE80; --good-soft:#123222; --warn:#FBBF24; --warn-soft:#3A2A0C; --bad:#F87171; --bad-soft:#3D1717;
+  --m-efe:#4ADE80; --m-tra:#5B8DF8; --m-tar:#C8FF5F;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  --backdrop:rgba(2,5,12,.66);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.num{font-variant-numeric:tabular-nums}
+h1,h2,h3{margin:0;text-wrap:balance}
+svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+svg.i.sm{width:16px;height:16px}
+svg.i.lg{width:26px;height:26px}
+.muted{color:var(--ink-2)}
+.faint{color:var(--ink-3)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- Shell ---------- */
+.app{display:grid;grid-template-columns:var(--side-w) minmax(0,1fr);min-height:100%}
+.side{position:sticky;top:0;height:100vh;height:100dvh;background:var(--navy);color:var(--on-navy);display:flex;flex-direction:column;padding:22px 14px 18px max(14px,env(safe-area-inset-left,0px));gap:18px;overflow-y:auto}
+.brand{display:flex;flex-direction:column;gap:2px;padding:0 8px}
+.brand-mark{font-family:var(--display);font-weight:800;font-style:italic;font-size:30px;line-height:.9;letter-spacing:.01em;text-transform:uppercase}
+.brand-mark span{color:var(--lime)}
+.brand-sub{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-2);font-weight:600}
+.brand-sub b{background:var(--lime);color:var(--lime-ink);border-radius:4px;padding:1px 6px;letter-spacing:.06em}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav-label{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy-2);padding:14px 12px 6px;font-weight:600}
+.nav button{display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;color:var(--on-navy-2);padding:11px 12px;border-radius:11px;font-weight:600;font-size:14.5px;text-align:left;position:relative;transition:background .15s,color .15s}
+.nav button:hover{background:var(--navy-2);color:var(--on-navy)}
+.nav button[aria-current="page"]{background:var(--navy-3);color:var(--on-navy)}
+.nav button[aria-current="page"]::before{content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:4px;border-radius:0 4px 4px 0;background:var(--lime)}
+.nav button[aria-current="page"] svg{color:var(--lime)}
+.side-foot{margin-top:auto;display:flex;flex-direction:column;gap:10px}
+.who{display:flex;align-items:center;gap:10px;background:var(--navy-2);border-radius:12px;padding:10px}
+.avatar{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;background:var(--lime);color:var(--lime-ink);flex:none;font-size:14px}
+.who-name{font-weight:700;font-size:13.5px;line-height:1.2}
+.who-role{font-size:11.5px;color:var(--on-navy-2)}
+.side-btn{display:flex;align-items:center;gap:8px;justify-content:center;border:1px solid var(--navy-3);background:transparent;color:var(--on-navy-2);border-radius:10px;padding:9px;font-weight:600;font-size:13px}
+.side-btn:hover{color:var(--on-navy);border-color:var(--on-navy-2)}
+
+.main{min-width:0;display:flex;flex-direction:column}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding-block:12px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));min-height:64px}
+.top-title{display:flex;flex-direction:column;min-width:0;flex:1}
+.top-title h1{font-size:20px;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top-title small{font-size:12px;color:var(--ink-3);font-weight:500}
+.top-brand{display:none;font-family:var(--display);font-weight:800;font-style:italic;font-size:22px;text-transform:uppercase;line-height:1}
+.top-brand span{color:var(--brand)}
+.top-actions{display:flex;align-items:center;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:600;white-space:nowrap;background:var(--surface-2);color:var(--ink-2)}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill.ok{background:var(--good-soft);color:var(--good)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.info{background:var(--brand-soft);color:var(--brand-text)}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;color:var(--ink-2)}
+.icon-btn:hover{color:var(--ink);border-color:var(--line-2)}
+#view{padding-block:22px 40px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));min-width:0;flex:1}
+.banner{margin:14px max(24px,env(safe-area-inset-right,0px)) 0 max(24px,env(safe-area-inset-left,0px));display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-radius:12px;padding:10px 14px;font-size:13.5px;font-weight:500}
+.banner.warn{background:var(--warn-soft);color:var(--warn)}
+.banner.info{background:var(--brand-soft);color:var(--brand-text)}
+.banner .btn{margin-left:auto}
+
+.tabbar{display:none}
+
+/* ---------- Buttons & inputs ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);font-weight:650;font-size:14.5px;padding:10px 16px;min-height:44px;transition:transform .08s,background .15s,border-color .15s,opacity .15s;white-space:nowrap}
+.btn:hover{border-color:var(--ink-3)}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.btn.primary:hover{background:var(--brand-hover);border-color:var(--brand-hover)}
+.btn.lime{background:var(--lime);border-color:var(--lime);color:var(--lime-ink)}
+.btn.lime:hover{filter:brightness(.96)}
+.btn.dark{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--ink-2)}
+.btn.ghost:hover{background:var(--surface-2);color:var(--ink)}
+.btn.danger{background:var(--bad);border-color:var(--bad);color:#fff}
+.btn.danger-soft{background:var(--bad-soft);border-color:transparent;color:var(--bad)}
+.btn.sm{min-height:36px;padding:7px 12px;font-size:13.5px;border-radius:10px}
+.btn.xl{min-height:58px;font-size:17px;border-radius:14px;padding:12px 20px}
+.btn.block{width:100%}
+.btn-export{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:.04em;text-transform:uppercase}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field>span,.label{font-size:12.5px;font-weight:650;color:var(--ink-2)}
+.field small{font-size:12px;color:var(--ink-3)}
+.input,select.input,textarea.input{width:100%;min-height:46px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface);padding:10px 13px;font-size:15.5px;outline:none;transition:border-color .15s,box-shadow .15s}
+textarea.input{min-height:80px;resize:vertical}
+.input:focus{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 22%,transparent)}
+.input.err{border-color:var(--bad)}
+.input-wrap{position:relative}
+.input-wrap .pre{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ink-3);font-weight:600;pointer-events:none}
+.input-wrap .input{padding-left:28px}
+.search{position:relative;flex:1;min-width:0}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ink-3)}
+.search .input{padding-left:40px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.stack{display:flex;flex-direction:column;gap:14px}
+.row-flex{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.spacer{flex:1}
+.err-msg{color:var(--bad);font-size:13px;font-weight:600}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px;background:var(--surface-2);padding:5px;border-radius:13px}
+.seg button{border:0;background:transparent;border-radius:9px;padding:9px 6px;font-weight:650;font-size:13.5px;color:var(--ink-2);display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:8px 14px;font-weight:600;font-size:13.5px;white-space:nowrap;color:var(--ink-2)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.tag{display:inline-flex;align-items:center;gap:5px;border-radius:7px;padding:3px 8px;font-size:12px;font-weight:650;white-space:nowrap;background:var(--surface-2);color:var(--ink-2)}
+.tag.ok{background:var(--good-soft);color:var(--good)}
+.tag.warn{background:var(--warn-soft);color:var(--warn)}
+.tag.bad{background:var(--bad-soft);color:var(--bad)}
+.tag.info{background:var(--brand-soft);color:var(--brand-text)}
+.tag.lime{background:var(--lime);color:var(--lime-ink)}
+
+/* ---------- Cards / sections ---------- */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.card-h{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.card-h h2,.card-h h3{font-size:15.5px;font-weight:750}
+.card-h .sub{font-size:12.5px;color:var(--ink-3)}
+.section-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.section-h h2{font-size:17px;font-weight:800}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.toolbar .search{min-width:min(100%,240px)}
+.toolbar select.input{width:auto;min-width:150px;flex:0 1 auto}
+
+.empty{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:44px 20px;border:1.5px dashed var(--line-2);border-radius:var(--r);background:var(--surface)}
+.empty .em-ico{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--lime);color:var(--lime-ink)}
+.empty h3{font-size:17px;font-weight:800}
+.empty p{margin:0;color:var(--ink-2);max-width:42ch;font-size:14px}
+
+/* ---------- KPI ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.kpi .k-l{font-size:12px;font-weight:650;color:var(--ink-2);display:flex;align-items:center;gap:7px;text-transform:uppercase;letter-spacing:.06em}
+.kpi .k-v{font-family:var(--display);font-weight:700;font-size:34px;line-height:1;letter-spacing:.005em;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi .k-s{font-size:12.5px;color:var(--ink-3)}
+.kpi.hero{background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
+.kpi.hero .k-l{color:var(--on-navy-2)}
+.kpi.hero .k-s{color:var(--on-navy-2)}
+.kpi.hero .k-v{color:var(--lime)}
+.kpi.neg .k-v{color:var(--bad)}
+.kpis.small .kpi .k-v{font-size:26px}
+.kpis.small{grid-template-columns:repeat(6,minmax(0,1fr))}
+.dash-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:12px}
+.span-8{grid-column:span 8}.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-12{grid-column:span 12}
+.chart svg{width:100%;height:auto;display:block}
+.chart text{font-family:var(--font);font-size:11px;fill:var(--ink-3)}
+.legend{display:flex;flex-direction:column;gap:10px}
+.legend-row{display:flex;align-items:center;gap:10px;font-size:13.5px}
+.legend-row .sw{width:12px;height:12px;border-radius:4px;flex:none}
+.legend-row b{margin-left:auto;font-variant-numeric:tabular-nums}
+.donut-wrap{display:grid;grid-template-columns:minmax(96px,132px) minmax(0,1fr);gap:16px;align-items:center}
+.legend{min-width:0}
+.legend-row span:not(.sw){min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hbars{display:flex;flex-direction:column;gap:12px}
+.hbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;font-size:13.5px}
+.hbar .nm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hbar .vl{font-variant-numeric:tabular-nums;font-weight:700}
+.hbar .track{grid-column:1/-1;height:9px;border-radius:5px;background:var(--surface-2);overflow:hidden}
+.hbar .fill{height:100%;border-radius:5px;background:var(--brand)}
+.hbar .fill.alt{background:var(--lime)}
+.be-track{height:14px;border-radius:7px;background:var(--surface-2);overflow:hidden;margin:10px 0 8px;position:relative}
+.be-fill{height:100%;background:linear-gradient(90deg,var(--brand),var(--lime));border-radius:7px}
+.filters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) auto;gap:10px;align-items:end;margin-bottom:16px}
+
+/* ---------- POS ---------- */
+.pos{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:20px;align-items:start}
+.pos-main{min-width:0;display:flex;flex-direction:column;gap:14px}
+.pos-tools{display:flex;gap:10px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px}
+.pcard{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;text-align:left;padding:0;transition:border-color .15s,transform .1s,box-shadow .15s;min-width:0}
+.pcard:hover{border-color:var(--line-2);box-shadow:var(--shadow)}
+.pcard:active{transform:scale(.985)}
+.pcard.in{border-color:var(--brand)}
+.pcard.out{opacity:.55}
+.pc-hit{border:0;background:transparent;padding:0;margin:0;text-align:left;display:flex;flex-direction:column;flex:1;width:100%;color:inherit;font:inherit;cursor:pointer;border-radius:inherit}
+.pc-hit[disabled]{cursor:not-allowed}
+.pcard .ph{aspect-ratio:16/10;max-width:100%;background:var(--surface-2);display:grid;place-items:center;overflow:hidden;position:relative}
+.pcard .ph img{width:100%;height:100%;object-fit:cover}
+.pcard .ph .ini{font-family:var(--display);font-weight:800;font-style:italic;font-size:38px;color:var(--ink-3);text-transform:uppercase}
+.pcard .pb{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pcard .pn{font-weight:700;font-size:14.5px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pcard .pp{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:auto}
+.pcard .price{font-family:var(--display);font-weight:700;font-size:22px;font-variant-numeric:tabular-nums;line-height:1}
+.pcard .badge{position:absolute;top:8px;right:8px;min-width:30px;height:30px;padding:0 8px;border-radius:999px;background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px;box-shadow:0 4px 10px rgba(37,99,235,.35)}
+.pcard .add{position:absolute;bottom:10px;right:10px}
+.cart{position:sticky;top:84px;background:var(--surface);border:1px solid var(--line);border-radius:20px;display:flex;flex-direction:column;max-height:calc(100dvh - 108px);overflow:hidden}
+.cart-h{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.cart-h h2{font-size:16px;font-weight:800}
+.cart-lines{overflow-y:auto;padding:6px 10px;flex:1;min-height:120px}
+.cline{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 10px;padding:10px 8px;border-bottom:1px solid var(--line)}
+.cline:last-child{border-bottom:0}
+.cline .nm{font-weight:650;font-size:14px;line-height:1.3}
+.cline .sub{font-size:12.5px;color:var(--ink-3)}
+.cline .stepper{justify-self:start}
+.cline .tot{font-weight:750;font-variant-numeric:tabular-nums;text-align:right}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--line-2);border-radius:11px;overflow:hidden;background:var(--surface)}
+.stepper button{width:38px;height:36px;border:0;background:transparent;display:grid;place-items:center;color:var(--ink)}
+.stepper button:hover{background:var(--surface-2)}
+.stepper .q{min-width:34px;text-align:center;font-weight:800;font-variant-numeric:tabular-nums}
+.cart-empty{padding:30px 16px;text-align:center;color:var(--ink-3);font-size:14px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.score{background:var(--navy);color:var(--on-navy);padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+.score-row{display:flex;justify-content:space-between;font-size:13px;color:var(--on-navy-2)}
+.score-total{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.score-total span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy-2);font-weight:700}
+.score-total b{font-family:var(--display);font-weight:800;font-size:46px;line-height:.9;color:var(--lime);font-variant-numeric:tabular-nums}
+.cartbar{display:none}
+.cart-close{display:none}
+.scrim{display:none}
+
+/* ---------- Lists ---------- */
+.rlist{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.rhead,.rrow{display:grid;gap:12px;align-items:center;padding:12px 16px}
+.rhead{background:var(--surface-2);font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2)}
+.rrow{border-top:1px solid var(--line);font-size:14px}
+.rrow.click{cursor:pointer}
+.rrow.click:hover{background:var(--surface-2)}
+.rrow .strong{font-weight:700}
+.rrow .r{text-align:right;font-variant-numeric:tabular-nums}
+.rrow .cell-l{display:none;font-size:11.5px;color:var(--ink-3);font-weight:600}
+.cols-ventas{grid-template-columns:110px 130px minmax(0,1.6fr) 110px 130px minmax(0,1fr) 140px}
+.cols-prod{grid-template-columns:52px minmax(0,1.6fr) 100px 100px 110px 110px minmax(150px,auto)}
+.cols-inv{grid-template-columns:minmax(0,1.6fr) 80px 80px 90px 80px 90px 110px 110px}
+.cols-mov{grid-template-columns:140px 150px minmax(0,1.4fr) 90px minmax(0,1fr) 120px}
+.cols-gas{grid-template-columns:110px 140px minmax(0,1.6fr) 110px minmax(0,1fr) 110px}
+.cols-caja{grid-template-columns:150px 150px minmax(0,1fr) 110px 110px 110px 130px}
+.thumb{width:44px;height:44px;border-radius:10px;background:var(--surface-2);display:grid;place-items:center;overflow:hidden;font-family:var(--display);font-weight:800;font-style:italic;color:var(--ink-3);font-size:20px}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.actions{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+
+/* ---------- Modal / sheet ---------- */
+.modal-root{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:20px}
+.modal-bg{position:absolute;inset:0;background:var(--backdrop);animation:fade .18s ease}
+.modal{position:relative;width:min(560px,100%);max-height:calc(100dvh - 40px);background:var(--surface);border-radius:22px;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;overflow:hidden;animation:pop .2s cubic-bezier(.2,.9,.3,1.2)}
+.modal.wide{width:min(760px,100%)}
+.modal-h{display:flex;align-items:center;gap:10px;padding:18px 20px 12px}
+.modal-h h2{font-size:18px;font-weight:800;flex:1}
+.modal-b{padding:6px 20px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:14px}
+.modal-f{display:flex;gap:10px;padding:14px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--surface)}
+.modal-f .btn{flex:1}
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}}
+@keyframes up{from{transform:translateY(100%)}}
+.summary{background:var(--surface-2);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.summary .sr-row{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.summary .sr-row b{font-variant-numeric:tabular-nums}
+.summary .sr-row.total{font-size:17px;font-weight:800;border-top:1px solid var(--line-2);padding-top:8px}
+.big-total{background:var(--navy);color:var(--on-navy);border-radius:16px;padding:16px 18px;display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.big-total span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy-2);font-weight:700}
+.big-total b{font-family:var(--display);font-weight:800;font-size:48px;line-height:.9;color:var(--lime);font-variant-numeric:tabular-nums}
+.paygrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.paybtn{border:1.5px solid var(--line-2);background:var(--surface);border-radius:14px;padding:12px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:700;font-size:13px;color:var(--ink-2);min-height:76px}
+.paybtn[aria-pressed="true"]{border-color:var(--brand);background:var(--brand-soft);color:var(--brand-text)}
+.quick{display:flex;gap:6px;flex-wrap:wrap}
+.change{display:flex;justify-content:space-between;align-items:center;background:var(--lime-soft);border-radius:12px;padding:10px 14px;font-weight:700}
+.change b{font-family:var(--display);font-size:26px;font-variant-numeric:tabular-nums}
+.success{position:fixed;inset:0;z-index:90;display:grid;place-items:center;background:var(--backdrop);animation:fade .15s;padding:20px}
+.success-card{background:var(--navy);color:var(--on-navy);border-radius:26px;padding:30px 26px;width:min(380px,100%);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;box-shadow:var(--shadow-lg);animation:pop .25s cubic-bezier(.2,.9,.3,1.3)}
+.success-check{width:76px;height:76px;border-radius:50%;background:var(--lime);color:var(--lime-ink);display:grid;place-items:center}
+.success-check svg{width:40px;height:40px;stroke-width:3}
+.success-card h2{font-size:22px;font-weight:800}
+.success-card .amt{font-family:var(--display);font-weight:800;font-size:54px;line-height:.95;color:var(--lime);font-variant-numeric:tabular-nums}
+.success-card .code{font-size:13px;color:var(--on-navy-2);letter-spacing:.08em}
+
+/* toast */
+.toasts{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:100;display:flex;flex-direction:column;gap:8px;align-items:center;width:min(440px,calc(100% - 32px));pointer-events:none}
+.toast{pointer-events:auto;display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--bg);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow-lg);font-weight:600;font-size:14px;width:100%;animation:pop .2s}
+.toast.err{background:var(--bad);color:#fff}
+.toast .t-ico{flex:none}
+.toast .t-msg{flex:1}
+.toast button{border:0;background:transparent;color:var(--lime);font-weight:800;padding:4px 6px}
+.toast.err button{color:#fff;text-decoration:underline}
+
+/* ---------- Login ---------- */
+.gate{min-height:100%;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.gate-art{background:var(--navy);color:var(--on-navy);padding:48px max(40px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;justify-content:space-between;gap:30px;position:relative;overflow:hidden}
+.gate-art::after{content:"";position:absolute;right:-120px;bottom:-60px;width:420px;height:420px;border-radius:50%;border:46px solid var(--lime);opacity:.9}
+.gate-art::before{content:"";position:absolute;right:120px;bottom:210px;width:110px;height:14px;background:var(--brand);transform:skewX(-24deg)}
+.gate-title{font-family:var(--display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(52px,7vw,96px);line-height:.86;letter-spacing:.005em;position:relative;z-index:1}
+.gate-title span{color:var(--lime)}
+.gate-meta{display:flex;gap:10px;align-items:center;position:relative;z-index:1;flex-wrap:wrap}
+.gate-meta .tag{background:var(--navy-3);color:var(--on-navy)}
+.gate-meta .tag.lime{background:var(--lime);color:var(--lime-ink)}
+.gate-form{display:flex;align-items:center;justify-content:center;padding:40px max(24px,env(safe-area-inset-right,0px)) 40px 24px}
+.gate-box{width:min(420px,100%);display:flex;flex-direction:column;gap:18px}
+.gate-box h2{font-size:24px;font-weight:800;letter-spacing:-.01em}
+.who-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.who-btn{border:1.5px solid var(--line-2);background:var(--surface);border-radius:14px;padding:14px;display:flex;align-items:center;gap:10px;font-weight:700;text-align:left;min-height:60px;min-width:0}
+.who-btn:hover{border-color:var(--brand)}
+.who-btn .avatar{background:var(--surface-2);color:var(--ink)}
+.who-btn span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.divider{display:flex;align-items:center;gap:10px;color:var(--ink-3);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.splash{min-height:100%;display:grid;place-items:center;background:var(--navy);color:var(--on-navy);padding:24px}
+.splash .brand-mark{font-size:44px;text-align:center}
+.loader{width:42px;height:6px;border-radius:3px;background:var(--navy-3);overflow:hidden;margin:18px auto 0;position:relative}
+.loader::after{content:"";position:absolute;inset:0;width:40%;background:var(--lime);border-radius:3px;animation:load 1s ease-in-out infinite alternate}
+@keyframes load{to{transform:translateX(150%)}}
+.list-edit{display:flex;flex-direction:column;gap:8px}
+.list-edit .li{display:flex;align-items:center;gap:10px;background:var(--surface-2);border-radius:11px;padding:6px 6px 6px 14px;font-weight:600}
+.list-edit .li span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px;font-size:14px}
+.kv dt{color:var(--ink-3);font-weight:600}
+.kv dd{margin:0;font-weight:600;text-align:right}
+.warnbox{display:flex;gap:10px;align-items:flex-start;background:var(--warn-soft);color:var(--warn);border-radius:12px;padding:10px 12px;font-size:13.5px;font-weight:600}
+.okbox{display:flex;gap:10px;align-items:flex-start;background:var(--good-soft);color:var(--good);border-radius:12px;padding:10px 12px;font-size:13.5px;font-weight:600}
+.infobox{display:flex;gap:10px;align-items:flex-start;background:var(--brand-soft);color:var(--brand-text);border-radius:12px;padding:10px 12px;font-size:13.5px;font-weight:500}
+.mini-lines{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.mini-lines .ml{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:10px 12px;border-top:1px solid var(--line);font-size:14px}
+.mini-lines .ml:first-child{border-top:0}
+.calc-preview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.calc-preview div{background:var(--surface-2);border-radius:12px;padding:10px 12px}
+.calc-preview span{display:block;font-size:12px;color:var(--ink-3);font-weight:600}
+.calc-preview b{font-family:var(--display);font-size:24px;font-variant-numeric:tabular-nums}
+.img-pick{display:flex;align-items:center;gap:12px}
+.img-pick .thumb{width:64px;height:64px}
+.danger-zone{border-color:color-mix(in srgb,var(--bad) 40%,var(--line))}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1200px){
+  .kpis.small{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .filters{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pos{grid-template-columns:minmax(0,1fr) 340px}
+}
+@media (max-width:1024px){
+  .cols-ventas,.cols-prod,.cols-inv,.cols-mov,.cols-gas,.cols-caja{grid-template-columns:1fr 1fr}
+  .rhead{display:none}
+  .rrow{grid-template-columns:1fr 1fr;gap:6px 12px;padding:14px 16px}
+  .rrow .cell-l{display:block}
+  .rrow .full{grid-column:1/-1}
+  .rrow .r{text-align:left}
+  .rrow .actions{grid-column:1/-1;justify-content:flex-start}
+  .rrow .thumb-cell{grid-column:1/-1}
+}
+@media (max-width:900px){
+  .app{grid-template-columns:minmax(0,1fr)}
+  .side{display:none}
+  .top{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));min-height:58px}
+  .top-brand{display:block}
+  .top-title{display:none}
+  .top .hide-m{display:none}
+  #view{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:16px calc(96px + env(safe-area-inset-bottom,0px))}
+  .banner{margin-left:max(16px,env(safe-area-inset-left,0px));margin-right:max(16px,env(safe-area-inset-right,0px))}
+  .tabbar{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--navy);padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));border-top:1px solid var(--navy-3)}
+  .tabbar button{border:0;background:transparent;color:var(--on-navy-2);display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 2px;font-size:11px;font-weight:650;border-radius:12px;min-height:54px}
+  .tabbar button[aria-current="page"]{color:var(--lime)}
+  .tabbar button[aria-current="page"] svg{transform:translateY(-1px)}
+  .pos{grid-template-columns:minmax(0,1fr)}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px}
+  .cart{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:70;border-radius:24px 24px 0 0;max-height:86dvh;transform:translateY(105%);transition:transform .25s cubic-bezier(.2,.8,.2,1);border:0;box-shadow:var(--shadow-lg);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .cart.open{transform:none}
+  .cart-close{display:grid}
+  .scrim.open{display:block;position:fixed;inset:0;z-index:65;background:var(--backdrop)}
+  .cartbar{display:flex;position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:35;background:var(--lime);color:var(--lime-ink);border:0;border-radius:16px;padding:12px 16px;align-items:center;gap:12px;font-weight:800;box-shadow:0 10px 28px rgba(11,18,32,.28);min-height:58px}
+  .cartbar[hidden]{display:none}
+  .cartbar .cnt{background:var(--lime-ink);color:var(--lime);border-radius:999px;min-width:28px;height:28px;display:grid;place-items:center;font-size:14px;padding:0 8px}
+  .cartbar .amt{margin-left:auto;font-family:var(--display);font-size:24px;font-variant-numeric:tabular-nums}
+  .pos-main.has-bar{padding-bottom:70px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpis.small{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dash-grid>*{grid-column:span 12}
+  .filters{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .modal-root{padding:0;place-items:end stretch}
+  .modal,.modal.wide{width:100%;max-height:92dvh;border-radius:24px 24px 0 0;animation:up .25s cubic-bezier(.2,.8,.2,1)}
+  .gate{grid-template-columns:minmax(0,1fr)}
+  .gate-art{padding:32px max(20px,env(safe-area-inset-right,0px)) 36px max(20px,env(safe-area-inset-left,0px));min-height:0}
+  .gate-art::after{width:220px;height:220px;border-width:26px;right:-70px;bottom:-70px}
+  .gate-art::before{display:none}
+  .gate-form{padding:24px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px));align-items:flex-start}
+  .kpi .k-v{font-size:28px}
+  .donut-wrap{grid-template-columns:110px minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .grid2,.grid3{grid-template-columns:minmax(0,1fr)}
+  .grid2.keep{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .paygrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .toolbar select.input{flex:1 1 140px;min-width:0}
+  .who-grid{grid-template-columns:minmax(0,1fr)}
+  .score-total b,.big-total b{font-size:40px}
+  .calc-preview{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<div id="root"><div class="splash"><div><div class="brand-mark">Feria<br><span>Mañana</span> Deportiva</div><div class="loader"></div></div></div></div>
+<div id="modals"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script>
+"use strict";
+/* =========================================================
+   FERIA MAÑANA DEPORTIVA 2026 · 3rd BGU — POS y contabilidad
+   ========================================================= */
+const TZ = "America/Guayaquil";
+const OFFSET_MS = 5 * 3600e3; // Ecuador: UTC-5 todo el año
+const COLS = ["productos","ventas","movimientos","gastos","cajas","auditoria"];
+const METODOS = ["efectivo","transferencia","tarjeta"];
+const MLABEL = {efectivo:"Efectivo",transferencia:"Transferencia",tarjeta:"Tarjeta",mixto:"Pago mixto"};
+const GASTO_CATS = ["Decoración","Transporte","Materiales","Empaques","Alquileres","Publicidad","Otros gastos"];
+const LS = {data:"feria26_datos_v1", sesion:"feria26_sesion", tema:"feria26_tema", modo:"feria26_modo"};
+const FILE_XLSX = "Feria_Manana_Deportiva_2026_3rd_BGU.xlsx";
+
+/* ---------- utilidades ---------- */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const NF = new Intl.NumberFormat("es-EC",{style:"currency",currency:"USD",minimumFractionDigits:2,maximumFractionDigits:2});
+const money = c => { c = Math.round(c||0); return (c<0?"−":"") + NF.format(Math.abs(c)/100); };
+const moneyShort = c => { const v=Math.abs(c)/100; const s = v>=1000 ? "$"+(v/1000).toFixed(v>=10000?0:1).replace(".",",")+"k" : "$"+(Number.isInteger(v)?v:v.toFixed(2).replace(".",",")); return (c<0?"−":"")+s; };
+const pct = v => (isFinite(v)? (v*100).toFixed(1).replace(".",",") : "0,0") + "%";
+const intf = n => new Intl.NumberFormat("es-EC").format(n||0);
+const sum = (a,f=x=>x) => a.reduce((s,x)=>s+(f(x)||0),0);
+function parseMoney(s){
+  s = String(s ?? "").trim().replace(/\s|\$/g,"");
+  if(!s) return null;
+  if(s.includes(",") && s.includes(".")){
+    if(s.lastIndexOf(",") > s.lastIndexOf(".")) s = s.replace(/\./g,"").replace(",",".");
+    else s = s.replace(/,/g,"");
+  } else s = s.replace(",",".");
+  if(!/^\d*\.?\d*$/.test(s) || s==="." ) return null;
+  const n = Number(s); if(!isFinite(n)) return null;
+  return Math.round(n*100);
+}
+function parseIntSafe(s){ s=String(s??"").trim(); if(!/^-?\d+$/.test(s)) return null; return parseInt(s,10); }
+const ALPH = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+const rnd = n => { const a=new Uint8Array(n); (window.crypto||{}).getRandomValues ? crypto.getRandomValues(a) : a.forEach((_,i)=>a[i]=Math.random()*256|0); return Array.from(a,b=>ALPH[b%32]).join(""); };
+const uid = p => p + Date.now().toString(36).toUpperCase() + rnd(4);
+const DTF = new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"});
+function lp(ts){ const o={}; for(const p of DTF.formatToParts(new Date(ts))) o[p.type]=p.value; if(o.hour==="24") o.hour="00"; return o; }
+const dayKey = ts => { const o=lp(ts); return `${o.year}-${o.month}-${o.day}`; };
+const hourOf = ts => parseInt(lp(ts).hour,10);
+const fD = ts => { const o=lp(ts); return `${o.day}/${o.month}/${o.year}`; };
+const fT = ts => { const o=lp(ts); return `${o.hour}:${o.minute}`; };
+const fDT = ts => fD(ts)+" "+fT(ts);
+const dayStart = k => Date.parse(k+"T00:00:00-05:00");
+const todayKey = () => dayKey(Date.now());
+const dkLabel = k => { const [y,m,d]=k.split("-"); return `${d}/${m}/${y}`; };
+function localInputNow(ts=Date.now()){ const o=lp(ts); return `${o.year}-${o.month}-${o.day}T${o.hour}:${o.minute}`; }
+function parseLocalInput(v){ if(!v) return null; const t=Date.parse(v.length===16? v+":00-05:00" : v+"-05:00"); return isFinite(t)?t:null; }
+const lsGet = k => { try{ const v=localStorage.getItem(k); return v==null?null:JSON.parse(v); }catch(e){ return null; } };
+const lsSet = (k,v) => { try{ localStorage.setItem(k,JSON.stringify(v)); return true; }catch(e){ return false; } };
+const lsDel = k => { try{ localStorage.removeItem(k); }catch(e){} };
+const initials = s => String(s||"?").trim().split(/\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase() || "?";
+const debounce = (fn,ms) => { let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a),ms); }; };
+const sleep = ms => new Promise(r=>setTimeout(r,ms));
+
+/* ---------- íconos (trazos estilo Lucide) ---------- */
+const IC = {
+  cart:'<circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>',
+  dash:'<rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/>',
+  pkg:'<path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>',
+  inv:'<rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/>',
+  receipt:'<path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/>',
+  wallet:'<path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>',
+  down:'<polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/>',
+  sliders:'<line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/>',
+  download:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',
+  upload:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>',
+  plus:'<path d="M5 12h14"/><path d="M12 5v14"/>', minus:'<path d="M5 12h14"/>',
+  search:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+  x:'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>', check:'<path d="M20 6 9 17l-5-5"/>',
+  trash:'<path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>',
+  edit:'<path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>',
+  alert:'<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
+  sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>',
+  moon:'<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
+  logout:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/>',
+  more:'<circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/>',
+  cash:'<rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>',
+  card:'<rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/>',
+  transfer:'<path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/>',
+  split:'<path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/>',
+  user:'<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+  lock:'<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  undo:'<path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/>',
+  ban:'<circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/>',
+  cloud:'<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>',
+  phone:'<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>',
+  eye:'<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+  eyeoff:'<path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/>',
+  xls:'<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h2"/><path d="M14 13h2"/><path d="M8 17h2"/><path d="M14 17h2"/>',
+  image:'<rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>',
+  inbox:'<path d="M12 17V3"/><path d="m6 11 6 6 6-6"/><path d="M19 21H5"/>',
+  clock:'<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+  trophy:'<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>',
+  scale:'<path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>'
+};
+const ic = (n,c="") => `<svg class="i ${c}" viewBox="0 0 24 24" aria-hidden="true">${IC[n]||""}</svg>`;
+
+/* =========================================================
+   ALMACENAMIENTO: nube compartida (db) o este dispositivo
+   ========================================================= */
+const S = {productos:{},ventas:{},movimientos:{},gastos:{},cajas:{},auditoria:{},config:null};
+let MODE = "cargando";   // "nube" | "local" | "lectura"
+let DB = null, USERCAP = null, READY = false, VER = 0;
+const UNSUBS = [];
+
+function bump(){ VER++; scheduleRender(); }
+function saveLocal(){
+  const ok = lsSet(LS.data, {v:1, guardado:Date.now(), ...S});
+  if(!ok) toast("No se pudo guardar en este dispositivo: el almacenamiento del navegador está lleno o bloqueado.", {type:"err"});
+  return ok;
+}
+function loadLocal(){
+  const d = lsGet(LS.data);
+  for(const c of COLS) S[c] = (d && d[c] && typeof d[c]==="object") ? d[c] : {};
+  S.config = d && d.config ? d.config : null;
+}
+function canWrite(){ return MODE==="nube" || MODE==="local"; }
+function writeGuard(){
+  if(canWrite()) return true;
+  toast("Esta cuenta solo puede consultar. Para registrar, usa el modo «Solo este dispositivo» en Ajustes.", {type:"err"});
+  return false;
+}
+function clean(o){ return JSON.parse(JSON.stringify(o)); }
+function dbErr(e){
+  const c = e && e.code;
+  if(c==="quota_exceeded") return "La base de datos llegó a su límite de espacio. Descarga un respaldo y libera registros antiguos.";
+  if(c==="invalid_argument") return "Tu cuenta no tiene permiso para guardar en la base compartida.";
+  if(c==="revoked") return "Se perdió el acceso a la base compartida. Recarga la página.";
+  if(c==="resource_exhausted") return "Demasiadas operaciones seguidas. Espera unos segundos e inténtalo de nuevo.";
+  return "No se pudo guardar. Revisa tu conexión e inténtalo de nuevo.";
+}
+async function put(col, doc){
+  if(!writeGuard()) throw new Error("solo-lectura");
+  const prev = S[col][doc.id];
+  S[col] = {...S[col], [doc.id]: doc}; bump();
+  if(MODE==="local"){ if(!saveLocal()){ S[col]={...S[col]}; if(prev) S[col][doc.id]=prev; else delete S[col][doc.id]; bump(); throw new Error("local"); } return; }
+  try{ await DB.collection(col).doc(doc.id).set(clean(doc)); }
+  catch(e){
+    if(e && e.code==="unavailable"){ await sleep(400+Math.random()*600); try{ await DB.collection(col).doc(doc.id).set(clean(doc)); return; }catch(e2){ e=e2; } }
+    S[col]={...S[col]}; if(prev) S[col][doc.id]=prev; else delete S[col][doc.id]; bump();
+    if(e && e.code==="invalid_argument"){ MODE="lectura"; bump(); }
+    toast(dbErr(e),{type:"err"}); throw e;
+  }
+}
+async function removeDoc(col,id){
+  const c = {...S[col]}; delete c[id]; S[col]=c; bump();
+  if(MODE==="local"){ saveLocal(); return; }
+  await DB.collection(col).doc(id).delete();
+}
+async function putConfig(cfg){
+  if(!writeGuard()) throw new Error("solo-lectura");
+  const prev=S.config; S.config=cfg; bump();
+  if(MODE==="local"){ saveLocal(); return; }
+  try{ await DB.doc("config/app").set(clean(cfg)); }
+  catch(e){ S.config=prev; bump(); toast(dbErr(e),{type:"err"}); throw e; }
+}
+async function audit(tipo, ref, motivo, valor, unidad="$"){
+  const a = {id:uid("A"), ts:Date.now(), tipo, ref:ref||"", usuario:SES()?.nombre||"", motivo:motivo||"", valor:valor??"", unidad};
+  try{ await put("auditoria", a); }catch(e){}
+}
+
+function withTimeout(p, ms){ return Promise.race([p, new Promise(r=>setTimeout(()=>r(null),ms))]); }
+async function boot(){
+  applyTheme();
+  const forcedLocal = lsGet(LS.modo)==="local";
+  let tries=0; while(!window.claude && tries<10){ await sleep(150); tries++; }
+  let db=null, user=null;
+  if(window.claude && typeof window.claude.use==="function" && !forcedLocal){
+    try{ [db,user] = await Promise.all([withTimeout(window.claude.use("db"),9000), withTimeout(window.claude.use("user"),9000)]); }catch(e){ db=null; }
+  }
+  USERCAP = user || null;
+  if(window.claude && typeof window.claude.use==="function"){
+    window.claude.use("downloads").then(d=>{ DOWNLOADS=d; }).catch(()=>{});
+  }
+  if(db){
+    DB = db;
+    let w=null; try{ w = user ? await user.can("data.write") : null; }catch(e){}
+    MODE = w===false ? "lectura" : "nube";
+    subscribeCloud();
+  } else { bootLocal(); }
+}
+function bootLocal(){
+  UNSUBS.splice(0).forEach(u=>{try{u()}catch(e){}});
+  DB=null; MODE="local"; loadLocal(); READY=true; bump();
+}
+function subscribeCloud(){
+  const pending = new Set([...COLS,"config"]);
+  const done = k => { if(pending.delete(k) && pending.size===0){ READY=true; } bump(); };
+  const onErr = e => { if(e && e.code==="revoked"){ toast("Se perdió el acceso a la base compartida.",{type:"err"}); } };
+  for(const c of COLS){
+    UNSUBS.push(DB.collection(c).onSnapshot(snap=>{
+      const o={}; for(const d of snap.docs){ o[d.id] = {...d.data(), id:d.id}; }
+      S[c]=o; done(c);
+    }, onErr));
+  }
+  UNSUBS.push(DB.doc("config/app").onSnapshot(d=>{ S.config = d.exists ? {...d.data()} : null; done("config"); }, onErr));
+  setTimeout(()=>{ if(!READY){ READY=true; bump(); } }, 12000);
+}
+let DOWNLOADS = null;
+
+/* =========================================================
+   SESIÓN, ROLES Y TEMA
+   ========================================================= */
+let SESSION = lsGet(LS.sesion);
+const SES = () => SESSION;
+const isAdmin = () => SESSION && SESSION.role==="admin";
+function setSession(s){ closeModal(true); SESSION=s; if(s) lsSet(LS.sesion,s); else lsDel(LS.sesion); UI.view = s && s.role==="admin" ? (UI.view||"vender") : "vender"; UI.mounted=null; bump(); }
+async function hashPin(pin, salt){
+  const txt = salt+":"+pin;
+  try{ const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(txt)); return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,"0")).join(""); }
+  catch(e){ let h=2166136261; for(let i=0;i<txt.length;i++){ h^=txt.charCodeAt(i); h=Math.imul(h,16777619); } return "f"+(h>>>0).toString(16); }
+}
+async function checkPin(pin){ const c=S.config; if(!c) return false; return (await hashPin(pin,c.salt))===c.pinHash; }
+function applyTheme(){
+  const t = lsGet(LS.tema) || "sistema";
+  if(t==="claro") document.documentElement.setAttribute("data-theme","light");
+  else if(t==="oscuro") document.documentElement.setAttribute("data-theme","dark");
+  else document.documentElement.removeAttribute("data-theme");
+}
+function isDark(){
+  const a=document.documentElement.getAttribute("data-theme");
+  if(a) return a==="dark";
+  return window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+}
+function toggleTheme(){ lsSet(LS.tema, isDark() ? "claro" : "oscuro"); applyTheme(); UI.mounted=null; scheduleRender(); }
+
+/* =========================================================
+   CÁLCULOS (siempre desde los registros guardados)
+   ========================================================= */
+let DCACHE = {ver:-1};
+function D(){
+  if(DCACHE.ver===VER) return DCACHE;
+  const prods = Object.values(S.productos).sort((a,b)=>String(a.codigo).localeCompare(String(b.codigo)));
+  const inv = {};
+  for(const p of prods) inv[p.id] = {ini:p.stockInicial||0, ent:0, aj:0, vend:0};
+  for(const m of Object.values(S.movimientos)){
+    const r = inv[m.productoId]; if(!r) continue;
+    if(m.tipo==="entrada") r.ent += m.cantidad||0; else if(m.tipo==="ajuste") r.aj += m.cantidad||0;
+  }
+  const ventas = Object.values(S.ventas).sort((a,b)=>a.ts-b.ts);
+  const E = [];  // efectos de línea (ventas y devoluciones) — solo ventas no anuladas
+  for(const s of ventas){
+    if(s.estado==="anulada") continue;
+    s.items.forEach((it,i)=>{
+      const r=inv[it.productoId]; if(r) r.vend += it.cantidad;
+      const share = s.total>0 ? it.neto/s.total : 0;
+      const pay = {}; for(const m of METODOS) pay[m] = (s.pagos?.[m]||0)*share;
+      E.push({ts:s.ts, tipo:"venta", s, idx:i, prod:it.productoId, nombre:it.nombre, cat:it.categoria||"", vend:s.vendedor, qty:it.cantidad, neto:it.neto, costo:it.costo*it.cantidad, pay});
+    });
+    for(const d of (s.devoluciones||[])){
+      for(const l of d.lineas){
+        const it = s.items[l.idx]; const r=inv[it.productoId]; if(r) r.vend -= l.cantidad;
+        const pay = {efectivo:0,transferencia:0,tarjeta:0}; pay[d.metodo] = -l.monto;
+        E.push({ts:d.ts, tipo:"devolucion", s, d, idx:l.idx, prod:it.productoId, nombre:it.nombre, cat:it.categoria||"", vend:s.vendedor, qty:-l.cantidad, neto:-l.monto, costo:-it.costo*l.cantidad, pay});
+      }
+    }
+  }
+  const stock = {}; for(const id in inv){ const r=inv[id]; r.act = r.ini + r.ent + r.aj - r.vend; stock[id]=r.act; }
+  DCACHE = {ver:VER, prods, inv, stock, ventas, E};
+  return DCACHE;
+}
+function estadoVenta(s){
+  if(s.estado==="anulada") return "Anulada";
+  const ret = sum(s.devoluciones||[], d=>sum(d.lineas,l=>l.cantidad));
+  if(!ret) return "Completada";
+  return ret >= sum(s.items,i=>i.cantidad) ? "Devuelta" : "Devolución parcial";
+}
+const estadoTag = e => ({"Completada":"ok","Anulada":"bad","Devuelta":"warn","Devolución parcial":"warn"}[e]||"");
+function returnedQty(s, idx){ return sum(s.devoluciones||[], d=>sum(d.lineas.filter(l=>l.idx===idx), l=>l.cantidad)); }
+function returnedAmt(s, idx){ return sum(s.devoluciones||[], d=>sum(d.lineas.filter(l=>l.idx===idx), l=>l.monto)); }
+function saleNet(s){ return s.estado==="anulada" ? 0 : s.total - sum(s.devoluciones||[], d=>d.monto); }
+function gastosActivos(){ return Object.values(S.gastos).filter(g=>g.estado!=="anulado").sort((a,b)=>a.ts-b.ts); }
+
+/** Indicadores con filtros (fecha, producto, categoría, vendedor). */
+function calc(F={}){
+  const {E, prods, stock} = D();
+  const inDate = ts => (!F.desde || dayKey(ts)>=F.desde) && (!F.hasta || dayKey(ts)<=F.hasta);
+  const e = E.filter(x => inDate(x.ts) && (!F.producto || x.prod===F.producto) && (!F.categoria || x.cat===F.categoria) && (!F.vendedor || x.vend===F.vendedor));
+  const ventas = sum(e,x=>x.neto), cmv = sum(e,x=>x.costo), unidades = sum(e,x=>x.qty);
+  const trans = new Set(e.filter(x=>x.tipo==="venta").map(x=>x.s.id)).size;
+  const gastosList = gastosActivos().filter(g=>inDate(g.ts));
+  const gastos = sum(gastosList,g=>g.monto);
+  const pay = {efectivo:0,transferencia:0,tarjeta:0};
+  for(const x of e) for(const m of METODOS) pay[m]+=x.pay[m];
+  for(const m of METODOS) pay[m]=Math.round(pay[m]);
+  const bruta = ventas - cmv, neta = bruta - gastos;
+  const byProd = {};
+  for(const x of e){ const r = byProd[x.prod] ||= {id:x.prod, nombre:x.nombre, qty:0, neto:0, costo:0}; r.qty+=x.qty; r.neto+=x.neto; r.costo+=x.costo; }
+  const prodRows = Object.values(byProd).map(r=>({...r, gan:r.neto-r.costo}));
+  const byHour = {}; for(const x of e){ const h=hourOf(x.ts); byHour[h]=(byHour[h]||0)+x.neto; }
+  const mc = ventas>0 ? bruta/ventas : 0;
+  const pe = (gastos>0 && mc>0) ? Math.round(gastos/mc) : null;
+  const ganUnit = unidades>0 ? bruta/unidades : 0;
+  const peUnits = (gastos>0 && ganUnit>0) ? Math.ceil(gastos/ganUnit) : null;
+  const invUnits = sum(prods.filter(p=>p.activo!==false), p=>Math.max(0,stock[p.id]||0));
+  const invValue = sum(prods, p=>Math.max(0,stock[p.id]||0)*(p.costo||0));
+  const lowStock = prods.filter(p=>p.activo!==false && (stock[p.id]||0) <= (p.stockMin||0));
+  // evolución: utilidad neta acumulada en el tiempo
+  const ev = [...e.map(x=>({ts:x.ts, d:x.neto-x.costo})), ...gastosList.map(g=>({ts:g.ts, d:-g.monto}))].sort((a,b)=>a.ts-b.ts);
+  let acc=0; const evo = ev.map(p=>({ts:p.ts, v:(acc+=p.d)}));
+  return {e, ventas, cmv, unidades, trans, gastos, gastosList, pay, bruta, neta, prodRows, byHour, mc, pe, peUnits, invUnits, invValue, lowStock, evo,
+    margenNeto: ventas>0? neta/ventas : 0, roi: (cmv+gastos)>0 ? neta/(cmv+gastos) : 0, ticket: trans>0 ? ventas/trans : 0};
+}
+function cajaAbierta(){ return Object.values(S.cajas).find(c=>!c.cerrada) || null; }
+function cajaCalc(c){
+  const {E} = D(); const end = c.cerrada || Date.now();
+  const e = E.filter(x=>x.ts>=c.abierta && x.ts<=end);
+  const pay={efectivo:0,transferencia:0,tarjeta:0}; for(const x of e) for(const m of METODOS) pay[m]+=x.pay[m];
+  for(const m of METODOS) pay[m]=Math.round(pay[m]);
+  const devEfe = Math.round(sum(e.filter(x=>x.tipo==="devolucion"), x=>-x.pay.efectivo));
+  const entradas = sum((c.movimientos||[]).filter(m=>m.tipo==="entrada"), m=>m.monto);
+  const salidas = sum((c.movimientos||[]).filter(m=>m.tipo==="salida"), m=>m.monto);
+  const esperado = (c.fondo||0) + pay.efectivo + entradas - salidas;
+  const ventasN = new Set(e.filter(x=>x.tipo==="venta").map(x=>x.s.id)).size;
+  return {efectivo:pay.efectivo, transferencia:pay.transferencia, tarjeta:pay.tarjeta, devEfe, entradas, salidas, esperado, total:pay.efectivo+pay.transferencia+pay.tarjeta, ventasN};
+}
+
+/* =========================================================
+   UI: estado, render, modales, toasts
+   ========================================================= */
+const UI = {view:"vender", mounted:null, cart:[], q:"", cat:"", prodQ:"", prodCat:"", prodEstado:"activos",
+  ventaQ:"", ventaEstado:"", ventaMetodo:"", ventaVend:"", ventaDia:"",
+  F:{desde:"",hasta:"",producto:"",categoria:"",vendedor:""}, cartOpen:false};
+let RENDER_PENDING=false;
+function scheduleRender(){ if(RENDER_PENDING) return; RENDER_PENDING=true; requestAnimationFrame(()=>{ RENDER_PENDING=false; render(); }); }
+
+function toast(msg, o={}){
+  const box=$("#toasts"); const el=document.createElement("div");
+  el.className="toast"+(o.type==="err"?" err":"");
+  el.innerHTML=`<span class="t-ico">${ic(o.type==="err"?"alert":"check","sm")}</span><span class="t-msg"></span>${o.action?`<button type="button">${esc(o.action.label)}</button>`:""}`;
+  el.querySelector(".t-msg").textContent=msg;
+  if(o.action) el.querySelector("button").onclick=()=>{ el.remove(); o.action.fn(); };
+  box.appendChild(el); while(box.children.length>3) box.firstChild.remove();
+  setTimeout(()=>el.remove(), o.ms || (o.action?6000:o.type==="err"?6000:3200));
+}
+let MODAL=null;
+function openModal({title, body, foot, wide=false, onMount, onClose}){
+  closeModal(true);
+  const root=$("#modals");
+  root.innerHTML=`<div class="modal-root" role="dialog" aria-modal="true" aria-label="${esc(title)}"><div class="modal-bg" data-close></div>
+    <div class="modal${wide?" wide":""}"><div class="modal-h"><h2>${esc(title)}</h2><button class="icon-btn" type="button" data-close aria-label="Cerrar">${ic("x")}</button></div>
+    <div class="modal-b">${body}</div>${foot?`<div class="modal-f">${foot}</div>`:""}</div></div>`;
+  const el=root.firstElementChild;
+  MODAL={el,onClose};
+  $$("[data-close]",el).forEach(b=>b.addEventListener("click",()=>closeModal()));
+  if(onMount) onMount(el);
+  const f=el.querySelector("[autofocus]"); if(f && window.matchMedia("(min-width:901px)").matches) setTimeout(()=>{ if(!el.contains(document.activeElement) || document.activeElement===document.body) f.focus(); },60);
+  return el;
+}
+function closeModal(silent){ if(!MODAL) return; const m=MODAL; MODAL=null; $("#modals").innerHTML=""; if(!silent && m.onClose) m.onClose(); }
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ if(MODAL) closeModal(); else if(UI.cartOpen){ UI.cartOpen=false; syncCartSheet(); } } });
+function confirmDlg(msg,{title="Confirmar",ok="Confirmar",danger=false,input=null}={}){
+  return new Promise(res=>{
+    let done=false;
+    const el=openModal({title, body:`<p style="margin:0" class="muted">${esc(msg)}</p>${input?`<label class="field"><span>${esc(input.label)}</span><input class="input" id="cf-in" autocomplete="off" placeholder="${esc(input.ph||"")}"></label><div class="err-msg" id="cf-err"></div>`:""}`,
+      foot:`<button class="btn" data-close type="button">Cancelar</button><button class="btn ${danger?"danger":"primary"}" id="cf-ok" type="button">${esc(ok)}</button>`,
+      onClose:()=>{ if(!done) res(null); }});
+    el.querySelector("#cf-ok").onclick=()=>{
+      let v=true;
+      if(input){ v=el.querySelector("#cf-in").value.trim(); if(input.required && !v){ el.querySelector("#cf-err").textContent=input.req||"Este dato es obligatorio."; return; } }
+      done=true; closeModal(true); res(v);
+    };
+  });
+}
+
+/* ---------- vistas por rol ---------- */
+const VIEWS = {
+  vender:{t:"Punto de venta", i:"cart", nav:"Vender"},
+  panel:{t:"Panel financiero", i:"dash", nav:"Panel", admin:true},
+  productos:{t:"Productos", i:"pkg", nav:"Productos"},
+  inventario:{t:"Inventario", i:"inv", nav:"Inventario", admin:true},
+  ventas:{t:"Historial de ventas", i:"receipt", nav:"Ventas"},
+  gastos:{t:"Gastos y costos", i:"down", nav:"Gastos", admin:true},
+  caja:{t:"Control de caja", i:"wallet", nav:"Caja", admin:true},
+  ajustes:{t:"Ajustes", i:"sliders", nav:"Ajustes", admin:true}
+};
+const allowed = v => VIEWS[v] && (!VIEWS[v].admin || isAdmin());
+function go(v){ if(!allowed(v)) v="vender"; UI.view=v; UI.mounted=null; UI.cartOpen=false; closeModal(true); scheduleRender(); try{ window.scrollTo({top:0}); }catch(e){} }
+
+function render(){
+  const root=$("#root");
+  if(!READY){ return; }
+  if(!S.config){ if(UI.mounted!=="setup"){ UI.mounted="setup"; root.innerHTML = MODE==="lectura" ? viewNoConfig() : viewSetup(); bindSetup(); } return; }
+  if(!SESSION){ if(UI.mounted!=="login"){ UI.mounted="login"; root.innerHTML=viewLogin(); bindLogin(); } return; }
+  if(!allowed(UI.view)) UI.view="vender";
+  if(UI.mounted!==UI.view){
+    UI.mounted=UI.view;
+    root.innerHTML = shell();
+    $("#view").innerHTML = VIEW_FN[UI.view].mount();
+    VIEW_FN[UI.view].bind && VIEW_FN[UI.view].bind();
+  }
+  updateChrome();
+  VIEW_FN[UI.view].update();
+  if(MODAL && MODAL.refresh) MODAL.refresh();
+}
+function navItems(){
+  return isAdmin() ? ["vender","panel","productos","inventario","ventas","gastos","caja","ajustes"] : ["vender","productos","ventas"];
+}
+function shell(){
+  const s=SESSION; const v=VIEWS[UI.view];
+  const tabs = isAdmin() ? ["vender","panel","productos","ventas"] : ["vender","productos","ventas"];
+  return `<div class="app">
+  <aside class="side">
+    <div class="brand"><div class="brand-mark">Feria <span>Mañana</span><br>Deportiva</div><div class="brand-sub"><b>2026</b> 3rd BGU</div></div>
+    <nav class="nav" aria-label="Secciones">
+      <div class="nav-label">Operación</div>
+      ${navItems().filter(k=>["vender","productos","ventas","inventario"].includes(k)).map(k=>`<button type="button" data-go="${k}" ${k===UI.view?'aria-current="page"':""}>${ic(VIEWS[k].i)}${esc(VIEWS[k].nav)}</button>`).join("")}
+      ${isAdmin()?`<div class="nav-label">Finanzas</div>
+      ${["panel","gastos","caja","ajustes"].map(k=>`<button type="button" data-go="${k}" ${k===UI.view?'aria-current="page"':""}>${ic(VIEWS[k].i)}${esc(VIEWS[k].nav)}</button>`).join("")}`:""}
+    </nav>
+    <div class="side-foot">
+      ${isAdmin()?`<button class="btn lime block btn-export" type="button" data-act="export">${ic("xls")}Exportar Excel</button>`:""}
+      <div class="who"><div class="avatar">${esc(initials(s.nombre))}</div><div style="min-width:0"><div class="who-name">${esc(s.nombre)}</div><div class="who-role">${s.role==="admin"?"Administrador":"Vendedor"}</div></div></div>
+      <button class="side-btn" type="button" data-act="logout">${ic("logout","sm")}Cambiar usuario</button>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <div class="top-brand">Feria <span>26</span></div>
+      <div class="top-title"><h1>${esc(v.t)}</h1><small id="top-sub"></small></div>
+      <div class="spacer"></div>
+      <div class="top-actions">
+        <span id="mode-pill"></span>
+        <button class="icon-btn" type="button" data-act="theme" aria-label="Cambiar entre modo claro y oscuro">${ic(isDark()?"sun":"moon")}</button>
+        ${isAdmin()?`<button class="btn lime sm btn-export hide-m" type="button" data-act="export">${ic("xls","sm")}Exportar Excel</button>`:""}
+      </div>
+    </header>
+    <div id="banner"></div>
+    <main id="view"></main>
+  </div>
+  <nav class="tabbar" aria-label="Secciones">
+    ${tabs.map(k=>`<button type="button" data-go="${k}" ${k===UI.view?'aria-current="page"':""}>${ic(VIEWS[k].i)}${esc(VIEWS[k].nav)}</button>`).join("")}
+    ${isAdmin()?`<button type="button" data-act="more" ${["inventario","gastos","caja","ajustes"].includes(UI.view)?'aria-current="page"':""}>${ic("more")}Más</button>`:`<button type="button" data-act="logout">${ic("logout")}Salir</button>`}
+  </nav>
+</div>`;
+}
+function updateChrome(){
+  const p=$("#mode-pill"); if(!p) return;
+  const m = MODE==="nube" ? `<span class="pill ok" title="Los datos se guardan en la base compartida de la feria">${ic("cloud","sm")}<span class="hide-m">Sincronizado</span></span>`
+    : MODE==="local" ? `<span class="pill warn" title="Los datos se guardan únicamente en este dispositivo y navegador">${ic("phone","sm")}<span class="hide-m">Solo este dispositivo</span></span>`
+    : `<span class="pill bad">${ic("eye","sm")}<span class="hide-m">Solo lectura</span></span>`;
+  if(p.innerHTML!==m) p.innerHTML=m;
+  const b=$("#banner");
+  let bh="";
+  if(MODE==="lectura") bh=`<div class="banner warn">${ic("eye","sm")}<span>Tu cuenta puede ver la base compartida pero no registrar en ella.</span><button class="btn sm" type="button" data-act="go-local">Trabajar en este dispositivo</button></div>`;
+  if(b && b.innerHTML!==bh) b.innerHTML=bh;
+  const sub=$("#top-sub"); if(sub){ const t=`${fD(Date.now())} · hora de Ecuador`; if(sub.textContent!==t) sub.textContent=t; }
+}
+
+/* ---------- acciones globales ---------- */
+const ACT = {
+  logout: async ()=>{ if(UI.cart.length && !(await confirmDlg("Hay productos en el carrito. Si cambias de usuario se vaciará.",{ok:"Cambiar usuario"}))) return; UI.cart=[]; setSession(null); },
+  theme: toggleTheme,
+  export: ()=>openExport(),
+  more: ()=>openMore(),
+  newProduct: ()=>openProductForm(),
+  movForm: ()=>openMovForm(),
+  newGasto: ()=>openGasto(),
+  voidGasto: a=>voidGasto(a.dataset.id),
+  cajaIn: ()=>openCajaMov("entrada"),
+  cajaOut: ()=>openCajaMov("salida"),
+  cierre: ()=>openCierre(),
+  showCierre: a=>showCierre(a.dataset.id),
+  exportCierre: a=>exportCierre(a.dataset.id),
+  "go-local": async ()=>{ if(await confirmDlg("Desde ahora este dispositivo guardará sus propios datos, separados de la base compartida. Podrás volver a la base compartida desde Ajustes.",{ok:"Usar este dispositivo"})){ lsSet(LS.modo,"local"); bootLocal(); UI.mounted=null; } }
+};
+document.addEventListener("click", e=>{
+  const g=e.target.closest("[data-go]"); if(g){ go(g.dataset.go); return; }
+  const a=e.target.closest("[data-act]"); if(a && ACT[a.dataset.act]){ e.preventDefault(); ACT[a.dataset.act](a,e); }
+});
+function openMore(){
+  const items=[["inventario","inv"],["gastos","down"],["caja","wallet"],["ajustes","sliders"]];
+  openModal({title:"Más secciones", body:`<div class="stack">
+    ${items.map(([k,i])=>`<button class="btn block" style="justify-content:flex-start" type="button" data-go="${k}">${ic(i)}${esc(VIEWS[k].t)}</button>`).join("")}
+    <button class="btn lime block btn-export" type="button" data-act="export">${ic("xls")}Exportar Excel</button>
+    <button class="btn ghost block" type="button" data-act="logout">${ic("logout")}Cambiar usuario (${esc(SESSION.nombre)})</button></div>`});
+}
+
+/* =========================================================
+   CONFIGURACIÓN INICIAL Y ACCESO
+   ========================================================= */
+function gateArt(){
+  return `<div class="gate-art"><div class="gate-meta"><span class="tag lime">2026</span><span class="tag">3rd BGU</span></div>
+    <div class="gate-title">Feria<br><span>Mañana</span><br>Deportiva</div>
+    <div class="gate-meta" style="color:var(--on-navy-2);font-size:13px;font-weight:500">Ventas, inventario y caja de la feria en un solo lugar.</div></div>`;
+}
+function viewNoConfig(){
+  return `<div class="gate">${gateArt()}<div class="gate-form"><div class="gate-box"><h2>La feria aún no está configurada</h2><p class="muted" style="margin:0">El administrador debe abrir esta app primero y crear el PIN. Si quieres usarla por tu cuenta, guarda los datos en este dispositivo.</p><button class="btn primary xl" type="button" data-act="go-local">Usar en este dispositivo</button></div></div></div>`;
+}
+function viewSetup(){
+  return `<div class="gate">${gateArt()}<div class="gate-form"><form class="gate-box" id="setup" novalidate>
+    <div><span class="tag info">Paso único</span></div>
+    <h2>Configura la feria</h2>
+    <p class="muted" style="margin:0">Crea el PIN del administrador y escribe quiénes venderán. Podrás cambiarlo después en Ajustes.</p>
+    <label class="field"><span>Nombre del administrador</span><input class="input" id="su-admin" value="Administrador" autocomplete="off"></label>
+    <div class="grid2 keep"><label class="field"><span>PIN (4 a 6 números)</span><input class="input" id="su-pin" inputmode="numeric" type="password" maxlength="6" autocomplete="new-password"></label>
+    <label class="field"><span>Repite el PIN</span><input class="input" id="su-pin2" inputmode="numeric" type="password" maxlength="6" autocomplete="new-password"></label></div>
+    <label class="field"><span>Vendedores (uno por línea)</span><textarea class="input" id="su-vend" rows="4" placeholder="Ej.: Camila Torres&#10;Mateo Andrade"></textarea><small>Aparecerán como botones para entrar a vender.</small></label>
+    <div class="infobox">${ic(MODE==="nube"?"cloud":"phone","sm")}<span>${MODE==="nube"?"Los datos se guardarán en la base compartida de esta página.":"Los datos se guardarán únicamente en este dispositivo y navegador. Haz respaldos desde Ajustes."}</span></div>
+    <div class="err-msg" id="su-err"></div>
+    <button class="btn primary xl" type="submit">Comenzar a vender</button>
+  </form></div></div>`;
+}
+function bindSetup(){
+  const f=$("#setup"); if(!f) return;
+  f.addEventListener("submit", async e=>{
+    e.preventDefault();
+    const pin=$("#su-pin").value.trim(), pin2=$("#su-pin2").value.trim(), err=$("#su-err");
+    if(!/^\d{4,6}$/.test(pin)){ err.textContent="El PIN debe tener entre 4 y 6 números."; return; }
+    if(pin!==pin2){ err.textContent="Los dos PIN no coinciden."; return; }
+    const vend=[...new Set($("#su-vend").value.split(/\n|,/).map(s=>s.trim()).filter(Boolean))];
+    const admin=$("#su-admin").value.trim()||"Administrador";
+    const salt=rnd(12);
+    try{
+      await putConfig({nombre:"FERIA MAÑANA DEPORTIVA 2026", subtitulo:"3rd BGU", salt, pinHash:await hashPin(pin,salt), vendedores:vend, admin, creado:Date.now(), version:1});
+      setSession({role:"admin", nombre:admin}); UI.view="productos"; UI.mounted=null;
+      audit("Configuración inicial","Feria","PIN y vendedores creados", vend.length, "vendedores");
+      toast("Listo. Empieza registrando tus productos.");
+    }catch(e2){ err.textContent="No se pudo guardar la configuración."; }
+  });
+}
+function viewLogin(){
+  const v=S.config.vendedores||[];
+  return `<div class="gate">${gateArt()}<div class="gate-form"><div class="gate-box">
+    <h2>¿Quién está vendiendo?</h2>
+    ${v.length?`<div class="who-grid">${v.map(n=>`<button class="who-btn" type="button" data-vend="${esc(n)}"><span class="avatar">${esc(initials(n))}</span><span>${esc(n)}</span></button>`).join("")}</div>`:`<div class="infobox">${ic("user","sm")}<span>Todavía no hay vendedores. El administrador puede agregarlos en Ajustes.</span></div>`}
+    <div class="divider">o</div>
+    <form id="admin-login" class="stack" novalidate>
+      <label class="field"><span>PIN de administrador</span><input class="input" id="lg-pin" inputmode="numeric" type="password" maxlength="6" autocomplete="current-password" placeholder="••••"></label>
+      <div class="err-msg" id="lg-err"></div>
+      <button class="btn dark xl" type="submit">${ic("lock")}Entrar como administrador</button>
+    </form>
+    <div class="row-flex faint" style="font-size:12.5px">${MODE==="nube"?ic("cloud","sm")+"Datos sincronizados entre dispositivos":MODE==="local"?ic("phone","sm")+"Datos guardados solo en este dispositivo":ic("eye","sm")+"Modo solo lectura"}</div>
+  </div></div></div>`;
+}
+function bindLogin(){
+  $$("[data-vend]").forEach(b=>b.addEventListener("click",()=>{ setSession({role:"vendedor", nombre:b.dataset.vend}); UI.view="vender"; }));
+  $("#admin-login").addEventListener("submit", async e=>{
+    e.preventDefault();
+    const pin=$("#lg-pin").value.trim();
+    if(await checkPin(pin)){ setSession({role:"admin", nombre:S.config.admin||"Administrador"}); UI.view="vender"; }
+    else { $("#lg-err").textContent="PIN incorrecto. Inténtalo de nuevo."; $("#lg-pin").value=""; $("#lg-pin").focus(); }
+  });
+}
+
+/* =========================================================
+   PUNTO DE VENTA
+   ========================================================= */
+const VIEW_FN = {};
+function cartQty(pid){ const l=UI.cart.find(x=>x.pid===pid); return l?l.qty:0; }
+function cartTotals(){
+  let sub=0, units=0;
+  for(const l of UI.cart){ const p=S.productos[l.pid]; if(!p) continue; sub+=p.precio*l.qty; units+=l.qty; }
+  return {sub, units};
+}
+function addToCart(pid, n=1){
+  const p=S.productos[pid]; if(!p) return;
+  const st=D().stock[pid]||0; const cur=cartQty(pid);
+  if(cur+n>st){ toast(st<=0?`${p.nombre} está agotado.`:`Solo quedan ${st} unidades de ${p.nombre}.`,{type:"err"}); return; }
+  const l=UI.cart.find(x=>x.pid===pid);
+  if(l) l.qty+=n; else UI.cart.push({pid, qty:n});
+  if(l && l.qty<=0) UI.cart=UI.cart.filter(x=>x!==l);
+  scheduleRender();
+}
+function setCartQty(pid,q){
+  const l=UI.cart.find(x=>x.pid===pid); if(!l) return;
+  if(q<=0){ removeLine(pid); return; }
+  const st=D().stock[pid]||0;
+  if(q>st){ toast(`Solo quedan ${st} unidades.`,{type:"err"}); q=st; }
+  l.qty=q; scheduleRender();
+}
+function removeLine(pid){
+  const i=UI.cart.findIndex(x=>x.pid===pid); if(i<0) return;
+  const [l]=UI.cart.splice(i,1); scheduleRender();
+  const p=S.productos[pid];
+  toast(`Quitaste ${p?p.nombre:"el producto"} del carrito.`,{action:{label:"Deshacer",fn:()=>{ UI.cart.splice(Math.min(i,UI.cart.length),0,l); scheduleRender(); }}});
+}
+function syncCartSheet(){ const c=$("#pos-cart"), s=$("#pos-scrim"); if(c) c.classList.toggle("open",UI.cartOpen); if(s) s.classList.toggle("open",UI.cartOpen); }
+function prodThumb(p, cls="thumb"){ return `<div class="${cls}">${p.imagen?`<img src="${esc(p.imagen)}" alt="">`:esc(initials(p.nombre))}</div>`; }
+
+VIEW_FN.vender = {
+  mount(){
+    return `<div class="pos">
+      <section class="pos-main" id="pos-main">
+        <div class="pos-tools"><div class="search">${ic("search")}<input class="input" id="pos-q" type="search" placeholder="Buscar producto o código" autocomplete="off" value="${esc(UI.q)}"></div></div>
+        <div class="chips" id="pos-cats"></div>
+        <div id="pos-caja"></div>
+        <div class="pgrid" id="pos-grid"></div>
+      </section>
+      <div class="scrim" id="pos-scrim"></div>
+      <aside class="cart" id="pos-cart" aria-label="Carrito"></aside>
+    </div>
+    <button class="cartbar" id="cartbar" type="button" hidden></button>`;
+  },
+  bind(){
+    $("#pos-q").addEventListener("input", e=>{ UI.q=e.target.value; this.update(); });
+    $("#pos-cats").addEventListener("click", e=>{ const b=e.target.closest("[data-cat]"); if(!b) return; UI.cat=b.dataset.cat; this.update(); });
+    $("#pos-grid").addEventListener("click", e=>{
+      const m=e.target.closest("[data-minus]"); if(m){ e.stopPropagation(); const pid=m.dataset.minus; setCartQty(pid, cartQty(pid)-1); return; }
+      const c=e.target.closest("[data-add]"); if(c) addToCart(c.dataset.add);
+    });
+    $("#pos-cart").addEventListener("click", e=>{
+      const t=e.target.closest("[data-inc],[data-dec],[data-rm],[data-checkout],[data-clear],[data-closecart]"); if(!t) return;
+      if(t.dataset.inc) addToCart(t.dataset.inc);
+      else if(t.dataset.dec) setCartQty(t.dataset.dec, cartQty(t.dataset.dec)-1);
+      else if(t.dataset.rm) removeLine(t.dataset.rm);
+      else if("checkout" in t.dataset) openCheckout();
+      else if("clear" in t.dataset){ const old=[...UI.cart]; UI.cart=[]; scheduleRender(); toast("Carrito vaciado.",{action:{label:"Deshacer",fn:()=>{UI.cart=old; scheduleRender();}}}); }
+      else if("closecart" in t.dataset){ UI.cartOpen=false; syncCartSheet(); }
+    });
+    $("#pos-scrim").addEventListener("click",()=>{ UI.cartOpen=false; syncCartSheet(); });
+    $("#cartbar").addEventListener("click",()=>{ UI.cartOpen=true; syncCartSheet(); });
+  },
+  update(){
+    const {prods, stock} = D();
+    const act = prods.filter(p=>p.activo!==false);
+    const cats=[...new Set(act.map(p=>p.categoria).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+    if(UI.cat && !cats.includes(UI.cat)) UI.cat="";
+    const ch=$("#pos-cats");
+    const chh = cats.length>1 ? [`<button class="chip" type="button" data-cat="" aria-pressed="${!UI.cat}">Todos</button>`, ...cats.map(c=>`<button class="chip" type="button" data-cat="${esc(c)}" aria-pressed="${UI.cat===c}">${esc(c)}</button>`)].join("") : "";
+    if(ch.innerHTML!==chh) ch.innerHTML=chh; ch.hidden=!chh;
+    const cj=$("#pos-caja"); const ab=cajaAbierta();
+    const cjh = (!ab && isAdmin() && act.length) ? `<div class="warnbox">${ic("wallet","sm")}<span style="flex:1">La caja está cerrada. Puedes vender igual, pero abre la caja para cuadrar el efectivo al final.</span><button class="btn sm" type="button" data-go="caja">Abrir caja</button></div>` : "";
+    if(cj.innerHTML!==cjh) cj.innerHTML=cjh;
+    const q=UI.q.trim().toLowerCase();
+    const list=act.filter(p=>(!UI.cat||p.categoria===UI.cat) && (!q || p.nombre.toLowerCase().includes(q) || String(p.codigo).toLowerCase().includes(q)));
+    const grid=$("#pos-grid");
+    if(!act.length){
+      grid.style.display="block";
+      grid.innerHTML=`<div class="empty"><div class="em-ico">${ic("pkg","lg")}</div><h3>Aún no hay productos para vender</h3><p>${isAdmin()?"Registra los productos de la feria con su costo, precio y stock. Aparecerán aquí como tarjetas.":"Pide al administrador que registre los productos de la feria."}</p>${isAdmin()?`<button class="btn primary" type="button" data-go="productos">${ic("plus")}Registrar productos</button>`:""}</div>`;
+    } else if(!list.length){
+      grid.style.display="block";
+      grid.innerHTML=`<div class="empty"><div class="em-ico">${ic("search","lg")}</div><h3>Sin resultados</h3><p>No hay productos que coincidan con «${esc(UI.q||UI.cat)}».</p></div>`;
+    } else {
+      grid.style.display="";
+      grid.innerHTML=list.map(p=>{
+        const st=stock[p.id]||0, inC=cartQty(p.id), left=st-inC, low=st<=(p.stockMin||0);
+        return `<div class="pcard${inC?" in":""}${st<=0?" out":""}">
+          <button class="pc-hit" type="button" data-add="${p.id}" ${left<=0?"disabled":""} aria-label="Agregar ${esc(p.nombre)}">
+            <div class="ph">${p.imagen?`<img src="${esc(p.imagen)}" alt="">`:`<span class="ini">${esc(initials(p.nombre))}</span>`}</div>
+            <div class="pb"><div class="pn">${esc(p.nombre)}</div>
+              <div class="pp"><span class="price">${money(p.precio)}</span><span class="tag ${st<=0?"bad":low?"warn":""}">${st<=0?"Agotado":`${left} disp.`}</span></div></div>
+          </button>
+          ${inC?`<span class="badge num">${inC}</span><button class="icon-btn" type="button" data-minus="${p.id}" aria-label="Quitar uno" style="position:absolute;top:8px;left:8px;width:32px;height:32px;border-radius:999px">${ic("minus","sm")}</button>`:""}
+        </div>`;
+      }).join("");
+    }
+    // carrito
+    const {sub, units} = cartTotals();
+    const cart=$("#pos-cart");
+    const lines = UI.cart.map(l=>{ const p=S.productos[l.pid]; if(!p) return ""; return `<div class="cline"><div><div class="nm">${esc(p.nombre)}</div><div class="sub num">${money(p.precio)} c/u</div></div><div class="tot">${money(p.precio*l.qty)}</div>
+      <div class="stepper"><button type="button" data-dec="${p.id}" aria-label="Menos">${ic("minus","sm")}</button><span class="q">${l.qty}</span><button type="button" data-inc="${p.id}" aria-label="Más">${ic("plus","sm")}</button></div>
+      <div style="text-align:right"><button class="btn ghost sm" type="button" data-rm="${p.id}" aria-label="Quitar">${ic("trash","sm")}</button></div></div>`; }).join("");
+    cart.innerHTML = `<div class="cart-h"><h2>Venta actual</h2><span class="tag">${esc(SESSION.nombre)}</span><div class="spacer"></div>
+      ${UI.cart.length?`<button class="btn ghost sm" type="button" data-clear>Vaciar</button>`:""}<button class="icon-btn cart-close" type="button" data-closecart aria-label="Cerrar carrito">${ic("x")}</button></div>
+      <div class="cart-lines">${lines || `<div class="cart-empty">${ic("cart","lg")}<span>Toca un producto para agregarlo a la venta.</span></div>`}</div>
+      <div class="score"><div class="score-row"><span>${units} ${units===1?"unidad":"unidades"}</span><span>Subtotal ${money(sub)}</span></div>
+        <div class="score-total"><span>Total</span><b>${money(sub)}</b></div>
+        <button class="btn lime xl block" type="button" data-checkout ${UI.cart.length?"":"disabled"}>${ic("wallet")}Cobrar</button></div>`;
+    syncCartSheet();
+    const bar=$("#cartbar");
+    bar.hidden = !UI.cart.length;
+    bar.innerHTML = `<span class="cnt num">${units}</span><span>Ver venta</span><span class="amt">${money(sub)}</span>`;
+    $("#pos-main").classList.toggle("has-bar", !!UI.cart.length);
+  }
+};
+
+/* ---------- cobro ---------- */
+function allocDiscount(lines, desc){
+  const subT=sum(lines,l=>l.subtotal);
+  if(!desc || !subT) return lines.map(()=>0);
+  const raw=lines.map(l=>desc*l.subtotal/subT);
+  const out=raw.map(Math.floor); let rem=desc-sum(out);
+  raw.map((v,i)=>[v-Math.floor(v),i]).sort((a,b)=>b[0]-a[0]).forEach(([,i])=>{ if(rem>0){ out[i]++; rem--; } });
+  return out;
+}
+function openCheckout(){
+  if(!UI.cart.length) return;
+  if(!writeGuard()) return;
+  const vend = S.config.vendedores||[];
+  const CO = {id:"V-"+rnd(6), descTipo:"monto", metodo:"efectivo", busy:false, vendedor: SESSION.role==="vendedor" ? SESSION.nombre : (vend.includes(SESSION.nombre)?SESSION.nombre:SESSION.nombre)};
+  UI.cartOpen=false; syncCartSheet();
+  const vendOpts=[...new Set([SESSION.nombre, ...vend])];
+  const el=openModal({title:"Cobrar venta", body:`
+    <div class="big-total"><span>Total a cobrar</span><b id="co-total">$0,00</b></div>
+    <div class="mini-lines" id="co-lines"></div>
+    <div><div class="label" style="margin-bottom:8px">Forma de pago</div>
+      <div class="paygrid">${[["efectivo","cash"],["transferencia","transfer"],["tarjeta","card"],["mixto","split"]].map(([k,i])=>`<button class="paybtn" type="button" data-pay="${k}" aria-pressed="${k==="efectivo"}">${ic(i,"lg")}${MLABEL[k]}</button>`).join("")}</div></div>
+    <div id="co-efectivo" class="stack">
+      <label class="field"><span>Dinero recibido (opcional, para calcular el vuelto)</span><div class="input-wrap"><span class="pre">$</span><input class="input num" id="co-recibido" inputmode="decimal" autocomplete="off" placeholder="0,00"></div></label>
+      <div class="quick" id="co-quick"></div>
+      <div class="change" id="co-change" hidden><span>Vuelto</span><b>$0,00</b></div>
+    </div>
+    <div id="co-mixto" class="stack" hidden>
+      <div class="grid3">${METODOS.map(m=>`<label class="field"><span>${MLABEL[m]}</span><div class="input-wrap"><span class="pre">$</span><input class="input num" data-mix="${m}" inputmode="decimal" autocomplete="off" placeholder="0,00"></div></label>`).join("")}</div>
+      <div class="infobox" id="co-mixinfo"></div>
+    </div>
+    <details id="co-more"><summary class="label" style="cursor:pointer;padding:6px 0">Descuento, vendedor y nota</summary>
+      <div class="stack" style="margin-top:10px">
+        <div class="grid2"><label class="field"><span>Descuento</span><div class="row-flex" style="flex-wrap:nowrap"><input class="input num" id="co-desc" inputmode="decimal" autocomplete="off" placeholder="0"><div class="seg" style="flex:none"><button type="button" data-dt="monto" aria-pressed="true">$</button><button type="button" data-dt="pct" aria-pressed="false">%</button></div></div></label>
+        <label class="field"><span>Vendedor responsable</span><select class="input" id="co-vend" ${SESSION.role==="vendedor"?"disabled":""}>${vendOpts.map(n=>`<option ${n===CO.vendedor?"selected":""}>${esc(n)}</option>`).join("")}</select></label></div>
+        <label class="field"><span>Observaciones</span><input class="input" id="co-obs" autocomplete="off" maxlength="200" placeholder="Opcional"></label>
+      </div></details>
+    <div class="err-msg" id="co-err" role="alert"></div>`,
+    foot:`<button class="btn" type="button" data-close>Volver</button><button class="btn primary xl" type="button" id="co-ok">${ic("check")}Confirmar venta</button>`});
+  const get = () => {
+    const lines=UI.cart.map(l=>{ const p=S.productos[l.pid]; return {p, qty:l.qty, subtotal:p.precio*l.qty}; }).filter(l=>l.p);
+    const subT=sum(lines,l=>l.subtotal);
+    const dv=el.querySelector("#co-desc").value.trim();
+    let desc=0, err="";
+    if(dv){ if(CO.descTipo==="pct"){ const n=Number(dv.replace(",",".")); if(!isFinite(n)||n<0||n>100) err="El descuento debe estar entre 0 y 100 %."; else desc=Math.round(subT*n/100); }
+      else { const c=parseMoney(dv); if(c==null) err="Escribe el descuento como número, por ejemplo 0,50."; else if(c>subT) err="El descuento no puede ser mayor que el subtotal."; else desc=c; } }
+    return {lines, subT, desc, total:subT-desc, err};
+  };
+  const refresh = () => {
+    const g=get();
+    el.querySelector("#co-total").textContent=money(g.total);
+    el.querySelector("#co-lines").innerHTML=g.lines.map(l=>`<div class="ml"><span>${l.qty} × ${esc(l.p.nombre)}</span><b class="num">${money(l.subtotal)}</b></div>`).join("") + (g.desc?`<div class="ml"><span>Descuento</span><b class="num" style="color:var(--bad)">${money(-g.desc)}</b></div>`:"");
+    el.querySelectorAll("[data-pay]").forEach(b=>b.setAttribute("aria-pressed", b.dataset.pay===CO.metodo));
+    el.querySelector("#co-efectivo").hidden = CO.metodo!=="efectivo";
+    el.querySelector("#co-mixto").hidden = CO.metodo!=="mixto";
+    const qs=[g.total, ...[100,500,1000,2000].filter(v=>v>g.total)].slice(0,4);
+    el.querySelector("#co-quick").innerHTML = qs.map((v,i)=>`<button class="btn sm" type="button" data-q="${v}">${i===0?"Exacto":money(v)}</button>`).join("");
+    const rec=parseMoney(el.querySelector("#co-recibido").value);
+    const chg=el.querySelector("#co-change");
+    chg.hidden = rec==null;
+    if(rec!=null){ const v=rec-g.total; chg.querySelector("b").textContent = v>=0?money(v):"Falta "+money(-v); chg.style.background = v>=0?"":"var(--bad-soft)"; }
+    if(CO.metodo==="mixto"){ const ms=sum(METODOS,m=>parseMoney(el.querySelector(`[data-mix="${m}"]`).value)||0); const d=g.total-ms;
+      el.querySelector("#co-mixinfo").innerHTML = `${ic("split","sm")}<span>${d===0?"Los montos cuadran con el total.":d>0?`Falta asignar ${money(d)}.`:`Te pasaste por ${money(-d)}.`}</span>`; }
+    el.querySelector("#co-err").textContent = g.err;
+  };
+  el.addEventListener("input", refresh);
+  el.addEventListener("click", e=>{
+    const p=e.target.closest("[data-pay]"); if(p){ CO.metodo=p.dataset.pay; refresh(); return; }
+    const d=e.target.closest("[data-dt]"); if(d){ CO.descTipo=d.dataset.dt; el.querySelectorAll("[data-dt]").forEach(b=>b.setAttribute("aria-pressed",b===d)); refresh(); return; }
+    const q=e.target.closest("[data-q]"); if(q){ el.querySelector("#co-recibido").value=(Number(q.dataset.q)/100).toFixed(2).replace(".",","); refresh(); }
+  });
+  el.querySelector("#co-ok").addEventListener("click", ()=>confirmSale(CO, el, get));
+  MODAL.refresh = refresh;
+  refresh();
+}
+async function confirmSale(CO, el, get){
+  if(CO.busy) return;
+  const err=m=>{ el.querySelector("#co-err").textContent=m; };
+  const g=get();
+  if(g.err) return err(g.err);
+  if(!g.lines.length) return err("El carrito está vacío.");
+  const st=D().stock;
+  for(const l of g.lines){ if(l.p.activo===false) return err(`${l.p.nombre} fue desactivado.`); if(l.qty>(st[l.p.id]||0)) return err(`Solo quedan ${st[l.p.id]||0} unidades de ${l.p.nombre}. Ajusta la cantidad.`); }
+  let pagos={efectivo:0,transferencia:0,tarjeta:0}, recibido=null, vuelto=null;
+  if(CO.metodo==="mixto"){
+    for(const m of METODOS){ const v=el.querySelector(`[data-mix="${m}"]`).value.trim(); if(v){ const c=parseMoney(v); if(c==null) return err(`Revisa el monto de ${MLABEL[m].toLowerCase()}.`); pagos[m]=c; } }
+    if(sum(METODOS,m=>pagos[m])!==g.total) return err("En el pago mixto, la suma de los montos debe ser igual al total.");
+    if(METODOS.filter(m=>pagos[m]>0).length<2) return err("Un pago mixto necesita al menos dos formas de pago. Si es una sola, elige esa opción.");
+  } else {
+    pagos[CO.metodo]=g.total;
+    if(CO.metodo==="efectivo"){ const r=el.querySelector("#co-recibido").value.trim(); if(r){ recibido=parseMoney(r); if(recibido==null) return err("Revisa el dinero recibido."); if(recibido<g.total) return err("El dinero recibido es menor que el total."); vuelto=recibido-g.total; } }
+  }
+  CO.busy=true; const btn=el.querySelector("#co-ok"); btn.disabled=true; btn.innerHTML="Guardando…";
+  const descs=allocDiscount(g.lines, g.desc);
+  const items=g.lines.map((l,i)=>({productoId:l.p.id, codigo:l.p.codigo, nombre:l.p.nombre, categoria:l.p.categoria||"", cantidad:l.qty, precio:l.p.precio, costo:l.p.costo, subtotal:l.subtotal, desc:descs[i], neto:l.subtotal-descs[i]}));
+  const vsel=el.querySelector("#co-vend");
+  const sale={id:CO.id, codigo:CO.id, ts:Date.now(), vendedor: SESSION.role==="vendedor"?SESSION.nombre:(vsel?vsel.value:SESSION.nombre), registradoPor:SESSION.nombre,
+    items, subtotal:g.subT, descuento:g.desc, total:g.total, metodo:CO.metodo, pagos, recibido, vuelto, obs:el.querySelector("#co-obs").value.trim(),
+    estado:"completada", devoluciones:[], anulacion:null, cajaId:(cajaAbierta()||{}).id||null};
+  try{ await put("ventas", sale); }
+  catch(e){ CO.busy=false; btn.disabled=false; btn.innerHTML=`${ic("check")}Confirmar venta`; return err("No se guardó la venta. Inténtalo de nuevo; no se cobrará dos veces."); }
+  UI.cart=[]; closeModal(true); scheduleRender(); showSuccess(sale);
+}
+function showSuccess(s){
+  const w=document.createElement("div"); w.className="success"; w.setAttribute("role","status");
+  w.innerHTML=`<div class="success-card"><div class="success-check">${ic("check")}</div><h2>Venta registrada</h2><div class="amt">${money(s.total)}</div>
+    <div class="code">${esc(s.codigo)} · ${esc(MLABEL[s.metodo])}${s.vuelto!=null?` · Vuelto ${money(s.vuelto)}`:""}</div>
+    <button class="btn lime xl block" type="button" style="margin-top:10px">Nueva venta</button></div>`;
+  document.body.appendChild(w);
+  const close=()=>{ w.remove(); const q=$("#pos-q"); if(q && window.matchMedia("(min-width:901px)").matches) q.focus(); };
+  w.querySelector("button").onclick=close; w.addEventListener("click",e=>{ if(e.target===w) close(); });
+  setTimeout(()=>{ if(document.body.contains(w)) close(); }, s.vuelto!=null?6000:2600);
+}
+
+/* =========================================================
+   PRODUCTOS
+   ========================================================= */
+VIEW_FN.productos = {
+  mount(){
+    return `<div class="section-h"><h2>Catálogo de la feria</h2><span class="tag" id="pr-count"></span><div class="spacer"></div>
+      ${isAdmin()?`<button class="btn" type="button" id="pr-mov">${ic("inbox")}Entrada de mercadería</button><button class="btn primary" type="button" id="pr-new">${ic("plus")}Nuevo producto</button>`:""}</div>
+      <div class="toolbar"><div class="search">${ic("search")}<input class="input" id="pr-q" type="search" placeholder="Buscar por nombre o código" value="${esc(UI.prodQ)}" autocomplete="off"></div>
+      <select class="input" id="pr-cat" aria-label="Categoría"></select>
+      <select class="input" id="pr-est" aria-label="Estado"><option value="activos">Activos</option><option value="inactivos">Desactivados</option><option value="todos">Todos</option></select></div>
+      <div id="pr-list"></div>`;
+  },
+  bind(){
+    $("#pr-q").addEventListener("input",e=>{UI.prodQ=e.target.value; this.update();});
+    $("#pr-cat").addEventListener("change",e=>{UI.prodCat=e.target.value; this.update();});
+    const es=$("#pr-est"); es.value=UI.prodEstado; es.addEventListener("change",e=>{UI.prodEstado=e.target.value; this.update();});
+    if(isAdmin()){ $("#pr-new").onclick=()=>openProductForm(); $("#pr-mov").onclick=()=>openMovForm(); }
+    $("#pr-list").addEventListener("click",e=>{
+      const b=e.target.closest("[data-pe],[data-pin],[data-ptog]"); if(!b) return;
+      if(b.dataset.pe) openProductForm(S.productos[b.dataset.pe]);
+      else if(b.dataset.pin) openMovForm(b.dataset.pin);
+      else if(b.dataset.ptog) toggleProduct(b.dataset.ptog);
+    });
+  },
+  update(){
+    const {prods, stock}=D();
+    const cats=[...new Set(prods.map(p=>p.categoria).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+    const cs=$("#pr-cat"); const ch=`<option value="">Todas las categorías</option>`+cats.map(c=>`<option ${c===UI.prodCat?"selected":""}>${esc(c)}</option>`).join("");
+    if(cs.innerHTML!==ch){ cs.innerHTML=ch; cs.value=UI.prodCat; }
+    const q=UI.prodQ.trim().toLowerCase();
+    const list=prods.filter(p=>(UI.prodEstado==="todos" || (UI.prodEstado==="activos")===(p.activo!==false)) && (!UI.prodCat||p.categoria===UI.prodCat) && (!q||p.nombre.toLowerCase().includes(q)||String(p.codigo).toLowerCase().includes(q)));
+    $("#pr-count").textContent=`${prods.filter(p=>p.activo!==false).length} activos`;
+    const box=$("#pr-list");
+    if(!prods.length){ box.innerHTML=`<div class="empty"><div class="em-ico">${ic("pkg","lg")}</div><h3>Registra tu primer producto</h3><p>Escribe cuánto te cuesta cada unidad y a cuánto la vendes. La app calcula la ganancia y el margen.</p>${isAdmin()?`<button class="btn primary" type="button" data-act="newProduct">${ic("plus")}Nuevo producto</button>`:""}</div>`; return; }
+    if(!list.length){ box.innerHTML=`<div class="empty"><div class="em-ico">${ic("search","lg")}</div><h3>Sin resultados</h3><p>Cambia la búsqueda o los filtros.</p></div>`; return; }
+    box.innerHTML=`<div class="rlist"><div class="rhead cols-prod"><span></span><span>Producto</span><span class="r">Costo</span><span class="r">Precio</span><span class="r">Ganancia</span><span class="r">Stock</span><span></span></div>
+      ${list.map(p=>{ const g=p.precio-p.costo, m=p.precio>0?g/p.precio:0, st=stock[p.id]||0;
+        return `<div class="rrow cols-prod"><div class="thumb-cell">${prodThumb(p)}</div>
+        <div class="full"><div class="strong">${esc(p.nombre)} ${p.activo===false?'<span class="tag">Desactivado</span>':""}</div><div class="faint" style="font-size:12.5px">${esc(p.codigo)} · ${esc(p.categoria||"Sin categoría")}</div></div>
+        <div class="r"><span class="cell-l">Costo</span>${money(p.costo)}</div>
+        <div class="r strong"><span class="cell-l">Precio</span>${money(p.precio)}</div>
+        <div class="r"><span class="cell-l">Ganancia</span><span style="color:${g<0?"var(--bad)":"inherit"}">${money(g)}</span> <span class="faint">· ${pct(m)}</span></div>
+        <div class="r"><span class="cell-l">Stock</span><span class="tag ${st<=0?"bad":st<=(p.stockMin||0)?"warn":"ok"}">${st} uds</span></div>
+        <div class="actions">${isAdmin()?`<button class="btn sm" type="button" data-pin="${p.id}" title="Entrada o ajuste">${ic("inbox","sm")}Stock</button><button class="btn sm" type="button" data-pe="${p.id}">${ic("edit","sm")}Editar</button><button class="btn ghost sm" type="button" data-ptog="${p.id}" title="${p.activo===false?"Activar":"Desactivar"}">${ic(p.activo===false?"eye":"eyeoff","sm")}</button>`:""}</div></div>`; }).join("")}</div>`;
+  }
+};
+function nextProductCode(){
+  const nums=Object.values(S.productos).map(p=>parseInt(String(p.codigo).replace(/\D/g,""),10)).filter(n=>isFinite(n));
+  return "P-"+String((nums.length?Math.max(...nums):0)+1).padStart(3,"0");
+}
+async function resizeImage(file){
+  const url=await new Promise((res,rej)=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.onerror=rej; r.readAsDataURL(file); });
+  const img=await new Promise((res,rej)=>{ const i=new Image(); i.onload=()=>res(i); i.onerror=rej; i.src=url; });
+  const max=320, k=Math.min(1,max/Math.max(img.width,img.height));
+  const c=document.createElement("canvas"); c.width=Math.round(img.width*k); c.height=Math.round(img.height*k);
+  c.getContext("2d").drawImage(img,0,0,c.width,c.height);
+  return c.toDataURL("image/jpeg",0.78);
+}
+function openProductForm(p){
+  if(!isAdmin()||!writeGuard()) return;
+  const edit=!!p; let img=p?p.imagen||null:null;
+  const cats=[...new Set(Object.values(S.productos).map(x=>x.categoria).filter(Boolean))];
+  const m=v=>v==null?"":(v/100).toFixed(2).replace(".",",");
+  const el=openModal({title: edit?`Editar ${p.nombre}`:"Nuevo producto", body:`
+    <div class="row-flex"><span class="tag info">${esc(edit?p.codigo:nextProductCode())}</span><span class="faint" style="font-size:12.5px">Código automático</span></div>
+    <label class="field"><span>Nombre del producto</span><input class="input" id="pf-n" value="${esc(p?.nombre)}" maxlength="80" autocomplete="off" autofocus></label>
+    <label class="field"><span>Categoría</span><input class="input" id="pf-c" list="pf-cats" value="${esc(p?.categoria)}" maxlength="40" placeholder="Ej.: Bebidas, Snacks, Dulces" autocomplete="off"><datalist id="pf-cats">${cats.map(c=>`<option value="${esc(c)}">`).join("")}</datalist></label>
+    <div class="grid2 keep"><label class="field"><span>Costo unitario</span><div class="input-wrap"><span class="pre">$</span><input class="input num" id="pf-cost" inputmode="decimal" value="${m(p?.costo)}" placeholder="0,00" autocomplete="off"></div></label>
+    <label class="field"><span>Precio de venta</span><div class="input-wrap"><span class="pre">$</span><input class="input num" id="pf-price" inputmode="decimal" value="${m(p?.precio)}" placeholder="0,00" autocomplete="off"></div></label></div>
+    <div class="calc-preview"><div><span>Ganancia por unidad</span><b id="pf-g">$0,00</b></div><div><span>Margen de utilidad</span><b id="pf-m">0,0%</b></div></div>
+    <div class="warnbox" id="pf-warn" hidden>${ic("alert","sm")}<span>El precio de venta es menor que el costo: perderás dinero en cada unidad.</span></div>
+    <div class="grid2 keep"><label class="field"><span>Stock inicial</span><input class="input num" id="pf-st" inputmode="numeric" value="${p?p.stockInicial:""}" placeholder="0" autocomplete="off">${edit?`<small>Para reponer mercadería usa «Entrada».</small>`:""}</label>
+    <label class="field"><span>Stock mínimo (alerta)</span><input class="input num" id="pf-min" inputmode="numeric" value="${p?p.stockMin:"5"}" autocomplete="off"></label></div>
+    <div class="field"><span>Imagen (opcional)</span><div class="img-pick"><div class="thumb" id="pf-thumb">${img?`<img src="${esc(img)}" alt="">`:ic("image")}</div>
+      <label class="btn sm">${ic("upload","sm")}Elegir foto<input type="file" accept="image/*" id="pf-img" class="sr"></label><button class="btn ghost sm" type="button" id="pf-imgdel" ${img?"":"hidden"}>Quitar</button></div></div>
+    <div class="err-msg" id="pf-err"></div>`,
+    foot:`<button class="btn" type="button" data-close>Cancelar</button><button class="btn primary" type="button" id="pf-ok">${ic("check")}${edit?"Guardar cambios":"Registrar producto"}</button>`});
+  const calcP=()=>{ const c=parseMoney(el.querySelector("#pf-cost").value)||0, pr=parseMoney(el.querySelector("#pf-price").value)||0, g=pr-c;
+    el.querySelector("#pf-g").textContent=money(g); el.querySelector("#pf-m").textContent=pct(pr>0?g/pr:0);
+    el.querySelector("#pf-warn").hidden=!(pr>0 && pr<c); };
+  el.addEventListener("input",calcP); calcP();
+  el.querySelector("#pf-img").addEventListener("change", async e=>{ const f=e.target.files[0]; if(!f) return; try{ img=await resizeImage(f); el.querySelector("#pf-thumb").innerHTML=`<img src="${img}" alt="">`; el.querySelector("#pf-imgdel").hidden=false; }catch(x){ el.querySelector("#pf-err").textContent="No se pudo leer esa imagen."; } });
+  el.querySelector("#pf-imgdel").onclick=()=>{ img=null; el.querySelector("#pf-thumb").innerHTML=ic("image"); el.querySelector("#pf-imgdel").hidden=true; };
+  let busy=false;
+  el.querySelector("#pf-ok").onclick=async()=>{
+    if(busy) return;
+    const E=el.querySelector("#pf-err"), nombre=el.querySelector("#pf-n").value.trim(), categoria=el.querySelector("#pf-c").value.trim();
+    const costo=parseMoney(el.querySelector("#pf-cost").value), precio=parseMoney(el.querySelector("#pf-price").value);
+    const sti=parseIntSafe(el.querySelector("#pf-st").value||"0"), smin=parseIntSafe(el.querySelector("#pf-min").value||"0");
+    if(!nombre) return E.textContent="Escribe el nombre del producto.";
+    if(Object.values(S.productos).some(x=>x.id!==p?.id && x.nombre.trim().toLowerCase()===nombre.toLowerCase())) return E.textContent="Ya existe un producto con ese nombre.";
+    if(costo==null) return E.textContent="Escribe el costo unitario, por ejemplo 0,35.";
+    if(precio==null||precio<=0) return E.textContent="Escribe un precio de venta mayor que cero.";
+    if(sti==null||sti<0) return E.textContent="El stock inicial debe ser un número entero, 0 o más.";
+    if(smin==null||smin<0) return E.textContent="El stock mínimo debe ser un número entero, 0 o más.";
+    if(edit){ const r=D().inv[p.id]; if(r && sti+r.ent+r.aj-r.vend<0) return E.textContent=`Con ese stock inicial el inventario quedaría negativo (ya se vendieron ${r.vend}).`; }
+    busy=true;
+    const doc = edit ? {...p, nombre, categoria, costo, precio, stockInicial:sti, stockMin:smin, imagen:img, actualizado:Date.now()}
+      : {id:uid("P"), codigo:nextProductCode(), nombre, categoria, costo, precio, stockInicial:sti, stockMin:smin, imagen:img, activo:true, creado:Date.now(), creadoPor:SESSION.nombre};
+    try{
+      await put("productos", doc);
+      const cambios = edit ? [p.costo!==costo&&`costo ${money(p.costo)}→${money(costo)}`, p.precio!==precio&&`precio ${money(p.precio)}→${money(precio)}`, p.stockInicial!==sti&&`stock inicial ${p.stockInicial}→${sti}`, p.nombre!==nombre&&`nombre «${p.nombre}»→«${nombre}»`].filter(Boolean).join("; ") : "";
+      audit(edit?"Producto editado":"Producto creado", `${doc.codigo} ${nombre}`, edit?(cambios||"datos generales"):`Costo ${money(costo)}, precio ${money(precio)}`, edit?"":sti, edit?"":"uds");
+      closeModal(true); toast(edit?"Producto actualizado.":`${nombre} registrado con ${sti} unidades.`);
+    }catch(x){ busy=false; E.textContent="No se pudo guardar el producto."; }
+  };
+}
+async function toggleProduct(id){
+  const p=S.productos[id]; if(!p||!writeGuard()) return;
+  const act=p.activo===false;
+  try{ await put("productos",{...p, activo:act, actualizado:Date.now()}); audit(act?"Producto activado":"Producto desactivado", `${p.codigo} ${p.nombre}`, "", "");
+    toast(act?`${p.nombre} vuelve a estar a la venta.`:`${p.nombre} ya no aparece en el punto de venta.`,{action:{label:"Deshacer",fn:()=>toggleProduct(id)}}); }catch(e){}
+}
+function openMovForm(pid){
+  if(!isAdmin()||!writeGuard()) return;
+  const {prods,stock}=D(); const act=prods.filter(p=>p.activo!==false || p.id===pid);
+  if(!act.length){ toast("Primero registra un producto.",{type:"err"}); return; }
+  let tipo="entrada", signo=1;
+  const el=openModal({title:"Movimiento de inventario", body:`
+    <div class="seg" id="mv-tipo"><button type="button" data-t="entrada" aria-pressed="true">${ic("inbox","sm")}Entrada de mercadería</button><button type="button" data-t="ajuste" aria-pressed="false">${ic("scale","sm")}Ajuste</button></div>
+    <label class="field"><span>Producto</span><select class="input" id="mv-p">${act.map(p=>`<option value="${p.id}" ${p.id===pid?"selected":""}>${esc(p.nombre)} · ${stock[p.id]||0} uds</option>`).join("")}</select></label>
+    <div id="mv-signo" hidden><div class="seg"><button type="button" data-s="1" aria-pressed="true">Sumar unidades</button><button type="button" data-s="-1" aria-pressed="false">Restar unidades</button></div></div>
+    <div class="grid2 keep"><label class="field"><span>Cantidad</span><input class="input num" id="mv-q" inputmode="numeric" placeholder="0" autocomplete="off" autofocus></label>
+    <label class="field"><span>Fecha y hora</span><input class="input" id="mv-f" type="datetime-local" value="${localInputNow()}"></label></div>
+    <label class="field"><span id="mv-ml">Motivo o proveedor (opcional)</span><input class="input" id="mv-m" maxlength="140" autocomplete="off" placeholder="Ej.: compra en mayorista"></label>
+    <div class="infobox" id="mv-prev"></div><div class="err-msg" id="mv-err"></div>`,
+    foot:`<button class="btn" type="button" data-close>Cancelar</button><button class="btn primary" type="button" id="mv-ok">${ic("check")}Registrar</button>`});
+  const prev=()=>{ const p=S.productos[el.querySelector("#mv-p").value]; const q=parseIntSafe(el.querySelector("#mv-q").value)||0; const cur=D().stock[p.id]||0; const nv=cur+(tipo==="entrada"?q:signo*q);
+    el.querySelector("#mv-prev").innerHTML=`${ic("inv","sm")}<span>Stock actual <b>${cur}</b> → quedará en <b>${nv}</b> unidades.</span>`;
+    el.querySelector("#mv-signo").hidden=tipo!=="ajuste"; el.querySelector("#mv-ml").textContent= tipo==="ajuste"?"Motivo del ajuste (obligatorio)":"Motivo o proveedor (opcional)";
+    el.querySelector("#mv-m").placeholder = tipo==="ajuste"?"Ej.: producto dañado, conteo físico":"Ej.: compra en mayorista"; };
+  el.addEventListener("input",prev); el.addEventListener("change",prev);
+  el.addEventListener("click",e=>{ const t=e.target.closest("[data-t]"); if(t){ tipo=t.dataset.t; el.querySelectorAll("[data-t]").forEach(b=>b.setAttribute("aria-pressed",b===t)); prev(); }
+    const s=e.target.closest("[data-s]"); if(s){ signo=Number(s.dataset.s); el.querySelectorAll("[data-s]").forEach(b=>b.setAttribute("aria-pressed",b===s)); prev(); } });
+  prev();
+  let busy=false;
+  el.querySelector("#mv-ok").onclick=async()=>{
+    if(busy) return; const E=el.querySelector("#mv-err");
+    const p=S.productos[el.querySelector("#mv-p").value]; const q=parseIntSafe(el.querySelector("#mv-q").value); const motivo=el.querySelector("#mv-m").value.trim();
+    const ts=parseLocalInput(el.querySelector("#mv-f").value)||Date.now();
+    if(q==null||q<=0) return E.textContent="Escribe una cantidad entera mayor que cero.";
+    if(tipo==="ajuste" && !motivo) return E.textContent="Indica el motivo del ajuste.";
+    const cant = tipo==="entrada"?q:signo*q;
+    if((D().stock[p.id]||0)+cant<0) return E.textContent="El ajuste dejaría el stock en negativo.";
+    busy=true;
+    try{ await put("movimientos",{id:uid("M"), tipo, productoId:p.id, codigo:p.codigo, nombre:p.nombre, cantidad:cant, motivo, ts, registrado:Date.now(), usuario:SESSION.nombre});
+      closeModal(true); toast(tipo==="entrada"?`Entraron ${q} unidades de ${p.nombre}.`:`Ajuste registrado en ${p.nombre}.`); }
+    catch(x){ busy=false; E.textContent="No se pudo registrar el movimiento."; }
+  };
+}
+
+/* =========================================================
+   INVENTARIO
+   ========================================================= */
+VIEW_FN.inventario = {
+  mount(){ return `<div class="section-h"><h2>Inventario inteligente</h2><div class="spacer"></div><button class="btn primary" type="button" data-act="movForm">${ic("inbox")}Entrada o ajuste</button></div>
+    <div class="kpis" id="iv-k"></div><div style="height:14px"></div><div id="iv-alert"></div><div id="iv-t"></div>
+    <div class="section-h" style="margin-top:26px"><h2>Historial de movimientos</h2><span class="faint" style="font-size:13px">Entradas, ajustes, ventas, devoluciones y anulaciones</span></div><div id="iv-m"></div>`; },
+  update(){
+    const {prods, inv, stock}=D();
+    const c=calc({});
+    $("#iv-k").innerHTML=[
+      ["Unidades disponibles", intf(c.invUnits), "productos activos","hero"],
+      ["Valor a costo", money(c.invValue), "dinero invertido en stock",""],
+      ["Unidades vendidas", intf(sum(prods,p=>inv[p.id].vend)), "netas de devoluciones",""],
+      ["Alertas de stock", intf(c.lowStock.length), c.lowStock.length?"productos en o bajo el mínimo":"todo en orden", c.lowStock.length?"neg":""]
+    ].map(([l,v,s,k])=>`<div class="kpi ${k}"><div class="k-l">${esc(l)}</div><div class="k-v">${v}</div><div class="k-s">${esc(s)}</div></div>`).join("");
+    $("#iv-alert").innerHTML = c.lowStock.length ? `<div class="warnbox" style="margin-bottom:14px">${ic("alert","sm")}<span>Stock bajo: ${c.lowStock.map(p=>`${esc(p.nombre)} (${stock[p.id]})`).join(", ")}.</span></div>` : "";
+    if(!prods.length){ $("#iv-t").innerHTML=`<div class="empty"><div class="em-ico">${ic("inv","lg")}</div><h3>Sin productos en inventario</h3><p>Cuando registres productos verás aquí sus existencias y movimientos.</p></div>`; $("#iv-m").innerHTML=""; return; }
+    $("#iv-t").innerHTML=`<div class="rlist"><div class="rhead cols-inv"><span>Producto</span><span class="r">Inicial</span><span class="r">Entradas</span><span class="r">Vendidas</span><span class="r">Ajustes</span><span class="r">Actual</span><span class="r">Valor costo</span><span class="r">Estado</span></div>
+      ${prods.map(p=>{ const r=inv[p.id]; const st=r.act; return `<div class="rrow cols-inv"><div class="full"><div class="strong">${esc(p.nombre)}</div><div class="faint" style="font-size:12.5px">${esc(p.codigo)}${p.activo===false?" · desactivado":""}</div></div>
+      <div class="r"><span class="cell-l">Inicial</span>${r.ini}</div><div class="r"><span class="cell-l">Entradas</span>${r.ent}</div><div class="r"><span class="cell-l">Vendidas</span>${r.vend}</div>
+      <div class="r"><span class="cell-l">Ajustes</span>${r.aj>0?"+":""}${r.aj}</div><div class="r strong"><span class="cell-l">Actual</span>${st}</div><div class="r"><span class="cell-l">Valor costo</span>${money(Math.max(0,st)*p.costo)}</div>
+      <div class="r"><span class="tag ${st<=0?"bad":st<=(p.stockMin||0)?"warn":"ok"}">${st<=0?"Agotado":st<=(p.stockMin||0)?"Stock bajo":"Disponible"}</span></div></div>`; }).join("")}</div>`;
+    const movs=invMovements().slice(0,150);
+    $("#iv-m").innerHTML = movs.length ? `<div class="rlist"><div class="rhead cols-mov"><span>Fecha</span><span>Tipo</span><span>Producto</span><span class="r">Cantidad</span><span>Motivo / referencia</span><span>Usuario</span></div>
+      ${movs.map(m=>`<div class="rrow cols-mov"><div class="num">${fDT(m.ts)}</div><div><span class="tag ${m.k}">${esc(m.tipo)}</span></div><div class="full strong">${esc(m.prod)}</div><div class="r strong num"><span class="cell-l">Cantidad</span>${m.q>0?"+":""}${m.q}</div><div class="faint">${esc(m.ref)}</div><div>${esc(m.user)}</div></div>`).join("")}</div>`
+      : `<div class="empty"><p>Todavía no hay movimientos.</p></div>`;
+  }
+};
+function invMovements(){
+  const out=[];
+  for(const p of Object.values(S.productos)) out.push({ts:p.creado||0, tipo:"Stock inicial", k:"info", prod:p.nombre, q:p.stockInicial||0, ref:p.codigo, user:p.creadoPor||""});
+  for(const m of Object.values(S.movimientos)) out.push({ts:m.ts, tipo:m.tipo==="entrada"?"Entrada":"Ajuste", k:m.tipo==="entrada"?"ok":"warn", prod:m.nombre, q:m.cantidad, ref:m.motivo||"", user:m.usuario});
+  for(const s of Object.values(S.ventas)){
+    s.items.forEach(it=>out.push({ts:s.ts, tipo:"Venta", k:"", prod:it.nombre, q:-it.cantidad, ref:s.codigo, user:s.vendedor}));
+    for(const d of (s.devoluciones||[])) d.lineas.forEach(l=>out.push({ts:d.ts, tipo:"Devolución", k:"warn", prod:s.items[l.idx].nombre, q:l.cantidad, ref:`${s.codigo} · ${d.motivo}`, user:d.usuario}));
+    if(s.estado==="anulada" && s.anulacion){ s.items.forEach((it,i)=>{ const q=it.cantidad-returnedQty(s,i); if(q) out.push({ts:s.anulacion.ts, tipo:"Anulación", k:"bad", prod:it.nombre, q, ref:`${s.codigo} · ${s.anulacion.motivo}`, user:s.anulacion.usuario}); }); }
+  }
+  return out.sort((a,b)=>b.ts-a.ts);
+}
+
+/* =========================================================
+   HISTORIAL DE VENTAS
+   ========================================================= */
+VIEW_FN.ventas = {
+  mount(){
+    const vend=[...new Set(Object.values(S.ventas).map(s=>s.vendedor))].sort();
+    return `<div class="section-h"><h2>Ventas registradas</h2><span class="tag" id="vt-count"></span><div class="spacer"></div><span class="faint" style="font-size:13px" id="vt-sum"></span></div>
+      <div class="toolbar"><div class="search">${ic("search")}<input class="input" id="vt-q" type="search" placeholder="Buscar por código o producto" value="${esc(UI.ventaQ)}" autocomplete="off"></div>
+      <input class="input" type="date" id="vt-d" value="${esc(UI.ventaDia)}" aria-label="Día" style="width:auto">
+      <select class="input" id="vt-e" aria-label="Estado"><option value="">Todos los estados</option>${["Completada","Devolución parcial","Devuelta","Anulada"].map(x=>`<option ${UI.ventaEstado===x?"selected":""}>${x}</option>`).join("")}</select>
+      <select class="input" id="vt-m" aria-label="Forma de pago"><option value="">Todas las formas de pago</option>${Object.entries(MLABEL).map(([k,v])=>`<option value="${k}" ${UI.ventaMetodo===k?"selected":""}>${v}</option>`).join("")}</select>
+      <select class="input" id="vt-v" aria-label="Vendedor"><option value="">Todos los vendedores</option>${vend.map(v=>`<option ${UI.ventaVend===v?"selected":""}>${esc(v)}</option>`).join("")}</select></div>
+      <div id="vt-list"></div>`;
+  },
+  bind(){
+    $("#vt-q").addEventListener("input",e=>{UI.ventaQ=e.target.value;this.update();});
+    $("#vt-d").addEventListener("change",e=>{UI.ventaDia=e.target.value;this.update();});
+    $("#vt-e").addEventListener("change",e=>{UI.ventaEstado=e.target.value;this.update();});
+    $("#vt-m").addEventListener("change",e=>{UI.ventaMetodo=e.target.value;this.update();});
+    $("#vt-v").addEventListener("change",e=>{UI.ventaVend=e.target.value;this.update();});
+    $("#vt-list").addEventListener("click",e=>{ const r=e.target.closest("[data-sale]"); if(r) openSale(r.dataset.sale); });
+  },
+  update(){
+    const q=UI.ventaQ.trim().toLowerCase();
+    const all=Object.values(S.ventas).sort((a,b)=>b.ts-a.ts);
+    const list=all.filter(s=>(!q || s.codigo.toLowerCase().includes(q) || s.items.some(i=>i.nombre.toLowerCase().includes(q))) && (!UI.ventaDia||dayKey(s.ts)===UI.ventaDia) && (!UI.ventaEstado||estadoVenta(s)===UI.ventaEstado) && (!UI.ventaMetodo||s.metodo===UI.ventaMetodo) && (!UI.ventaVend||s.vendedor===UI.ventaVend));
+    $("#vt-count").textContent=`${list.length} de ${all.length}`;
+    $("#vt-sum").textContent= list.length ? `Neto mostrado: ${money(sum(list,saleNet))}` : "";
+    const box=$("#vt-list");
+    if(!all.length){ box.innerHTML=`<div class="empty"><div class="em-ico">${ic("receipt","lg")}</div><h3>Aún no hay ventas</h3><p>Cada venta confirmada en el punto de venta aparece aquí con su código, productos y forma de pago.</p><button class="btn primary" type="button" data-go="vender">${ic("cart")}Ir a vender</button></div>`; return; }
+    if(!list.length){ box.innerHTML=`<div class="empty"><div class="em-ico">${ic("search","lg")}</div><h3>Sin resultados</h3><p>Ninguna venta coincide con los filtros.</p></div>`; return; }
+    box.innerHTML=`<div class="rlist"><div class="rhead cols-ventas"><span>Código</span><span>Fecha</span><span>Productos</span><span class="r">Total</span><span>Pago</span><span>Vendedor</span><span>Estado</span></div>
+      ${list.slice(0,300).map(s=>{ const e=estadoVenta(s); return `<div class="rrow cols-ventas click" data-sale="${s.id}" tabindex="0" role="button">
+        <div class="strong">${esc(s.codigo)}</div><div class="num faint">${fDT(s.ts)}</div>
+        <div class="full">${esc(s.items.map(i=>`${i.cantidad}× ${i.nombre}`).join(", "))}</div>
+        <div class="r strong"><span class="cell-l">Total</span><span style="${e==="Anulada"?"text-decoration:line-through;color:var(--ink-3)":""}">${money(s.total)}</span></div>
+        <div><span class="tag info">${esc(MLABEL[s.metodo])}</span></div><div>${esc(s.vendedor)}</div><div><span class="tag ${estadoTag(e)}">${esc(e)}</span></div></div>`; }).join("")}</div>
+      ${list.length>300?`<p class="faint" style="font-size:13px">Se muestran las 300 más recientes. Usa los filtros o exporta a Excel para ver todas.</p>`:""}`;
+  }
+};
+document.addEventListener("keydown",e=>{ if(e.key==="Enter"){ const r=e.target.closest&&e.target.closest("[data-sale]"); if(r) openSale(r.dataset.sale); } });
+function openSale(id){
+  const s=S.ventas[id]; if(!s) return; const e=estadoVenta(s);
+  const canRet = isAdmin() && s.estado!=="anulada" && s.items.some((it,i)=>returnedQty(s,i)<it.cantidad);
+  openModal({title:`Venta ${s.codigo}`, wide:true, body:`
+    <div class="row-flex"><span class="tag ${estadoTag(e)}">${esc(e)}</span><span class="tag info">${esc(MLABEL[s.metodo])}</span><span class="faint num">${fDT(s.ts)}</span><span class="faint">· ${esc(s.vendedor)}</span></div>
+    <div class="mini-lines">${s.items.map((it,i)=>{ const rq=returnedQty(s,i); return `<div class="ml"><span><b>${it.cantidad}×</b> ${esc(it.nombre)} <span class="faint">a ${money(it.precio)}${it.desc?` · desc. ${money(it.desc)}`:""}${rq?` · devueltas ${rq}`:""}</span></span><b class="num">${money(it.neto)}</b></div>`; }).join("")}</div>
+    <div class="summary"><div class="sr-row"><span>Subtotal</span><b>${money(s.subtotal)}</b></div>${s.descuento?`<div class="sr-row"><span>Descuento</span><b>${money(-s.descuento)}</b></div>`:""}
+      <div class="sr-row total"><span>Total cobrado</span><b>${money(s.total)}</b></div>
+      ${METODOS.filter(m=>s.pagos[m]).map(m=>`<div class="sr-row"><span>${MLABEL[m]}</span><b>${money(s.pagos[m])}</b></div>`).join("")}
+      ${s.recibido!=null?`<div class="sr-row"><span>Recibido / vuelto</span><b>${money(s.recibido)} / ${money(s.vuelto)}</b></div>`:""}
+      ${isAdmin()?`<div class="sr-row"><span>Costo histórico</span><b>${money(sum(s.items,i=>i.costo*i.cantidad))}</b></div><div class="sr-row"><span>Ganancia de la venta</span><b>${money(s.total-sum(s.items,i=>i.costo*i.cantidad))}</b></div>`:""}</div>
+    ${s.obs?`<div class="infobox">${ic("edit","sm")}<span>${esc(s.obs)}</span></div>`:""}
+    ${(s.devoluciones||[]).map(d=>`<div class="warnbox">${ic("undo","sm")}<span>Devolución ${fDT(d.ts)} por ${esc(d.usuario)}: ${esc(d.lineas.map(l=>`${l.cantidad}× ${s.items[l.idx].nombre}`).join(", "))} — reembolso ${money(d.monto)} en ${esc(MLABEL[d.metodo].toLowerCase())}. Motivo: ${esc(d.motivo)}</span></div>`).join("")}
+    ${s.anulacion?`<div class="warnbox" style="background:var(--bad-soft);color:var(--bad)">${ic("ban","sm")}<span>Anulada el ${fDT(s.anulacion.ts)} por ${esc(s.anulacion.usuario)}. Motivo: ${esc(s.anulacion.motivo)}</span></div>`:""}`,
+    foot: isAdmin()&&s.estado!=="anulada" ? `${canRet?`<button class="btn" type="button" id="sd-ret">${ic("undo")}Devolución</button>`:""}<button class="btn danger-soft" type="button" id="sd-void">${ic("ban")}Anular venta</button>` : `<button class="btn" type="button" data-close>Cerrar</button>`,
+    onMount:el=>{
+      const r=el.querySelector("#sd-ret"); if(r) r.onclick=()=>openReturn(s.id);
+      const v=el.querySelector("#sd-void"); if(v) v.onclick=()=>voidSale(s.id);
+    }});
+}
+async function voidSale(id){
+  const s=S.ventas[id]; if(!s||!writeGuard()) return;
+  const motivo=await confirmDlg(`La venta ${s.codigo} quedará registrada como anulada. El stock de sus productos vuelve al inventario y su dinero deja de contarse en las ventas.`,{title:"Anular venta",ok:"Anular venta",danger:true,input:{label:"Motivo de la anulación",required:true,req:"Escribe el motivo de la anulación.",ph:"Ej.: cobro equivocado"}});
+  if(!motivo) return;
+  const cur=S.ventas[id]; if(cur.estado==="anulada") return;
+  try{ await put("ventas",{...cur, estado:"anulada", anulacion:{ts:Date.now(), usuario:SESSION.nombre, motivo}}); toast(`Venta ${s.codigo} anulada. El inventario se restituyó.`); openSale(id); }catch(e){}
+}
+function openReturn(id){
+  const s=S.ventas[id]; if(!s||!writeGuard()) return;
+  const lines=s.items.map((it,i)=>({i, it, max:it.cantidad-returnedQty(s,i)})).filter(l=>l.max>0);
+  const q={}; lines.forEach(l=>q[l.i]=0);
+  const defM = s.metodo==="mixto" ? "efectivo" : s.metodo;
+  const lineAmt=(l,c)=>{ if(!c) return 0; const remQ=l.max, remA=l.it.neto-returnedAmt(s,l.i); return c===remQ ? remA : Math.round(l.it.neto*c/l.it.cantidad); };
+  const el=openModal({title:`Devolución · ${s.codigo}`, body:`
+    <p class="muted" style="margin:0">Elige cuántas unidades devuelve el cliente. Regresan al inventario y el reembolso se resta de las ventas.</p>
+    <div class="mini-lines">${lines.map(l=>`<div class="ml" style="align-items:center"><span><b>${esc(l.it.nombre)}</b><br><span class="faint" style="font-size:12.5px">Puede devolver hasta ${l.max}</span></span>
+      <div class="stepper"><button type="button" data-rd="${l.i}">${ic("minus","sm")}</button><span class="q" id="rq-${l.i}">0</span><button type="button" data-ri="${l.i}">${ic("plus","sm")}</button></div></div>`).join("")}</div>
+    <label class="field"><span>Reembolso en</span><select class="input" id="rt-m">${METODOS.map(m=>`<option value="${m}" ${m===defM?"selected":""}>${MLABEL[m]}</option>`).join("")}</select></label>
+    <label class="field"><span>Motivo</span><input class="input" id="rt-mo" maxlength="140" placeholder="Ej.: producto en mal estado" autocomplete="off"></label>
+    <div class="big-total"><span>Reembolso</span><b id="rt-t">$0,00</b></div><div class="err-msg" id="rt-err"></div>`,
+    foot:`<button class="btn" type="button" data-close>Cancelar</button><button class="btn primary" type="button" id="rt-ok">${ic("check")}Registrar devolución</button>`});
+  const upd=()=>{ lines.forEach(l=>el.querySelector("#rq-"+l.i).textContent=q[l.i]); el.querySelector("#rt-t").textContent=money(sum(lines,l=>lineAmt(l,q[l.i]))); };
+  el.addEventListener("click",e=>{ const a=e.target.closest("[data-ri]"), b=e.target.closest("[data-rd]");
+    if(a){ const l=lines.find(x=>x.i==a.dataset.ri); q[l.i]=Math.min(l.max,q[l.i]+1); upd(); }
+    if(b){ const l=lines.find(x=>x.i==b.dataset.rd); q[l.i]=Math.max(0,q[l.i]-1); upd(); } });
+  let busy=false;
+  el.querySelector("#rt-ok").onclick=async()=>{
+    if(busy) return; const E=el.querySelector("#rt-err");
+    const sel=lines.filter(l=>q[l.i]>0); const motivo=el.querySelector("#rt-mo").value.trim();
+    if(!sel.length) return E.textContent="Elige al menos una unidad para devolver.";
+    if(!motivo) return E.textContent="Escribe el motivo de la devolución.";
+    busy=true;
+    const cur=S.ventas[id];
+    const dl=sel.map(l=>({idx:l.i, cantidad:q[l.i], monto:lineAmt(l,q[l.i])}));
+    const dev={id:uid("D"), ts:Date.now(), usuario:SESSION.nombre, motivo, metodo:el.querySelector("#rt-m").value, lineas:dl, monto:sum(dl,x=>x.monto)};
+    try{ await put("ventas",{...cur, devoluciones:[...(cur.devoluciones||[]), dev]}); toast(`Devolución registrada: ${money(dev.monto)}.`); openSale(id); }
+    catch(x){ busy=false; E.textContent="No se pudo registrar la devolución."; }
+  };
+}
+
+/* =========================================================
+   GASTOS
+   ========================================================= */
+VIEW_FN.gastos = {
+  mount(){ return `<div class="section-h"><h2>Gastos operativos</h2><div class="spacer"></div><button class="btn primary" type="button" data-act="newGasto">${ic("plus")}Registrar gasto</button></div>
+    <div class="infobox" style="margin-bottom:14px">${ic("scale","sm")}<span>Aquí van los gastos de la feria (decoración, transporte, empaques…). El costo de los productos vendidos se calcula solo desde cada venta, así no se cuenta dos veces.</span></div>
+    <div class="kpis" id="gs-k"></div><div class="dash-grid" id="gs-g"></div><div style="height:14px"></div><div id="gs-l"></div>`; },
+  update(){
+    const c=calc({}); const g=c.gastosList;
+    $("#gs-k").innerHTML=[["Gastos operativos",money(c.gastos),`${g.length} registros`,"hero"],["Costo de lo vendido",money(c.cmv),"se calcula con cada venta",""],["Utilidad bruta",money(c.bruta),"ventas − costo",c.bruta<0?"neg":""],["Utilidad neta",money(c.neta),"bruta − gastos",c.neta<0?"neg":""]]
+      .map(([l,v,s,k])=>`<div class="kpi ${k}"><div class="k-l">${esc(l)}</div><div class="k-v">${v}</div><div class="k-s">${esc(s)}</div></div>`).join("");
+    const byCat={}; g.forEach(x=>byCat[x.categoria]=(byCat[x.categoria]||0)+x.monto);
+    const cats=Object.entries(byCat).sort((a,b)=>b[1]-a[1]); const mx=cats.length?cats[0][1]:1;
+    $("#gs-g").innerHTML = cats.length ? `<div class="card span-6"><div class="card-h"><h3>Por categoría</h3></div><div class="hbars">${cats.map(([k,v])=>`<div class="hbar"><span class="nm">${esc(k)}</span><span class="vl">${money(v)}</span><div class="track"><div class="fill" style="width:${(v/mx*100).toFixed(1)}%"></div></div></div>`).join("")}</div></div>
+      <div class="card span-6">${breakEvenCard(c)}</div>` : "";
+    const all=Object.values(S.gastos).sort((a,b)=>b.ts-a.ts);
+    $("#gs-l").innerHTML = all.length ? `<div class="rlist"><div class="rhead cols-gas"><span>Fecha</span><span>Categoría</span><span>Descripción</span><span class="r">Monto</span><span>Responsable</span><span></span></div>
+      ${all.map(x=>`<div class="rrow cols-gas" ${x.estado==="anulado"?'style="opacity:.55"':""}><div class="num">${fD(x.ts)}</div><div><span class="tag">${esc(x.categoria)}</span></div><div class="full"><div class="strong">${esc(x.descripcion)}</div>${x.obs?`<div class="faint" style="font-size:12.5px">${esc(x.obs)}</div>`:""}${x.estado==="anulado"?`<div class="faint" style="font-size:12.5px">Anulado: ${esc(x.anulacion?.motivo||"")}</div>`:""}</div>
+        <div class="r strong"><span class="cell-l">Monto</span>${x.estado==="anulado"?`<s>${money(x.monto)}</s>`:money(x.monto)}</div><div>${esc(x.responsable)}</div>
+        <div class="actions">${x.estado!=="anulado"?`<button class="btn ghost sm" type="button" data-act="voidGasto" data-id="${x.id}">${ic("trash","sm")}Anular</button>`:""}</div></div>`).join("")}</div>`
+      : `<div class="empty"><div class="em-ico">${ic("down","lg")}</div><h3>Sin gastos registrados</h3><p>Registra lo que la feria gasta fuera de los productos para conocer la utilidad neta real.</p><button class="btn primary" type="button" data-act="newGasto">${ic("plus")}Registrar gasto</button></div>`;
+  }
+};
+function openGasto(){
+  if(!isAdmin()||!writeGuard()) return;
+  const el=openModal({title:"Registrar gasto", body:`
+    <div class="grid2 keep"><label class="field"><span>Fecha</span><input class="input" type="date" id="gx-f" value="${todayKey()}"></label>
+    <label class="field"><span>Monto</span><div class="input-wrap"><span class="pre">$</span><input class="input num" id="gx-m" inputmode="decimal" placeholder="0,00" autocomplete="off" autofocus></div></label></div>
+    <label class="field"><span>Categoría</span><select class="input" id="gx-c">${GASTO_CATS.map(c=>`<option>${c}</option>`).join("")}</select></label>
+    <label class="field"><span>Descripción</span><input class="input" id="gx-d" maxlength="120" placeholder="Ej.: globos y cinta para el stand" autocomplete="off"></label>
+    <label class="field"><span>Responsable</span><input class="input" id="gx-r" maxlength="60" value="${esc(SESSION.nombre)}" autocomplete="off"></label>
+    <label class="field"><span>Observaciones (opcional)</span><input class="input" id="gx-o" maxlength="160" autocomplete="off"></label>
+    <div class="err-msg" id="gx-err"></div>`,
+    foot:`<button class="btn" type="button" data-close>Cancelar</button><button class="btn primary" type="button" id="gx-ok">${ic("check")}Guardar gasto</button>`});
+  let busy=false;
+  el.querySelector("#gx-ok").onclick=async()=>{
+    if(busy) return; const E=el.querySelector("#gx-err");
+    const f=el.querySelector("#gx-f").value, m=parseMoney(el.querySelector("#gx-m").value), d=el.querySelector("#gx-d").value.trim(), r=el.querySelector("#gx-r").value.trim();
+    if(!f) return E.textContent="Elige la fecha del gasto.";
+    if(m==null||m<=0) return E.textContent="Escribe un monto mayor que cero.";
+    if(!d) return E.textContent="Describe el gasto.";
+    if(!r) return E.textContent="Indica quién es el responsable.";
+    busy=true;
+    const ts = f===todayKey() ? Date.now() : dayStart(f)+12*3600e3;
+    try{ await put("gastos",{id:uid("G"), ts, fecha:f, categoria:el.querySelector("#gx-c").value, descripcion:d, monto:m, responsable:r, obs:el.querySelector("#gx-o").value.trim(), estado:"activo", registrado:Date.now(), usuario:SESSION.nombre});
+      closeModal(true); toast(`Gasto de ${money(m)} registrado.`); }
+    catch(x){ busy=false; E.textContent="No se pudo guardar el gasto."; }
+  };
+}
+async function voidGasto(id){
+  const g=S.gastos[id]; if(!g||!writeGuard()) return;
+  const motivo=await confirmDlg(`El gasto «${g.descripcion}» (${money(g.monto)}) dejará de restar en la utilidad. Queda en el historial como anulado.`,{title:"Anular gasto",ok:"Anular",danger:true,input:{label:"Motivo",required:true,req:"Escribe el motivo."}});
+  if(!motivo) return;
+  try{ await put("gastos",{...g, estado:"anulado", anulacion:{ts:Date.now(), usuario:SESSION.nombre, motivo}});
+    toast("Gasto anulado.",{action:{label:"Deshacer",fn:async()=>{ const c=S.gastos[id]; await put("gastos",{...c, estado:"activo", anulacion:null}); audit("Gasto restaurado", c.descripcion, "Se deshizo la anulación", c.monto); }}}); }catch(e){}
+}
+
+/* =========================================================
+   CAJA
+   ========================================================= */
+VIEW_FN.caja = {
+  mount(){ return `<div id="cj-now"></div><div class="section-h" style="margin-top:26px"><h2>Cierres anteriores</h2></div><div id="cj-hist"></div>`; },
+  update(){
+    const c=cajaAbierta(); const box=$("#cj-now");
+    if(!c){
+      if(!box.querySelector("#cj-open")){
+        box.innerHTML=`<div class="dash-grid" style="margin-top:0"><div class="card span-6"><div class="card-h"><span class="tag">Caja cerrada</span><h2>Abrir caja</h2></div>
+          <div class="stack"><label class="field"><span>Responsable</span><input class="input" id="cj-r" value="${esc(SESSION.nombre)}" maxlength="60" autocomplete="off"></label>
+          <label class="field"><span>Fondo inicial en efectivo</span><div class="input-wrap"><span class="pre">$</span><input class="input num" id="cj-f" inputmode="decimal" placeholder="0,00" autocomplete="off"></div><small>El dinero con el que empieza la caja para dar vuelto.</small></label>
+          <div class="err-msg" id="cj-err"></div><button class="btn primary xl" type="button" id="cj-open">${ic("wallet")}Abrir caja · ${fT(Date.now())}</button></div></div>
+          <div class="card span-6"><div class="card-h"><h3>Cómo funciona</h3></div><div class="stack muted" style="font-size:14px">
+          <p style="margin:0">1. Al abrir la caja anota el fondo inicial.</p><p style="margin:0">2. Las ventas se suman solas según su forma de pago.</p><p style="margin:0">3. Registra entradas o salidas de efectivo que no sean ventas (por ejemplo, compra de hielo).</p><p style="margin:0">4. Al cerrar, cuenta el efectivo: la app calcula si sobra o falta dinero.</p></div></div></div>`;
+        $("#cj-open").onclick=openCaja;
+      }
+    } else {
+      const k=cajaCalc(c);
+      box.innerHTML=`<div class="section-h"><h2>Caja abierta</h2><span class="tag ok">Desde ${fDT(c.abierta)}</span><span class="faint">Responsable: ${esc(c.responsable)}</span><div class="spacer"></div>
+        <button class="btn" type="button" data-act="cajaIn">${ic("plus")}Entrada</button><button class="btn" type="button" data-act="cajaOut">${ic("minus")}Salida</button><button class="btn dark" type="button" data-act="cierre">${ic("lock")}Cerrar caja</button></div>
+        <div class="kpis"><div class="kpi hero"><div class="k-l">${ic("cash","sm")}Efectivo esperado</div><div class="k-v">${money(k.esperado)}</div><div class="k-s">fondo + ventas + entradas − salidas</div></div>
+        <div class="kpi"><div class="k-l">Ventas en efectivo</div><div class="k-v">${money(k.efectivo)}</div><div class="k-s">${k.devEfe?`incluye −${money(k.devEfe)} devuelto`:`${k.ventasN} ventas en el turno`}</div></div>
+        <div class="kpi"><div class="k-l">Transferencias</div><div class="k-v">${money(k.transferencia)}</div><div class="k-s">no entran a la caja</div></div>
+        <div class="kpi"><div class="k-l">Tarjeta</div><div class="k-v">${money(k.tarjeta)}</div><div class="k-s">no entran a la caja</div></div></div>
+        <div class="dash-grid"><div class="card span-6"><div class="card-h"><h3>Resumen del turno</h3></div><dl class="kv">
+          <dt>Fondo inicial</dt><dd class="num">${money(c.fondo)}</dd><dt>Ventas en efectivo</dt><dd class="num">${money(k.efectivo)}</dd><dt>Entradas de efectivo</dt><dd class="num">${money(k.entradas)}</dd><dt>Salidas de efectivo</dt><dd class="num">${money(-k.salidas)}</dd><dt>Total vendido (todos los medios)</dt><dd class="num">${money(k.total)}</dd></dl></div>
+        <div class="card span-6"><div class="card-h"><h3>Entradas y salidas</h3></div>${(c.movimientos||[]).length?`<div class="mini-lines">${c.movimientos.slice().reverse().map(m=>`<div class="ml"><span><span class="tag ${m.tipo==="entrada"?"ok":"warn"}">${m.tipo==="entrada"?"Entrada":"Salida"}</span> ${esc(m.motivo)} <span class="faint">· ${fT(m.ts)} · ${esc(m.usuario)}</span></span><b class="num">${money(m.tipo==="entrada"?m.monto:-m.monto)}</b></div>`).join("")}</div>`:`<p class="faint" style="margin:0">Sin movimientos manuales de efectivo.</p>`}</div></div>`;
+    }
+    const hist=Object.values(S.cajas).filter(x=>x.cerrada).sort((a,b)=>b.cerrada-a.cerrada);
+    $("#cj-hist").innerHTML = hist.length ? `<div class="rlist"><div class="rhead cols-caja"><span>Apertura</span><span>Cierre</span><span>Responsable</span><span class="r">Esperado</span><span class="r">Contado</span><span class="r">Diferencia</span><span></span></div>
+      ${hist.map(x=>`<div class="rrow cols-caja"><div class="num">${fDT(x.abierta)}</div><div class="num">${fDT(x.cerrada)}</div><div class="full">${esc(x.responsable)}</div><div class="r"><span class="cell-l">Esperado</span>${money(x.cierre.esperado)}</div><div class="r"><span class="cell-l">Contado</span>${money(x.cierre.contado)}</div>
+      <div class="r strong"><span class="cell-l">Diferencia</span><span class="tag ${x.cierre.diferencia===0?"ok":x.cierre.diferencia>0?"info":"bad"}">${x.cierre.diferencia===0?"Cuadra":(x.cierre.diferencia>0?"Sobra ":"Falta ")+money(Math.abs(x.cierre.diferencia))}</span></div>
+      <div class="actions"><button class="btn sm" type="button" data-act="showCierre" data-id="${x.id}">${ic("eye","sm")}Ver</button><button class="btn sm" type="button" data-act="exportCierre" data-id="${x.id}">${ic("download","sm")}Excel</button></div></div>`).join("")}</div>`
+      : `<div class="empty"><p>Aún no hay cierres de caja.</p></div>`;
+  }
+};
+async function openCaja(){
+  if(!writeGuard()) return; const E=$("#cj-err");
+  const r=$("#cj-r").value.trim(), f=parseMoney($("#cj-f").value||"0");
+  if(!r) return E.textContent="Indica quién es el responsable.";
+  if(f==null) return E.textContent="Escribe el fondo inicial, por ejemplo 20,00.";
+  if(cajaAbierta()) return E.textContent="Ya hay una caja abierta.";
+  const b=$("#cj-open"); b.disabled=true;
+  try{ await put("cajas",{id:uid("C"), abierta:Date.now(), responsable:r, fondo:f, movimientos:[], cerrada:null, cierre:null, abiertaPor:SESSION.nombre}); toast(`Caja abierta con ${money(f)}.`); UI.mounted=null; scheduleRender(); }
+  catch(e){ b.disabled=false; E.textContent="No se pudo abrir la caja."; }
+}
+function openCajaMov(tipo){
+  const c=cajaAbierta(); if(!c||!writeGuard()) return;
+  const el=openModal({title: tipo==="entrada"?"Entrada de efectivo":"Salida de efectivo", body:`
+    <label class="field"><span>Monto</span><div class="input-wrap"><span class="pre">$</span><input class="input num" id="cm-m" inputmode="decimal" placeholder="0,00" autocomplete="off" autofocus></div></label>
+    <label class="field"><span>Motivo</span><input class="input" id="cm-r" maxlength="120" placeholder="${tipo==="entrada"?"Ej.: cambio en monedas":"Ej.: compra de hielo"}" autocomplete="off"></label>
+    ${tipo==="salida"?`<div class="infobox">${ic("alert","sm")}<span>Si la salida es un gasto de la feria, regístralo también en Gastos para que reste en la utilidad.</span></div>`:""}
+    <div class="err-msg" id="cm-err"></div>`,
+    foot:`<button class="btn" type="button" data-close>Cancelar</button><button class="btn primary" type="button" id="cm-ok">${ic("check")}Registrar</button>`});
+  let busy=false;
+  el.querySelector("#cm-ok").onclick=async()=>{
+    if(busy) return; const E=el.querySelector("#cm-err"); const m=parseMoney(el.querySelector("#cm-m").value), r=el.querySelector("#cm-r").value.trim();
+    if(m==null||m<=0) return E.textContent="Escribe un monto mayor que cero.";
+    if(!r) return E.textContent="Escribe el motivo.";
+    busy=true; const cur=cajaAbierta();
+    try{ await put("cajas",{...cur, movimientos:[...(cur.movimientos||[]),{id:uid("CM"), ts:Date.now(), tipo, monto:m, motivo:r, usuario:SESSION.nombre}]}); closeModal(true); toast(`${tipo==="entrada"?"Entrada":"Salida"} de ${money(m)} registrada.`); }
+    catch(x){ busy=false; E.textContent="No se pudo registrar."; }
+  };
+}
+function openCierre(){
+  const c=cajaAbierta(); if(!c||!writeGuard()) return;
+  const el=openModal({title:"Cerrar caja", body:`
+    <div class="summary" id="ci-sum"></div>
+    <label class="field"><span>Efectivo contado en la caja</span><div class="input-wrap"><span class="pre">$</span><input class="input num" id="ci-c" inputmode="decimal" placeholder="0,00" autocomplete="off" autofocus></div></label>
+    <div class="big-total"><span id="ci-dl">Diferencia</span><b id="ci-d">—</b></div>
+    <label class="field"><span>Observaciones (opcional)</span><input class="input" id="ci-o" maxlength="160" autocomplete="off"></label>
+    <div class="err-msg" id="ci-err"></div>`,
+    foot:`<button class="btn" type="button" data-close>Cancelar</button><button class="btn dark" type="button" id="ci-ok">${ic("lock")}Cerrar caja</button>`});
+  const upd=()=>{ const k=cajaCalc(cajaAbierta()||c);
+    el.querySelector("#ci-sum").innerHTML=`<div class="sr-row"><span>Fondo inicial</span><b>${money(c.fondo)}</b></div><div class="sr-row"><span>Ventas en efectivo</span><b>${money(k.efectivo)}</b></div><div class="sr-row"><span>Entradas</span><b>${money(k.entradas)}</b></div><div class="sr-row"><span>Salidas</span><b>${money(-k.salidas)}</b></div><div class="sr-row total"><span>Efectivo esperado</span><b>${money(k.esperado)}</b></div><div class="sr-row"><span>Transferencias</span><b>${money(k.transferencia)}</b></div><div class="sr-row"><span>Tarjeta</span><b>${money(k.tarjeta)}</b></div>`;
+    const ct=parseMoney(el.querySelector("#ci-c").value); const d=ct==null?null:ct-k.esperado;
+    el.querySelector("#ci-d").textContent = d==null?"—":money(d);
+    el.querySelector("#ci-dl").textContent = d==null?"Diferencia":d===0?"Cuadra exacto":d>0?"Sobrante":"Faltante"; };
+  el.addEventListener("input",upd); upd(); MODAL.refresh=upd;
+  let busy=false;
+  el.querySelector("#ci-ok").onclick=async()=>{
+    if(busy) return; const E=el.querySelector("#ci-err"); const ct=parseMoney(el.querySelector("#ci-c").value);
+    if(ct==null) return E.textContent="Cuenta el efectivo y escribe el monto.";
+    busy=true; const cur=cajaAbierta(); const now=Date.now(); const k=cajaCalc({...cur, cerrada:now});
+    const cierre={efectivoVentas:k.efectivo, devolucionesEfectivo:k.devEfe, transferencias:k.transferencia, tarjetas:k.tarjeta, entradas:k.entradas, salidas:k.salidas, esperado:k.esperado, contado:ct, diferencia:ct-k.esperado, total:k.total, ventas:k.ventasN, cerradoPor:SESSION.nombre, obs:el.querySelector("#ci-o").value.trim()};
+    try{ await put("cajas",{...cur, cerrada:now, cierre}); closeModal(true); UI.mounted=null; scheduleRender(); showCierre(cur.id); }
+    catch(x){ busy=false; E.textContent="No se pudo cerrar la caja."; }
+  };
+}
+function showCierre(id){
+  const c=S.cajas[id]; if(!c||!c.cierre) return; const k=c.cierre;
+  openModal({title:"Resumen de cierre", body:`
+    <div class="row-flex"><span class="tag">${fDT(c.abierta)} → ${fDT(c.cerrada)}</span><span class="faint">${esc(c.responsable)}</span></div>
+    <div class="summary"><div class="sr-row"><span>Fondo inicial</span><b>${money(c.fondo)}</b></div><div class="sr-row"><span>Ventas en efectivo</span><b>${money(k.efectivoVentas)}</b></div>
+    <div class="sr-row"><span>Entradas de efectivo</span><b>${money(k.entradas)}</b></div><div class="sr-row"><span>Salidas de efectivo</span><b>${money(-k.salidas)}</b></div>
+    <div class="sr-row total"><span>Efectivo esperado</span><b>${money(k.esperado)}</b></div><div class="sr-row"><span>Efectivo contado</span><b>${money(k.contado)}</b></div>
+    <div class="sr-row total"><span>${k.diferencia===0?"Diferencia (cuadra)":k.diferencia>0?"Sobrante":"Faltante"}</span><b style="color:${k.diferencia<0?"var(--bad)":"inherit"}">${money(k.diferencia)}</b></div>
+    <div class="sr-row"><span>Transferencias</span><b>${money(k.transferencias)}</b></div><div class="sr-row"><span>Tarjeta</span><b>${money(k.tarjetas)}</b></div><div class="sr-row"><span>Total vendido en el turno</span><b>${money(k.total)}</b></div></div>
+    ${k.obs?`<div class="infobox">${esc(k.obs)}</div>`:""}`,
+    foot:`<button class="btn" type="button" data-close>Cerrar</button><button class="btn lime" type="button" data-act="exportCierre" data-id="${c.id}">${ic("download")}Exportar cierre</button>`});
+}
+
+/* =========================================================
+   PANEL FINANCIERO
+   ========================================================= */
+VIEW_FN.panel = {
+  mount(){
+    const {prods}=D(); const cats=[...new Set(prods.map(p=>p.categoria).filter(Boolean))].sort();
+    const vend=[...new Set([...(S.config.vendedores||[]), ...Object.values(S.ventas).map(s=>s.vendedor)])].sort();
+    const F=UI.F;
+    return `<div class="filters">
+      <label class="field"><span>Desde</span><input class="input" type="date" id="fl-d" value="${esc(F.desde)}"></label>
+      <label class="field"><span>Hasta</span><input class="input" type="date" id="fl-h" value="${esc(F.hasta)}"></label>
+      <label class="field"><span>Producto</span><select class="input" id="fl-p"><option value="">Todos</option>${prods.map(p=>`<option value="${p.id}" ${F.producto===p.id?"selected":""}>${esc(p.nombre)}</option>`).join("")}</select></label>
+      <label class="field"><span>Categoría</span><select class="input" id="fl-c"><option value="">Todas</option>${cats.map(c=>`<option ${F.categoria===c?"selected":""}>${esc(c)}</option>`).join("")}</select></label>
+      <label class="field"><span>Vendedor</span><select class="input" id="fl-v"><option value="">Todos</option>${vend.map(v=>`<option ${F.vendedor===v?"selected":""}>${esc(v)}</option>`).join("")}</select></label>
+      <div class="row-flex" style="flex-wrap:nowrap"><button class="btn" type="button" id="fl-today">Hoy</button><button class="btn ghost" type="button" id="fl-x">Limpiar</button></div></div>
+      <div id="pn"></div>`;
+  },
+  bind(){
+    const m={"#fl-d":"desde","#fl-h":"hasta","#fl-p":"producto","#fl-c":"categoria","#fl-v":"vendedor"};
+    for(const [s,k] of Object.entries(m)) $(s).addEventListener("change",e=>{ UI.F[k]=e.target.value; this.update(); });
+    $("#fl-today").onclick=()=>{ UI.F.desde=UI.F.hasta=todayKey(); UI.mounted=null; scheduleRender(); };
+    $("#fl-x").onclick=()=>{ UI.F={desde:"",hasta:"",producto:"",categoria:"",vendedor:""}; UI.mounted=null; scheduleRender(); };
+  },
+  update(){
+    const c=calc(UI.F); const box=$("#pn");
+    const filtered = UI.F.producto||UI.F.categoria||UI.F.vendedor;
+    const tile=(l,v,s,k="",i="")=>`<div class="kpi ${k}"><div class="k-l">${i?ic(i,"sm"):""}${esc(l)}</div><div class="k-v">${v}</div>${s?`<div class="k-s">${s}</div>`:""}</div>`;
+    const top=[...c.prodRows].sort((a,b)=>b.qty-a.qty).slice(0,6);
+    const rent=[...c.prodRows].sort((a,b)=>b.gan-a.gan).slice(0,6);
+    const mxQ=top.length?Math.max(1,top[0].qty):1, mxG=rent.length?Math.max(1,...rent.map(r=>Math.abs(r.gan))):1;
+    const noData = !Object.keys(S.ventas).length;
+    box.innerHTML=`
+      ${noData?`<div class="infobox" style="margin-bottom:14px">${ic("receipt","sm")}<span>Los indicadores se llenan con las ventas reales. Aún no hay ventas registradas.</span></div>`:""}
+      <div class="kpis">
+        ${tile("Ventas netas",money(c.ventas),`${intf(c.trans)} transacciones · ticket ${money(c.ticket)}`,"hero","receipt")}
+        ${tile("Utilidad neta",money(c.neta),`margen neto ${pct(c.margenNeto)}`,c.neta<0?"neg":"","trophy")}
+        ${tile("Transacciones",intf(c.trans),"ventas no anuladas","","cart")}
+        ${tile("Unidades vendidas",intf(c.unidades),"netas de devoluciones","","pkg")}
+      </div>
+      <div class="kpis small" style="margin-top:12px">
+        ${tile("Costo vendido",money(c.cmv),"costo histórico")}
+        ${tile("Gastos operativos",money(c.gastos),filtered?"de todo el período":"")}
+        ${tile("Utilidad bruta",money(c.bruta),`margen ${pct(c.mc)}`,c.bruta<0?"neg":"")}
+        ${tile("Efectivo",money(c.pay.efectivo),"","","cash")}
+        ${tile("Transferencias",money(c.pay.transferencia),"","","transfer")}
+        ${tile("Tarjeta",money(c.pay.tarjeta),"","","card")}
+      </div>
+      <div class="dash-grid">
+        <div class="card span-8 chart"><div class="card-h"><h3>Ventas por hora</h3><span class="sub">hora de Ecuador</span></div>${hourChart(c.byHour)}</div>
+        <div class="card span-4"><div class="card-h"><h3>Distribución de ingresos</h3></div>${donut(c.pay)}</div>
+        <div class="card span-6 chart"><div class="card-h"><h3>Evolución de la utilidad neta</h3><span class="sub">acumulada, descontando gastos</span></div>${lineChart(c.evo)}</div>
+        <div class="card span-6">${breakEvenCard(c)}</div>
+        <div class="card span-4"><div class="card-h"><h3>Más vendidos</h3><span class="sub">unidades</span></div>${top.length?`<div class="hbars">${top.map(r=>`<div class="hbar"><span class="nm">${esc(r.nombre)}</span><span class="vl">${intf(r.qty)}</span><div class="track"><div class="fill" style="width:${(Math.max(0,r.qty)/mxQ*100).toFixed(1)}%"></div></div></div>`).join("")}</div>`:emptyMini()}</div>
+        <div class="card span-4"><div class="card-h"><h3>Más rentables</h3><span class="sub">ganancia bruta</span></div>${rent.length?`<div class="hbars">${rent.map(r=>`<div class="hbar"><span class="nm">${esc(r.nombre)}</span><span class="vl">${money(r.gan)}</span><div class="track"><div class="fill alt" style="width:${(Math.max(0,r.gan)/mxG*100).toFixed(1)}%"></div></div></div>`).join("")}</div>`:emptyMini()}</div>
+        <div class="card span-4"><div class="card-h"><h3>Inventario disponible</h3><button class="btn ghost sm" type="button" data-go="inventario" style="margin-left:auto">Ver todo</button></div>
+          <dl class="kv"><dt>Unidades en stock</dt><dd class="num">${intf(c.invUnits)}</dd><dt>Valor a costo</dt><dd class="num">${money(c.invValue)}</dd><dt>Productos con stock bajo</dt><dd class="num">${c.lowStock.length}</dd></dl>
+          ${c.lowStock.length?`<div class="warnbox" style="margin-top:12px">${ic("alert","sm")}<span>${c.lowStock.slice(0,5).map(p=>esc(p.nombre)).join(", ")}${c.lowStock.length>5?"…":""}</span></div>`:""}</div>
+      </div>`;
+  }
+};
+function emptyMini(){ return `<p class="faint" style="margin:0;font-size:13.5px">Sin ventas en este filtro.</p>`; }
+function breakEvenCard(c){
+  if(c.gastos<=0) return `<div class="card-h"><h3>Punto de equilibrio</h3></div><p class="faint" style="margin:0;font-size:13.5px">Se calcula cuando haya gastos registrados y ventas con ganancia.</p>`;
+  if(!c.pe) return `<div class="card-h"><h3>Punto de equilibrio</h3></div><p class="faint" style="margin:0;font-size:13.5px">Registra ventas con ganancia para calcular cuánto hay que vender para cubrir ${money(c.gastos)} de gastos.</p>`;
+  const prog=Math.min(1,c.ventas/c.pe);
+  return `<div class="card-h"><h3>Punto de equilibrio</h3><span class="tag ${prog>=1?"ok":"warn"}" style="margin-left:auto">${prog>=1?"Alcanzado":pct(prog)+" logrado"}</span></div>
+    <div style="font-size:14px" class="muted">Para cubrir ${money(c.gastos)} de gastos hay que vender <b style="color:var(--ink)">${money(c.pe)}</b>${c.peUnits?` (unas ${intf(c.peUnits)} unidades)`:""}.</div>
+    <div class="be-track"><div class="be-fill" style="width:${(prog*100).toFixed(1)}%"></div></div>
+    <dl class="kv"><dt>Vendido</dt><dd class="num">${money(c.ventas)}</dd><dt>${prog>=1?"Excedente sobre el equilibrio":"Falta vender"}</dt><dd class="num">${money(Math.abs(c.pe-c.ventas))}</dd><dt>Rentabilidad sobre lo invertido</dt><dd class="num">${pct(c.roi)}</dd><dt>Margen de contribución</dt><dd class="num">${pct(c.mc)}</dd></dl>`;
+}
+function niceMax(v){ if(v<=0) return 100; const p=Math.pow(10,Math.floor(Math.log10(v))); const n=v/p; return (n<=1?1:n<=2?2:n<=2.5?2.5:n<=5?5:10)*p; }
+function hourChart(byHour){
+  const hs=Object.keys(byHour).map(Number);
+  if(!hs.length) return `<p class="faint" style="margin:0;font-size:13.5px">Las barras aparecerán con las primeras ventas.</p>`;
+  let a=Math.min(...hs,8), b=Math.max(...hs,14); const n=b-a+1;
+  const W=640,H=230,L=52,R=10,T=14,B=28, iw=W-L-R, ih=H-T-B;
+  const mx=niceMax(Math.max(...Object.values(byHour),1)); const bw=iw/n;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Ventas por hora">`;
+  for(let i=0;i<=4;i++){ const v=mx*i/4, y=T+ih-ih*i/4; s+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-width="1"/><text x="${L-8}" y="${y+4}" text-anchor="end">${moneyShort(v)}</text>`; }
+  for(let h=a;h<=b;h++){ const v=byHour[h]||0, x=L+(h-a)*bw, bh=Math.max(0,v)/mx*ih;
+    s+=`<rect x="${x+bw*.18}" y="${T+ih-bh}" width="${bw*.64}" height="${bh}" rx="4" fill="${v===Math.max(...Object.values(byHour))?"var(--brand)":"color-mix(in srgb,var(--brand) 45%,transparent)"}"><title>${h}:00 · ${money(v)}</title></rect>`;
+    if(n<=14 || (h-a)%2===0) s+=`<text x="${x+bw/2}" y="${H-8}" text-anchor="middle">${h}h</text>`; }
+  return s+`</svg>`;
+}
+function donut(pay){
+  const tot=sum(METODOS,m=>Math.max(0,pay[m]));
+  const colors={efectivo:"var(--m-efe)",transferencia:"var(--m-tra)",tarjeta:"var(--m-tar)"};
+  let off=0; const R=60, C=2*Math.PI*R;
+  let segs=`<circle cx="80" cy="80" r="${R}" fill="none" stroke="var(--surface-2)" stroke-width="22"/>`;
+  if(tot>0) for(const m of METODOS){ const v=Math.max(0,pay[m]); if(!v) continue; const len=v/tot*C;
+    segs+=`<circle cx="80" cy="80" r="${R}" fill="none" stroke="${colors[m]}" stroke-width="22" stroke-dasharray="${len} ${C-len}" stroke-dashoffset="${-off}" transform="rotate(-90 80 80)"><title>${MLABEL[m]} ${money(v)}</title></circle>`; off+=len; }
+  return `<div class="donut-wrap"><svg viewBox="0 0 160 160" role="img" aria-label="Distribución por forma de pago" style="width:100%;max-width:160px">${segs}<text x="80" y="76" text-anchor="middle" style="font-size:11px;fill:var(--ink-3)">Total</text><text x="80" y="96" text-anchor="middle" style="font-size:17px;font-weight:800;fill:var(--ink)">${moneyShort(tot)}</text></svg>
+    <div class="legend">${METODOS.map(m=>`<div class="legend-row"><span class="sw" style="background:${colors[m]}"></span><span>${MLABEL[m]}</span><b>${tot?pct(Math.max(0,pay[m])/tot):"0%"}</b></div><div class="faint num" style="font-size:12.5px;margin:-6px 0 0 22px">${money(pay[m])}</div>`).join("")}</div></div>`;
+}
+function lineChart(evo){
+  if(evo.length<2) return `<p class="faint" style="margin:0;font-size:13.5px">La curva aparece cuando haya al menos dos movimientos (ventas o gastos).</p>`;
+  const W=640,H=230,L=56,R=12,T=14,B=28, iw=W-L-R, ih=H-T-B;
+  const pts=[{ts:evo[0].ts, v:0}, ...evo];
+  const t0=pts[0].ts, t1=Math.max(pts[pts.length-1].ts, t0+60000);
+  let lo=Math.min(0,...pts.map(p=>p.v)), hi=Math.max(0,...pts.map(p=>p.v));
+  if(hi===lo) hi=lo+100;
+  const step=niceMax((hi-lo)/4); lo=Math.floor(lo/step)*step; hi=Math.ceil(hi/step)*step; if(hi===lo) hi=lo+step;
+  const X=t=>L+(t-t0)/(t1-t0)*iw, Y=v=>T+ih-(v-lo)/(hi-lo||1)*ih;
+  let d=""; pts.forEach((p,i)=>{ d+= i? ` H${X(p.ts).toFixed(1)} V${Y(p.v).toFixed(1)}` : `M${X(p.ts).toFixed(1)} ${Y(p.v).toFixed(1)}`; });
+  const last=pts[pts.length-1];
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Utilidad neta acumulada">`;
+  for(let v=lo; v<=hi+step/2; v+=step){ const y=Y(v); s+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-width="1"/><text x="${L-8}" y="${y+4}" text-anchor="end">${moneyShort(v)}</text>`; }
+  s+=`<line x1="${L}" x2="${W-R}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--ink-3)" stroke-dasharray="4 4"/>`;
+  s+=`<path d="${d} V${Y(0)} H${X(t0)} Z" fill="color-mix(in srgb,var(--brand) 14%,transparent)"/>`;
+  s+=`<path d="${d}" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linejoin="round"/>`;
+  s+=`<circle cx="${X(last.ts)}" cy="${Y(last.v)}" r="5" fill="var(--lime)" stroke="var(--ink)" stroke-width="2"/>`;
+  const sameDay=dayKey(t0)===dayKey(t1);
+  s+=`<text x="${L}" y="${H-8}">${sameDay?fT(t0):fD(t0)}</text><text x="${W-R}" y="${H-8}" text-anchor="end">${sameDay?fT(t1):fD(t1)}</text>`;
+  return s+`</svg>`;
+}
+
+/* =========================================================
+   AJUSTES, RESPALDO Y RESTAURACIÓN
+   ========================================================= */
+VIEW_FN.ajustes = {
+  mount(){ return `<div class="dash-grid" style="margin-top:0" id="aj"></div>`; },
+  update(){
+    const c=S.config; const v=c.vendedores||[];
+    const html=`
+    <div class="card span-6"><div class="card-h"><h3>Vendedores</h3><span class="sub">${v.length} registrados</span></div>
+      <div class="list-edit">${v.map(n=>`<div class="li"><span>${esc(n)}</span><button class="btn ghost sm" type="button" data-rmv="${esc(n)}" aria-label="Quitar ${esc(n)}">${ic("x","sm")}</button></div>`).join("")||`<p class="faint" style="margin:0">Sin vendedores.</p>`}</div>
+      <form class="row-flex" style="margin-top:12px;flex-wrap:nowrap" id="aj-addv"><input class="input" id="aj-v" placeholder="Nombre del vendedor" maxlength="40" autocomplete="off"><button class="btn primary" type="submit">${ic("plus")}Agregar</button></form></div>
+    <div class="card span-6"><div class="card-h"><h3>Almacenamiento</h3>${MODE==="nube"?`<span class="tag ok">Base compartida</span>`:MODE==="local"?`<span class="tag warn">Solo este dispositivo</span>`:`<span class="tag bad">Solo lectura</span>`}</div>
+      <div class="stack" style="font-size:14px">${MODE==="nube"?`<p class="muted" style="margin:0">Las ventas se guardan en la base de datos de esta página y se ven al instante en todos los dispositivos con permiso para registrar. Ninguna venta se pierde al recargar.</p>`
+        :`<p class="muted" style="margin:0">Los datos están guardados <b>únicamente en este dispositivo y navegador</b>. Si borras los datos del navegador o cambias de equipo, se pierden: descarga un respaldo al final de cada jornada.</p>`}
+        ${MODE!=="nube" && window.claude?`<button class="btn sm" type="button" id="aj-cloud" style="align-self:flex-start">${ic("cloud","sm")}Volver a la base compartida</button>`:""}</div></div>
+    <div class="card span-6"><div class="card-h"><h3>Copia de seguridad</h3></div>
+      <p class="muted" style="margin:0 0 12px;font-size:14px">Descarga todos los registros en un archivo .json. Puedes restaurarlo aquí mismo o en otro dispositivo.</p>
+      <div class="row-flex"><button class="btn primary" type="button" id="aj-bk">${ic("download")}Descargar respaldo</button><label class="btn">${ic("upload")}Restaurar respaldo<input type="file" accept=".json,application/json" id="aj-rs" class="sr"></label></div></div>
+    <div class="card span-6"><div class="card-h"><h3>Seguridad</h3></div>
+      <p class="muted" style="margin:0 0 12px;font-size:14px">Los vendedores solo pueden vender, ver productos y consultar ventas. Gastos, caja, anulaciones, inventario y reportes requieren el PIN de administrador.</p>
+      <button class="btn" type="button" id="aj-pin">${ic("lock")}Cambiar PIN</button></div>
+    <div class="card span-12 danger-zone"><div class="card-h"><h3>Borrar todos los datos</h3><span class="sub">Elimina productos, ventas, gastos, caja y auditoría. No se puede deshacer.</span></div>
+      <button class="btn danger-soft" type="button" id="aj-reset">${ic("trash")}Borrar todo</button></div>`;
+    const box=$("#aj"); if(box.dataset.h===html) return; box.dataset.h=html; box.innerHTML=html;
+    box.querySelectorAll("[data-rmv]").forEach(b=>b.onclick=async()=>{ const n=b.dataset.rmv; try{ await putConfig({...S.config, vendedores:(S.config.vendedores||[]).filter(x=>x!==n)}); audit("Vendedor eliminado", n, "", ""); toast(`${n} ya no aparece al iniciar.`,{action:{label:"Deshacer",fn:()=>putConfig({...S.config, vendedores:[...(S.config.vendedores||[]), n]})}}); }catch(e){} });
+    $("#aj-addv").onsubmit=async e=>{ e.preventDefault(); const n=$("#aj-v").value.trim(); if(!n) return; if((S.config.vendedores||[]).some(x=>x.toLowerCase()===n.toLowerCase())){ toast("Ese vendedor ya existe.",{type:"err"}); return; }
+      try{ await putConfig({...S.config, vendedores:[...(S.config.vendedores||[]), n]}); audit("Vendedor agregado", n, "", ""); toast(`${n} agregado.`); }catch(x){} };
+    $("#aj-bk").onclick=downloadBackup;
+    $("#aj-rs").onchange=e=>{ const f=e.target.files[0]; e.target.value=""; if(f) restoreBackup(f); };
+    $("#aj-pin").onclick=changePin;
+    $("#aj-reset").onclick=resetAll;
+    const cl=$("#aj-cloud"); if(cl) cl.onclick=async()=>{ if(await confirmDlg("Este dispositivo dejará de usar sus datos locales y se conectará a la base compartida. Descarga un respaldo antes si lo necesitas.",{ok:"Conectar"})){ lsDel(LS.modo); READY=false; UI.mounted=null; $("#root").innerHTML=`<div class="splash"><div><div class="brand-mark">Conectando…</div><div class="loader"></div></div></div>`; boot(); } };
+  }
+};
+function changePin(){
+  const el=openModal({title:"Cambiar PIN", body:`<label class="field"><span>PIN actual</span><input class="input" id="cp-a" type="password" inputmode="numeric" maxlength="6" autofocus></label>
+    <div class="grid2 keep"><label class="field"><span>PIN nuevo</span><input class="input" id="cp-n" type="password" inputmode="numeric" maxlength="6"></label><label class="field"><span>Repite el PIN nuevo</span><input class="input" id="cp-n2" type="password" inputmode="numeric" maxlength="6"></label></div><div class="err-msg" id="cp-err"></div>`,
+    foot:`<button class="btn" type="button" data-close>Cancelar</button><button class="btn primary" type="button" id="cp-ok">Guardar PIN</button>`});
+  el.querySelector("#cp-ok").onclick=async()=>{ const E=el.querySelector("#cp-err"); const a=el.querySelector("#cp-a").value, n=el.querySelector("#cp-n").value, n2=el.querySelector("#cp-n2").value;
+    if(!(await checkPin(a))) return E.textContent="El PIN actual no es correcto.";
+    if(!/^\d{4,6}$/.test(n)) return E.textContent="El PIN nuevo debe tener entre 4 y 6 números.";
+    if(n!==n2) return E.textContent="Los PIN nuevos no coinciden.";
+    const salt=rnd(12); try{ await putConfig({...S.config, salt, pinHash:await hashPin(n,salt)}); audit("PIN cambiado","Seguridad","",""); closeModal(true); toast("PIN actualizado."); }catch(x){} };
+}
+function backupObject(){ const o={app:"feria-manana-deportiva-2026", version:1, exportado:new Date().toISOString(), config:S.config}; for(const c of COLS) o[c]=S[c]; return o; }
+async function downloadBackup(){
+  const name=`Respaldo_Feria_2026_${todayKey()}.json`;
+  await saveFile(name, new Blob([JSON.stringify(backupObject())],{type:"application/json"}), "Respaldo descargado.");
+}
+function validateBackup(o){
+  if(!o || typeof o!=="object" || o.app!=="feria-manana-deportiva-2026") return "El archivo no es un respaldo de esta app.";
+  if(!o.config || typeof o.config.pinHash!=="string") return "El respaldo no tiene la configuración de la feria.";
+  for(const c of COLS){ if(!o[c] || typeof o[c]!=="object" || Array.isArray(o[c])) return `El respaldo está incompleto: falta «${c}».`; }
+  for(const p of Object.values(o.productos)) if(!p.id||typeof p.precio!=="number"||typeof p.costo!=="number") return "Hay productos con datos inválidos en el respaldo.";
+  for(const s of Object.values(o.ventas)) if(!s.id||!Array.isArray(s.items)||typeof s.total!=="number"||!s.pagos) return "Hay ventas con datos inválidos en el respaldo.";
+  return null;
+}
+async function restoreBackup(file){
+  if(!writeGuard()) return;
+  let o; try{ o=JSON.parse(await file.text()); }catch(e){ toast("No se pudo leer el archivo: no es un JSON válido.",{type:"err"}); return; }
+  const bad=validateBackup(o); if(bad){ toast(bad,{type:"err"}); return; }
+  const n=sum(COLS,c=>Object.keys(o[c]).length);
+  const ok=await confirmDlg(`Se reemplazarán todos los datos actuales por el respaldo (${Object.keys(o.productos).length} productos, ${Object.keys(o.ventas).length} ventas, ${n} registros en total). El PIN volverá a ser el del respaldo.`,{title:"Restaurar respaldo",ok:"Restaurar",danger:true,input:{label:"Escribe RESTAURAR para confirmar",required:true}});
+  if(ok!=="RESTAURAR"){ if(ok) toast("No se restauró: escribe RESTAURAR exactamente.",{type:"err"}); return; }
+  await replaceAll(o, "Respaldo restaurado.");
+  audit("Respaldo restaurado", file.name, `${n} registros`, n, "registros");
+}
+async function replaceAll(o, msg){
+  const prog=toastProgress("Guardando…");
+  try{
+    if(MODE==="local"){ for(const c of COLS) S[c]=o[c]||{}; S.config=o.config; saveLocal(); bump(); }
+    else {
+      const ops=[];
+      for(const c of COLS){ const nw=o[c]||{}; for(const id of Object.keys(S[c])) if(!nw[id]) ops.push(()=>DB.collection(c).doc(id).delete()); for(const [id,d] of Object.entries(nw)) ops.push(()=>DB.collection(c).doc(id).set(clean({...d,id}))); }
+      ops.push(()=> o.config ? DB.doc("config/app").set(clean(o.config)) : DB.doc("config/app").delete());
+      let i=0; const N=ops.length;
+      const worker=async()=>{ while(i<N){ const k=i++; try{ await ops[k](); }catch(e){ await sleep(500); await ops[k](); } prog(`Guardando ${Math.min(N,i)} de ${N}…`); } };
+      await Promise.all([worker(),worker(),worker(),worker()]);
+    }
+    prog(null); toast(msg); UI.mounted=null;
+  }catch(e){ prog(null); toast(dbErr(e)+" La operación quedó incompleta; vuelve a intentarlo.",{type:"err"}); }
+}
+function toastProgress(t){ const box=$("#toasts"); const el=document.createElement("div"); el.className="toast"; el.innerHTML=`<span class="t-msg"></span>`; el.querySelector(".t-msg").textContent=t; box.appendChild(el); return m=>{ if(m==null) el.remove(); else el.querySelector(".t-msg").textContent=m; }; }
+async function resetAll(){
+  const el=openModal({title:"Borrar todos los datos", body:`<div class="warnbox">${ic("alert","sm")}<span>Se borrarán productos, ventas, gastos, cajas y auditoría${MODE==="nube"?" en todos los dispositivos":""}. Descarga un respaldo antes.</span></div>
+    <label class="field"><span>PIN de administrador</span><input class="input" id="rs-p" type="password" inputmode="numeric" maxlength="6"></label>
+    <label class="field"><span>Escribe BORRAR para confirmar</span><input class="input" id="rs-t" autocomplete="off"></label>
+    <label class="row-flex" style="font-size:14px"><input type="checkbox" id="rs-k" checked> Conservar PIN y vendedores</label><div class="err-msg" id="rs-err"></div>`,
+    foot:`<button class="btn" type="button" data-close>Cancelar</button><button class="btn danger" type="button" id="rs-ok">${ic("trash")}Borrar todo</button>`});
+  el.querySelector("#rs-ok").onclick=async()=>{ const E=el.querySelector("#rs-err");
+    if(!(await checkPin(el.querySelector("#rs-p").value))) return E.textContent="PIN incorrecto.";
+    if(el.querySelector("#rs-t").value.trim()!=="BORRAR") return E.textContent="Escribe BORRAR en mayúsculas.";
+    const keep=el.querySelector("#rs-k").checked; closeModal(true);
+    const o={config: keep?S.config:null}; for(const c of COLS) o[c]={};
+    await replaceAll(o, "Datos borrados.");
+    if(!keep) setSession(null);
+  };
+}
+
+/* =========================================================
+   DESCARGAS
+   ========================================================= */
+async function saveFile(filename, blob, okMsg){
+  if(!DOWNLOADS && window.claude && typeof window.claude.use==="function"){ try{ DOWNLOADS = await withTimeout(window.claude.use("downloads"),5000); }catch(e){} }
+  if(DOWNLOADS){
+    try{ await DOWNLOADS.save({filename, data:blob}); toast(okMsg||"Archivo listo."); return true; }
+    catch(e){ if(e && e.code==="declined") { toast("Descarga cancelada."); return false; }
+      if(e && e.code==="rate_limited"){ toast("Ya hay una descarga esperando confirmación.",{type:"err"}); return false; }
+      if(!(e && ["unavailable","not_granted","capability_disabled","capability_removed"].includes(e.code))){ toast("No se pudo descargar el archivo.",{type:"err"}); return false; } }
+  }
+  try{ const u=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=u; a.download=filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u),4000); toast(okMsg||"Archivo listo."); return true; }
+  catch(e){ toast("Las descargas no están disponibles en esta vista.",{type:"err"}); return false; }
+}
+
+/* =========================================================
+   EXPORTACIÓN A EXCEL (.xlsx real con ExcelJS)
+   ========================================================= */
+let EXCEL_P=null;
+function loadExcel(){
+  if(window.ExcelJS) return Promise.resolve(window.ExcelJS);
+  if(EXCEL_P) return EXCEL_P;
+  EXCEL_P=new Promise((res,rej)=>{ const s=document.createElement("script"); s.src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"; s.onload=()=>window.ExcelJS?res(window.ExcelJS):rej(new Error("ExcelJS")); s.onerror=()=>{ EXCEL_P=null; rej(new Error("ExcelJS")); }; document.head.appendChild(s); });
+  return EXCEL_P;
+}
+function openExport(){
+  if(!isAdmin()) return;
+  let modo="todo";
+  const days=[...new Set(Object.values(S.ventas).map(s=>dayKey(s.ts)))].sort();
+  const el=openModal({title:"Exportar Excel", body:`
+    <div class="infobox">${ic("xls","sm")}<span>Se genera <b>${FILE_XLSX}</b> con 8 hojas: resumen, detalle de ventas, productos, inventario, gastos, métodos de pago, cierres de caja y auditoría.</span></div>
+    <div class="seg" id="ex-m"><button type="button" data-m="todo" aria-pressed="true">Todo</button><button type="button" data-m="hoy" aria-pressed="false">Hoy</button><button type="button" data-m="rango" aria-pressed="false">Rango de fechas</button></div>
+    <div class="grid2 keep" id="ex-r" hidden><label class="field"><span>Desde</span><input class="input" type="date" id="ex-d" value="${days[0]||todayKey()}"></label><label class="field"><span>Hasta</span><input class="input" type="date" id="ex-h" value="${days[days.length-1]||todayKey()}"></label></div>
+    <div class="err-msg" id="ex-err"></div>`,
+    foot:`<button class="btn" type="button" data-close>Cancelar</button><button class="btn lime btn-export" type="button" id="ex-ok">${ic("download")}Generar Excel</button>`});
+  el.addEventListener("click",e=>{ const b=e.target.closest("[data-m]"); if(!b) return; modo=b.dataset.m; el.querySelectorAll("[data-m]").forEach(x=>x.setAttribute("aria-pressed",x===b)); el.querySelector("#ex-r").hidden=modo!=="rango"; });
+  let busy=false;
+  el.querySelector("#ex-ok").onclick=async()=>{
+    if(busy) return; const E=el.querySelector("#ex-err");
+    let r={desde:"",hasta:""};
+    if(modo==="hoy") r={desde:todayKey(),hasta:todayKey()};
+    if(modo==="rango"){ r={desde:el.querySelector("#ex-d").value, hasta:el.querySelector("#ex-h").value}; if(!r.desde||!r.hasta) return E.textContent="Elige las dos fechas."; if(r.desde>r.hasta) return E.textContent="La fecha «desde» debe ser anterior a «hasta»."; }
+    busy=true; const b=el.querySelector("#ex-ok"); b.disabled=true; b.textContent="Generando…";
+    try{ const wb=await buildWorkbook(r); const buf=await wb.xlsx.writeBuffer();
+      const fn = modo==="todo" ? FILE_XLSX : FILE_XLSX.replace(".xlsx", `_${r.desde}${r.hasta!==r.desde?"_a_"+r.hasta:""}.xlsx`);
+      closeModal(true); await saveFile(fn, new Blob([buf],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}), "Excel generado."); }
+    catch(e){ busy=false; b.disabled=false; b.innerHTML=`${ic("download")}Generar Excel`; E.textContent="No se pudo generar el Excel. Revisa tu conexión (la librería se descarga la primera vez) e inténtalo de nuevo."; console.error(e); }
+  };
+}
+const XC = {navy:"FF0B1220", blue:"FF2563EB", lime:"FFC8FF5F", grey:"FFF3F5F9", line:"FFDCE2EC", white:"FFFFFFFF", red:"FFC92A2A"};
+const FMT = {money:'"$"#,##0.00;[Red]-"$"#,##0.00', date:"dd/mm/yyyy", time:"hh:mm", dt:"dd/mm/yyyy hh:mm", pct:"0.0%", int:"#,##0;[Red]-#,##0"};
+const xd = ts => new Date(ts - OFFSET_MS);   // hora de Ecuador en Excel
+const usd = c => Math.round(c)/100;
+function colL(n){ let s=""; while(n>0){ const m=(n-1)%26; s=String.fromCharCode(65+m)+s; n=(n-1-m)/26|0; } return s; }
+/** Hoja con encabezado en la fila 1, filas de datos, fila de totales, filtros y encabezado congelado. */
+function dataSheet(wb, name, cols, rows, totals, tabColor){
+  const ws=wb.addWorksheet(name,{views:[{state:"frozen",ySplit:1}], properties:{tabColor:{argb:tabColor||XC.blue}}});
+  ws.columns=cols.map(c=>({header:c.h, key:c.k, width:c.w||14, style:c.f?{numFmt:FMT[c.f]}:{}}));
+  const hr=ws.getRow(1); hr.height=24;
+  hr.eachCell(c=>{ c.fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.navy}}; c.font={bold:true,color:{argb:XC.white},name:"Calibri",size:11}; c.alignment={vertical:"middle",horizontal:"center",wrapText:true}; c.border={bottom:{style:"medium",color:{argb:XC.lime}}}; });
+  rows.forEach((r,i)=>{ const row=ws.addRow(r); row.eachCell({includeEmpty:true},(c,ci)=>{ const cf=cols[ci-1]; if(cf&&cf.f) c.numFmt=FMT[cf.f]; c.border={bottom:{style:"thin",color:{argb:XC.line}}}; if(i%2===1) c.fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.grey}}; c.alignment={vertical:"middle"}; }); });
+  const first=2, last=Math.max(2, rows.length+1);
+  ws.autoFilter={from:{row:1,column:1}, to:{row:Math.max(1,rows.length+1), column:cols.length}};
+  if(totals){
+    const tr=ws.getRow(last+1);
+    for(const [k,v] of Object.entries(totals)){ const ci=cols.findIndex(c=>c.k===k)+1; const cell=tr.getCell(ci); cell.value = typeof v==="function" ? v(colL(ci), first, last) : v; }
+    for(let ci=1; ci<=cols.length; ci++){ const cell=tr.getCell(ci); if(cols[ci-1].f) cell.numFmt=FMT[cols[ci-1].f]; cell.font={bold:true}; cell.fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.lime}}; cell.border={top:{style:"medium",color:{argb:XC.navy}}}; }
+    tr.height=22;
+  }
+  if(!rows.length){ ws.getCell(2,1).value="Sin registros en el período"; ws.getCell(2,1).font={italic:true,color:{argb:"FF7A869E"}}; }
+  return {ws, first, last, n:rows.length, tot:last+1};
+}
+async function buildWorkbook(r){
+  const EX=await loadExcel();
+  const wb=new EX.Workbook(); wb.creator="Feria Mañana Deportiva 2026 · 3rd BGU"; wb.created=new Date();
+  const inR = ts => (!r.desde || dayKey(ts)>=r.desde) && (!r.hasta || dayKey(ts)<=r.hasta);
+  const {prods, inv, stock}=D();
+  const resumen=wb.addWorksheet("Resumen financiero",{views:[{state:"frozen",ySplit:5}], properties:{tabColor:{argb:XC.lime}}});
+  // ---- Hoja 2: Detalle de ventas
+  const det=[]; let vNet=0, vCost=0, vUnits=0, vDesc=0; const salesIn=new Set();
+  const ventas=Object.values(S.ventas).sort((a,b)=>a.ts-b.ts);
+  const evs=[];
+  for(const s of ventas){
+    if(inR(s.ts)) s.items.forEach(it=>evs.push({ts:s.ts, s, it, q:it.cantidad, desc:it.desc, neto:it.neto, costo:it.costo*it.cantidad, estado:s.estado==="anulada"?"Anulada":"Completada", metodo:MLABEL[s.metodo]}));
+    for(const d of (s.devoluciones||[])) if(inR(d.ts)) d.lineas.forEach(l=>{ const it=s.items[l.idx]; evs.push({ts:d.ts, s, it, q:-l.cantidad, desc:0, neto:-l.monto, costo:-it.costo*l.cantidad, estado:s.estado==="anulada"?"Anulada":"Devolución", metodo:MLABEL[d.metodo]+" (reembolso)"}); });
+  }
+  evs.sort((a,b)=>a.ts-b.ts);
+  evs.forEach((e,i)=>{ const row=i+2;
+    det.push([e.s.codigo, xd(e.ts), xd(e.ts), e.it.nombre, e.q, usd(e.it.precio), usd(e.desc), usd(e.neto), usd(e.costo), {formula:`H${row}-I${row}`, result:usd(e.neto-e.costo)}, e.s.vendedor, e.estado, e.metodo]);
+    if(e.estado!=="Anulada"){ vNet+=e.neto; vCost+=e.costo; vUnits+=e.q; vDesc+=e.desc; if(e.q>0) salesIn.add(e.s.id); } });
+  const D2=dataSheet(wb,"Detalle de ventas",[
+    {h:"ID de venta",k:"id",w:13},{h:"Fecha",k:"f",w:12,f:"date"},{h:"Hora",k:"h",w:8,f:"time"},{h:"Producto",k:"p",w:28},{h:"Cantidad",k:"q",w:10,f:"int"},{h:"Precio unitario",k:"pu",w:14,f:"money"},
+    {h:"Descuento asignado",k:"d",w:14,f:"money"},{h:"Total neto",k:"t",w:13,f:"money"},{h:"Costo histórico",k:"c",w:14,f:"money"},{h:"Ganancia",k:"g",w:13,f:"money"},{h:"Vendedor",k:"v",w:18},{h:"Estado",k:"e",w:14},{h:"Método de pago",k:"m",w:24}
+  ], det, {id:"TOTAL (sin anuladas)", q:(L,f,l)=>({formula:`SUMIFS(${L}${f}:${L}${l},L${f}:L${l},"<>Anulada")`,result:vUnits}), d:(L,f,l)=>({formula:`SUMIFS(${L}${f}:${L}${l},L${f}:L${l},"<>Anulada")`,result:usd(vDesc)}),
+    t:(L,f,l)=>({formula:`SUMIFS(${L}${f}:${L}${l},L${f}:L${l},"<>Anulada")`,result:usd(vNet)}), c:(L,f,l)=>({formula:`SUMIFS(${L}${f}:${L}${l},L${f}:L${l},"<>Anulada")`,result:usd(vCost)}), g:(L,f,l)=>({formula:`SUMIFS(${L}${f}:${L}${l},L${f}:L${l},"<>Anulada")`,result:usd(vNet-vCost)})});
+  // ---- Hoja 3: Productos
+  const pr=prods.map((p,i)=>{ const row=i+2; return [p.codigo,p.nombre,p.categoria||"",usd(p.costo),usd(p.precio),{formula:`E${row}-D${row}`,result:usd(p.precio-p.costo)},{formula:`IF(E${row}=0,0,F${row}/E${row})`,result:p.precio?(p.precio-p.costo)/p.precio:0},stock[p.id]||0,p.stockMin||0,p.activo===false?"Desactivado":"Activo"]; });
+  dataSheet(wb,"Productos",[{h:"Código",k:"c",w:10},{h:"Nombre",k:"n",w:28},{h:"Categoría",k:"cat",w:16},{h:"Costo unitario",k:"co",w:14,f:"money"},{h:"Precio de venta",k:"pv",w:14,f:"money"},{h:"Ganancia por unidad",k:"g",w:15,f:"money"},{h:"Margen",k:"m",w:10,f:"pct"},{h:"Stock actual",k:"s",w:12,f:"int"},{h:"Stock mínimo",k:"sm",w:12,f:"int"},{h:"Estado",k:"e",w:13}], pr, null, XC.navy);
+  // ---- Hoja 4: Inventario (al momento de exportar)
+  let invVal=0;
+  const iv=prods.map((p,i)=>{ const row=i+2, x=inv[p.id]; invVal+=Math.max(0,x.act)*p.costo; return [p.codigo,p.nombre,x.ini,x.ent,x.vend,x.aj,{formula:`C${row}+D${row}-E${row}+F${row}`,result:x.act},usd(p.costo),{formula:`MAX(0,G${row})*H${row}`,result:usd(Math.max(0,x.act)*p.costo)}]; });
+  const sumT=(res)=>(L,f,l)=>({formula:`SUM(${L}${f}:${L}${l})`,result:res});
+  const I4=dataSheet(wb,"Inventario",[{h:"Código",k:"c",w:10},{h:"Producto",k:"p",w:28},{h:"Stock inicial",k:"i",w:12,f:"int"},{h:"Entradas",k:"e",w:11,f:"int"},{h:"Unidades vendidas netas",k:"v",w:14,f:"int"},{h:"Ajustes",k:"a",w:10,f:"int"},{h:"Stock final",k:"s",w:12,f:"int"},{h:"Costo unitario",k:"cu",w:13,f:"money"},{h:"Valor del inventario",k:"vi",w:16,f:"money"}],
+    iv, {c:"TOTAL", i:sumT(sum(prods,p=>inv[p.id].ini)), e:sumT(sum(prods,p=>inv[p.id].ent)), v:sumT(sum(prods,p=>inv[p.id].vend)), a:sumT(sum(prods,p=>inv[p.id].aj)), s:sumT(sum(prods,p=>inv[p.id].act)), vi:sumT(usd(invVal))}, XC.navy);
+  // ---- Hoja 5: Gastos
+  const gs=gastosActivos().filter(g=>inR(g.ts));
+  const G5=dataSheet(wb,"Gastos",[{h:"Fecha",k:"f",w:12,f:"date"},{h:"Categoría",k:"c",w:16},{h:"Descripción",k:"d",w:36},{h:"Monto",k:"m",w:13,f:"money"},{h:"Responsable",k:"r",w:18},{h:"Observaciones",k:"o",w:30}],
+    gs.map(g=>[xd(g.ts),g.categoria,g.descripcion,usd(g.monto),g.responsable,g.obs||""]), {c:"TOTAL", m:sumT(usd(sum(gs,g=>g.monto)))}, XC.red);
+  // ---- Hoja 6: Métodos de pago
+  const mp=[]; const payT={efectivo:0,transferencia:0,tarjeta:0};
+  for(const s of ventas){ if(s.estado==="anulada") continue;
+    if(inR(s.ts)) for(const m of METODOS) if(s.pagos[m]){ mp.push([s.codigo,xd(s.ts),MLABEL[m],usd(s.pagos[m]),s.vendedor,"Venta"]); payT[m]+=s.pagos[m]; }
+    for(const d of (s.devoluciones||[])) if(inR(d.ts)){ mp.push([s.codigo,xd(d.ts),MLABEL[d.metodo],usd(-d.monto),d.usuario,"Devolución"]); payT[d.metodo]-=d.monto; } }
+  mp.sort((a,b)=>a[1]-b[1]);
+  const M6=dataSheet(wb,"Métodos de pago",[{h:"ID de venta",k:"id",w:13},{h:"Fecha",k:"f",w:16,f:"dt"},{h:"Medio de pago",k:"m",w:16},{h:"Importe",k:"i",w:13,f:"money"},{h:"Responsable",k:"r",w:18},{h:"Tipo",k:"t",w:12}],
+    mp, {id:"TOTAL", i:sumT(usd(sum(METODOS,m=>payT[m])))}, XC.blue);
+  // ---- Hoja 7: Cierre de caja
+  const cajas=Object.values(S.cajas).filter(c=>inR(c.abierta)).sort((a,b)=>a.abierta-b.abierta);
+  const cj=cajas.map((c,i)=>{ const row=i+2; const k=c.cierre || (()=>{ const x=cajaCalc(c); return {efectivoVentas:x.efectivo,transferencias:x.transferencia,tarjetas:x.tarjeta,entradas:x.entradas,salidas:x.salidas,esperado:x.esperado,contado:null,diferencia:null}; })();
+    return [xd(c.abierta), c.cerrada?xd(c.cerrada):"Abierta", c.responsable, usd(c.fondo), usd(k.efectivoVentas), usd(k.transferencias), usd(k.tarjetas), usd(k.entradas), usd(k.salidas),
+      {formula:`D${row}+E${row}+H${row}-I${row}`, result:usd(k.esperado)}, k.contado==null?null:usd(k.contado), k.contado==null?null:{formula:`K${row}-J${row}`, result:usd(k.diferencia)}, {formula:`E${row}+F${row}+G${row}`, result:usd(k.efectivoVentas+k.transferencias+k.tarjetas)}, c.cerrada?"Cerrada":"Abierta"]; });
+  dataSheet(wb,"Cierre de caja",[{h:"Apertura",k:"a",w:16,f:"dt"},{h:"Cierre",k:"c",w:16,f:"dt"},{h:"Responsable",k:"r",w:18},{h:"Fondo inicial",k:"fi",w:13,f:"money"},{h:"Ventas en efectivo",k:"ve",w:14,f:"money"},{h:"Transferencias",k:"t",w:14,f:"money"},{h:"Tarjetas",k:"ta",w:12,f:"money"},{h:"Entradas de efectivo",k:"en",w:14,f:"money"},{h:"Salidas de efectivo",k:"sa",w:14,f:"money"},{h:"Efectivo esperado",k:"es",w:14,f:"money"},{h:"Efectivo contado",k:"co",w:14,f:"money"},{h:"Diferencia",k:"d",w:12,f:"money"},{h:"Total por métodos de pago",k:"tm",w:16,f:"money"},{h:"Estado",k:"e",w:10}],
+    cj, null, XC.navy);
+  // ---- Hoja 8: Movimientos y auditoría
+  dataSheet(wb,"Movimientos y auditoría",[{h:"Fecha y hora",k:"f",w:17,f:"dt"},{h:"Tipo de movimiento",k:"t",w:24},{h:"Referencia",k:"r",w:26},{h:"Usuario",k:"u",w:18},{h:"Motivo",k:"m",w:36},{h:"Valor o cantidad",k:"v",w:14},{h:"Unidad",k:"un",w:10}],
+    auditRows(inR).map(a=>[xd(a.ts),a.tipo,a.ref,a.usuario,a.motivo,a.valor,a.unidad]), null, "FF7A869E");
+  // ---- Hoja 1: Resumen (fórmulas a las otras hojas)
+  const ws=resumen; ws.columns=[{width:38},{width:18},{width:58}];
+  ws.mergeCells("A1:C1"); ws.getCell("A1").value="FERIA MAÑANA DEPORTIVA 2026"; ws.getCell("A1").font={bold:true,size:18,color:{argb:XC.lime}}; ws.getCell("A1").fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.navy}}; ws.getRow(1).height=32; ws.getCell("A1").alignment={vertical:"middle",indent:1};
+  ws.mergeCells("A2:C2"); ws.getCell("A2").value="3rd BGU · Resumen financiero"; ws.getCell("A2").font={bold:true,size:12,color:{argb:XC.white}}; ws.getCell("A2").fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.navy}}; ws.getCell("A2").alignment={indent:1};
+  ws.getCell("A3").value="Período"; ws.getCell("B3").value= r.desde ? (r.desde===r.hasta?dkLabel(r.desde):`${dkLabel(r.desde)} al ${dkLabel(r.hasta)}`) : "Todas las fechas";
+  ws.getCell("A4").value="Generado"; ws.getCell("B4").value=xd(Date.now()); ws.getCell("B4").numFmt=FMT.dt; ws.getCell("C4").value="Hora de Ecuador (UTC−5). Montos en dólares (USD).";
+  ["A3","A4"].forEach(a=>ws.getCell(a).font={bold:true,color:{argb:"FF47536D"}});
+  const head=(row,a,b,c)=>{ const R=ws.getRow(row); [a,b,c].forEach((v,i)=>{ const cell=R.getCell(i+1); cell.value=v; cell.font={bold:true,color:{argb:XC.white}}; cell.fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.blue}}; }); R.height=22; };
+  const DS="'Detalle de ventas'", MS="'Métodos de pago'";
+  const dr=(L)=>`${DS}!${L}${D2.first}:${L}${D2.last}`, de=`${DS}!L${D2.first}:L${D2.last}`;
+  const gT=sum(gs,g=>g.monto);
+  head(6,"Concepto","Valor","Cómo se calcula");
+  const lines=[
+    ["Ventas netas",{formula:`SUMIFS(${dr("H")},${de},"<>Anulada")`,result:usd(vNet)},"Suma del total neto en «Detalle de ventas», sin anuladas y restando devoluciones","money"],
+    ["Costo de productos vendidos",{formula:`SUMIFS(${dr("I")},${de},"<>Anulada")`,result:usd(vCost)},"Costo histórico de cada unidad al momento de la venta","money"],
+    ["Utilidad bruta",{formula:"B7-B8",result:usd(vNet-vCost)},"Ventas netas − costo de productos vendidos","money"],
+    ["Gastos operativos",{formula:`SUM(Gastos!D${G5.first}:D${G5.last})`,result:usd(gT)},"Gastos de la feria registrados (hoja «Gastos»)","money"],
+    ["Utilidad neta",{formula:"B9-B10",result:usd(vNet-vCost-gT)},"Utilidad bruta − gastos operativos","money"],
+    ["Margen bruto",{formula:"IF(B7=0,0,B9/B7)",result:vNet?(vNet-vCost)/vNet:0},"Utilidad bruta ÷ ventas netas","pct"],
+    ["Margen de rentabilidad (neto)",{formula:"IF(B7=0,0,B11/B7)",result:vNet?(vNet-vCost-gT)/vNet:0},"Utilidad neta ÷ ventas netas","pct"],
+    ["Rentabilidad sobre lo invertido",{formula:"IF((B8+B10)=0,0,B11/(B8+B10))",result:(vCost+gT)?(vNet-vCost-gT)/(vCost+gT):0},"Utilidad neta ÷ (costo vendido + gastos)","pct"],
+    ["Transacciones",salesIn.size,"Ventas no anuladas en el período","int"],
+    ["Unidades vendidas netas",{formula:`SUMIFS(${dr("E")},${de},"<>Anulada")`,result:vUnits},"Unidades vendidas menos devueltas","int"],
+    ["Descuentos otorgados",{formula:`SUMIFS(${dr("G")},${de},"<>Anulada")`,result:usd(vDesc)},"Descuentos repartidos entre los productos de cada venta","money"],
+    ["Valor del inventario a costo (actual)",{formula:`Inventario!I${I4.tot}`,result:usd(invVal)},"Stock disponible al momento de exportar × costo unitario","money"]
+  ];
+  lines.forEach((l,i)=>{ const R=ws.getRow(7+i); R.getCell(1).value=l[0]; R.getCell(2).value=l[1]; R.getCell(2).numFmt=FMT[l[3]]; R.getCell(3).value=l[2]; R.getCell(3).font={color:{argb:"FF7A869E"},size:10}; R.getCell(1).font={bold:[2,4].includes(i)}; R.getCell(2).font={bold:[0,2,4].includes(i)}; [1,2,3].forEach(c=>R.getCell(c).border={bottom:{style:"thin",color:{argb:XC.line}}}); });
+  ws.getRow(11).eachCell(c=>c.fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.lime}});
+  const b0=7+lines.length+1;
+  head(b0,"Balance por método de pago","Importe","Desde la hoja «Métodos de pago» (ventas − reembolsos)");
+  const mr=`${MS}!C${M6.first}:C${M6.last}`, mi=`${MS}!D${M6.first}:D${M6.last}`;
+  METODOS.forEach((m,i)=>{ const R=ws.getRow(b0+1+i); R.getCell(1).value=MLABEL[m]; R.getCell(2).value={formula:`SUMIFS(${mi},${mr},"${MLABEL[m]}")`,result:usd(payT[m])}; R.getCell(2).numFmt=FMT.money; [1,2,3].forEach(c=>R.getCell(c).border={bottom:{style:"thin",color:{argb:XC.line}}}); });
+  const tR=ws.getRow(b0+4); tR.getCell(1).value="Total recibido"; tR.getCell(2).value={formula:`SUM(B${b0+1}:B${b0+3})`,result:usd(sum(METODOS,m=>payT[m]))}; tR.getCell(2).numFmt=FMT.money; tR.font={bold:true}; [1,2,3].forEach(c=>tR.getCell(c).fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.lime}});
+  const cR=ws.getRow(b0+5); cR.getCell(1).value="Control: total recibido − ventas netas"; cR.getCell(2).value={formula:`ROUND(B${b0+4}-B7,2)`,result:usd(sum(METODOS,m=>payT[m])-vNet)}; cR.getCell(2).numFmt=FMT.money; cR.getCell(3).value="Debe ser $0,00. Si no lo es, revisa pagos y devoluciones."; cR.getCell(3).font={color:{argb:"FF7A869E"},size:10};
+  const n0=b0+7;
+  ws.getCell(`A${n0}`).value="Notas"; ws.getCell(`A${n0}`).font={bold:true};
+  ["Las ventas anuladas aparecen en «Detalle de ventas» con estado «Anulada» y no suman en ningún total.",
+   "Las devoluciones aparecen como filas negativas en la fecha en que se registraron.",
+   "«Productos» e «Inventario» muestran el estado al momento de exportar, sin filtrar por fecha.",
+   "El costo de lo vendido viene de cada venta y los gastos operativos de la hoja «Gastos»: no se cuentan dos veces."].forEach((t,i)=>{ ws.mergeCells(`A${n0+1+i}:C${n0+1+i}`); ws.getCell(`A${n0+1+i}`).value="• "+t; ws.getCell(`A${n0+1+i}`).font={color:{argb:"FF47536D"},size:10}; });
+  return wb;
+}
+function auditRows(inR){
+  const a=[];
+  for(const s of Object.values(S.ventas)){
+    if(inR(s.ts)) a.push({ts:s.ts,tipo:"Venta registrada",ref:s.codigo,usuario:s.vendedor,motivo:`${MLABEL[s.metodo]}${s.descuento?` · descuento ${money(s.descuento)}`:""}${s.obs?` · ${s.obs}`:""}`,valor:usd(s.total),unidad:"USD"});
+    for(const d of (s.devoluciones||[])) if(inR(d.ts)) a.push({ts:d.ts,tipo:"Devolución",ref:s.codigo,usuario:d.usuario,motivo:d.motivo,valor:-usd(d.monto),unidad:"USD"});
+    if(s.anulacion && inR(s.anulacion.ts)) a.push({ts:s.anulacion.ts,tipo:"Anulación de venta",ref:s.codigo,usuario:s.anulacion.usuario,motivo:s.anulacion.motivo,valor:-usd(saleNet({...s,estado:"x"})),unidad:"USD"});
+  }
+  for(const m of Object.values(S.movimientos)) if(inR(m.ts)) a.push({ts:m.ts,tipo:m.tipo==="entrada"?"Entrada de inventario":"Ajuste de inventario",ref:`${m.codigo} ${m.nombre}`,usuario:m.usuario,motivo:m.motivo||"",valor:m.cantidad,unidad:"uds"});
+  for(const g of Object.values(S.gastos)){
+    if(inR(g.registrado||g.ts)) a.push({ts:g.registrado||g.ts,tipo:"Gasto registrado",ref:`${g.categoria} · ${g.descripcion}`,usuario:g.usuario||g.responsable,motivo:g.obs||"",valor:usd(g.monto),unidad:"USD"});
+    if(g.anulacion && inR(g.anulacion.ts)) a.push({ts:g.anulacion.ts,tipo:"Gasto anulado",ref:`${g.categoria} · ${g.descripcion}`,usuario:g.anulacion.usuario,motivo:g.anulacion.motivo,valor:-usd(g.monto),unidad:"USD"});
+  }
+  for(const c of Object.values(S.cajas)){
+    if(inR(c.abierta)) a.push({ts:c.abierta,tipo:"Apertura de caja",ref:c.responsable,usuario:c.abiertaPor||c.responsable,motivo:"Fondo inicial",valor:usd(c.fondo),unidad:"USD"});
+    for(const m of (c.movimientos||[])) if(inR(m.ts)) a.push({ts:m.ts,tipo:m.tipo==="entrada"?"Entrada de efectivo":"Salida de efectivo",ref:"Caja",usuario:m.usuario,motivo:m.motivo,valor:usd(m.tipo==="entrada"?m.monto:-m.monto),unidad:"USD"});
+    if(c.cerrada && c.cierre && inR(c.cerrada)) a.push({ts:c.cerrada,tipo:"Cierre de caja",ref:c.responsable,usuario:c.cierre.cerradoPor,motivo:`Esperado ${money(c.cierre.esperado)}, contado ${money(c.cierre.contado)}${c.cierre.obs?` · ${c.cierre.obs}`:""}`,valor:usd(c.cierre.diferencia),unidad:"USD dif."});
+  }
+  for(const x of Object.values(S.auditoria)) if(inR(x.ts)) a.push({ts:x.ts,tipo:x.tipo,ref:x.ref,usuario:x.usuario,motivo:x.motivo,valor:x.valor===""?null:x.valor,unidad:x.valor===""?"":x.unidad});
+  return a.sort((x,y)=>x.ts-y.ts);
+}
+async function exportCierre(id){
+  const c=S.cajas[id]; if(!c||!c.cierre) return; const k=c.cierre;
+  try{
+    const EX=await loadExcel(); const wb=new EX.Workbook();
+    const ws=wb.addWorksheet("Cierre de caja",{properties:{tabColor:{argb:XC.lime}}}); ws.columns=[{width:34},{width:20}];
+    ws.mergeCells("A1:B1"); ws.getCell("A1").value="FERIA MAÑANA DEPORTIVA 2026 · Cierre de caja"; ws.getCell("A1").font={bold:true,size:14,color:{argb:XC.lime}}; ws.getCell("A1").fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.navy}}; ws.getRow(1).height=28;
+    const rows=[["Apertura",xd(c.abierta),"dt"],["Cierre",xd(c.cerrada),"dt"],["Responsable",c.responsable],["Cerrado por",k.cerradoPor],["Fondo inicial",usd(c.fondo),"money"],["Ventas en efectivo",usd(k.efectivoVentas),"money"],["Entradas de efectivo",usd(k.entradas),"money"],["Salidas de efectivo",usd(k.salidas),"money"],
+      ["Efectivo esperado",{formula:"B7+B8+B9-B10",result:usd(k.esperado)},"money"],["Efectivo contado",usd(k.contado),"money"],["Diferencia (+ sobrante / − faltante)",{formula:"B12-B11",result:usd(k.diferencia)},"money"],["Transferencias",usd(k.transferencias),"money"],["Tarjetas",usd(k.tarjetas),"money"],["Total por métodos de pago",{formula:"B8+B14+B15",result:usd(k.total)},"money"],["Ventas en el turno",k.ventas||0],["Observaciones",k.obs||""]];
+    rows.forEach((r2,i)=>{ const R=ws.getRow(3+i); R.getCell(1).value=r2[0]; R.getCell(2).value=r2[1]; if(r2[2]) R.getCell(2).numFmt=FMT[r2[2]]; R.getCell(1).font={bold:true}; [1,2].forEach(cc=>R.getCell(cc).border={bottom:{style:"thin",color:{argb:XC.line}}}); if([8,10].includes(i)) [1,2].forEach(cc=>R.getCell(cc).fill={type:"pattern",pattern:"solid",fgColor:{argb:XC.lime}}); });
+    const mv=(c.movimientos||[]).map(m=>[xd(m.ts),m.tipo==="entrada"?"Entrada":"Salida",m.motivo,usd(m.tipo==="entrada"?m.monto:-m.monto),m.usuario]);
+    dataSheet(wb,"Movimientos de efectivo",[{h:"Fecha y hora",k:"f",w:17,f:"dt"},{h:"Tipo",k:"t",w:10},{h:"Motivo",k:"m",w:34},{h:"Monto",k:"v",w:13,f:"money"},{h:"Usuario",k:"u",w:18}], mv, {f:"TOTAL", v:(L,f,l)=>({formula:`SUM(${L}${f}:${L}${l})`,result:usd(k.entradas-k.salidas)})});
+    const vs=Object.values(S.ventas).filter(s=>s.ts>=c.abierta && s.ts<=c.cerrada).sort((a,b)=>a.ts-b.ts).map(s=>[s.codigo,xd(s.ts),s.items.map(i=>`${i.cantidad}× ${i.nombre}`).join(", "),usd(s.total),MLABEL[s.metodo],s.vendedor,estadoVenta(s)]);
+    dataSheet(wb,"Ventas del turno",[{h:"ID de venta",k:"id",w:13},{h:"Fecha y hora",k:"f",w:17,f:"dt"},{h:"Productos",k:"p",w:40},{h:"Total",k:"t",w:12,f:"money"},{h:"Forma de pago",k:"m",w:15},{h:"Vendedor",k:"v",w:18},{h:"Estado",k:"e",w:16}], vs, null);
+    const buf=await wb.xlsx.writeBuffer();
+    await saveFile(`Cierre_Caja_${dayKey(c.cerrada)}_${fT(c.cerrada).replace(":","h")}.xlsx`, new Blob([buf]), "Cierre exportado.");
+  }catch(e){ toast("No se pudo generar el Excel del cierre.",{type:"err"}); console.error(e); }
+}
+
+window.addEventListener("resize", debounce(()=>{ if(!window.matchMedia("(max-width:900px)").matches && UI.cartOpen){ UI.cartOpen=false; syncCartSheet(); } },150));
+setInterval(()=>{ if(READY && SESSION && (UI.view==="caja")) scheduleRender(); }, 30000);
+window.__feria = {S, D, calc, cajaCalc, buildWorkbook, auditRows, get MODE(){return MODE;}};
+boot();
+</script>
+
+</body></html>
